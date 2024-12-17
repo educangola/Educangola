@@ -1,0 +1,325 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Educa_Angola/Login</title>
+    <meta name="author" content="Vecuro">
+    <meta name="description" content="Educino - Online Courses and Education HTML Template">
+    <meta name="keywords" content="academic, artist, center, club, coach, college, drive, driving, education, entertainment, gambling, golf, jackpot, knowledge, money, multipurpose, music, song, student">
+    <meta name="robots" content="INDEX,FOLLOW">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicons - Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" href="{% static 'assets/img/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'assets/img/favicon.ico' %}" type="image/x-icon">
+
+    <!--==============================
+	  Google Fonts
+	============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <!--==============================
+	    All CSS File
+	============================== -->
+    <!-- Bootstrap -->
+<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+<!-- <link rel="stylesheet" href="{% static 'assets/css/app.min.css' %}"> -->
+<!-- Fontawesome Icon -->
+<link rel="stylesheet" href="{% static 'assets/css/fontawesome.min.css' %}">
+<!-- Magnific Popup -->
+<link rel="stylesheet" href="{% static 'assets/css/magnific-popup.min.css' %}">
+<!-- Slick Slider -->
+<link rel="stylesheet" href="{% static 'assets/css/slick.min.css' %}">
+<!-- Theme Custom CSS -->
+<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+
+</head>
+
+
+<body>
+
+    <div class="preloader  ">
+        <button class="vs-btn preloaderCls">Cancelar</button>
+        <div class="preloader-inner">
+            <div class="loader"></div>
+        </div>
+    </div>
+    <!--==============================
+    Mobile Menu
+    ============================== -->
+    <div class="vs-menu-wrapper">
+        <div class="vs-menu-area text-center">
+            <button class="vs-menu-toggle"><i class="fal fa-times"></i></button>
+            <div class="mobile-logo">
+                <a href="{% static 'index.html' %}"><img src="{% static 'assets/img/logo.svg' %}" alt="Educino"></a>
+            </div>
+            <div class="vs-mobile-menu">
+                <ul>
+                    <li class="menu-item-has-children">
+                        <a href="index-5.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">Sobre Nós</a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="course.html">Cursos</a>
+                        <ul class="sub-menu">
+                            <li><a href="course.html">Cursos 1</a></li>
+                            <li><a href="courses-2.html">Cursos 2</a></li>
+                            <li><a href="course-details.html">Detalhes do Curso 1</a></li>
+                            <li><a href="course-details-2.html">Detalhes do Curso 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="blog.html">Blog</a>
+                        <ul class="sub-menu">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="blog-details.html">Detalhes do Blog</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="index-5.html#">Páginas</a>
+                        <ul class="sub-menu">
+                            <li><a href="team.html">Nossos Tutores</a></li>
+                            <li><a href="team-details.html">Detalhes do Tutor</a></li>
+                            <li><a href="become-tutor.html">Torne-se um Tutor</a></li>
+                            <li><a href="find-tutor.html">Encontre um Tutor</a></li>
+                            <li><a href="academic.html">Acadêmico</a></li>
+                            <li><a href="academic-program.html">Programa Acadêmico</a></li>
+                            <li><a href="program-details.html">Detalhes do Programa</a></li>
+                            <li><a href="find-program.html">Encontre um Programa</a></li>
+                            <li><a href="event-details.html">Detalhes do Evento</a></li>
+                            <li><a href="login-register.html">Entrar/Registrar</a></li>
+                            <li><a href="error.html">Página de Erro</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contate-nos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--==============================
+    Popup Search Box
+    ============================== -->
+    <div class="popup-search-box d-none d-lg-block  ">
+        <button class="searchClose"><i class="fal fa-times"></i></button>
+        <form action="login-register.html#">
+            <input type="text" class="border-theme" placeholder="What are you looking for">
+            <button type="submit"><i class="fal fa-search"></i></button>
+        </form>
+    </div>
+    <!--==============================
+    Header Area
+    ==============================-->
+    
+    <!--==============================
+    Breadcumb
+    ============================== -->
+    <div class="breadcumb-wrapper " data-bg-src="{% static 'assets/img/young-woman-with-afro-haircut-wearing-pink-sweater-holding-textbooks.jpg' %}">
+        <div class="container z-index-common">
+            <div class="breadcumb-content">
+                <h1 class="breadcumb-title">Entrar & Registrar</h1>
+                <div class="breadcumb-menu-wrap">
+                    <ul class="breadcumb-menu">
+                        <li><a href="{% url 'index' %}">Início</a></li>
+                        <li>Entrar & Registrar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--==============================
+    Login & Register
+    ==============================-->
+    <section class="space-top space-extra-bottom">
+        <div class="container">
+            <div class="central d-flex flex-column align-items-center mt-3">
+                {% if status == '1' %}
+                    <div class="alert alert-danger text-center w-75" role="alert">
+                        Email ou Senha Invalidos!
+                    </div>
+                {% endif %}
+            </div>
+            <div class="row gx-60">
+                <div class="col-lg-6">
+                    <div class="form-style4 login" data-bg-src="{% static 'assets/img/4873411.jpg' %}">
+                        <h2 class="form-title">Login</h2>
+                        <form action="{% url 'Valida_login_normal' %}" method="POST"> {% csrf_token %}
+                            <div class="form-group">
+                                <input type="text" autocomplete="off" name="email" id="email" placeholder="E-mail">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" autocomplete="off" name="senha" id="password" placeholder="Senha">
+                            </div>
+                            <div class="row justify-content-between">
+                                <div class="col-auto form-group">
+                                    <input type="checkbox" name="rememberlogin" id="rememberlogin">
+                                    <label for="rememberlogin">Lembrar-me</label>
+                                </div>
+                                <div class="col-auto form-group">
+                                    <a style="text-decoration: none;" class="forget-link" href="{% url 'Login_normal' %}">Esqueci a minha senha!</a>
+                                </div>
+                            </div>
+                            <button type="submit" class="vs-btn">Entrar</button>
+                            <a style="text-decoration: none; color: white;" type="submit" class="vs-btn" href="{% url 'Cadastrar_normal' %}">Cadastrar</a>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <!--==============================
+    CTA Area
+    ==============================-->
+    <section class="space-bottom">
+        <div class="container">
+            <div class="cta-style2">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="cta-content">
+                            <p class="cta-text">CENTROS QUALIFICADOS PREMIADOS</p>
+                            <h2 class="cta-title h1">Centros de alta qualidade a preços acessíveis</h2>
+                            <a href="team.html" class="vs-btn style2"><i class="far fa-angle-right"></i>Encontre um Tutor</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="cta-img">
+                            <img src="{% static 'assets/img/about/about-2-6.jpg' %}" alt="Imagem Sobre">
+                            <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn popup-video position-center"><i class="fas fa-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <!--==============================
+    Footer Area
+    ==============================-->
+    <footer class="footer-wrapper footer-layout1 style4">
+        <div class="widget-area" data-bg-src="{% static 'assets/img/bg/footer-bg1.png' %}">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-6 col-xl-auto">
+                        <div class="widget footer-widget">
+                            <div class="vs-widget-about">
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="{% static 'assets/img/logo-white.svg' %}" alt="logo"></a>
+                                </div>
+                                <p class="footer-text">Lorem ipsum dolor sit amet, consectet rem ips dolor sit amet. Sum dolor sit amet, consectet e dolor sit amet, comod.</p>
+                                <p class="footer-info"><i class="fal fa-phone-alt"></i><a class="text-inherit" href="tel:++11234562228">(00) 123 456 789</a></p>
+                                <p class="footer-info"><i class="fal fa-envelope"></i><a class="text-inherit" href="mailto:info@example.com">hello@domainname.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6 col-xl-auto">
+                        <div class="widget nav_menu footer-widget">
+                            <h3 class="widget_title">Links de Estudo</h3>
+                            <div class="menu-all-pages-container footer-menu">
+                                <ul class="menu">
+                                    <li><a href="course.html">Todos os Cursos</a></li>
+                                    <li><a href="blog.html">Sessões de Verão</a></li>
+                                    <li><a href="course.html">Melhores Cursos</a></li>
+                                    <li><a href="https://html.vecurosoft.com/educino/demo/find-tutor.htm">Contratar professores</a></li>
+                                    <li><a href="academic-program.html">FAQs do Programa</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6 col-xl-auto">
+                        <div class="widget nav_menu footer-widget">
+                            <h3 class="widget_title">Links Rápidos</h3>
+                            <div class="menu-all-pages-container footer-menu">
+                                <ul class="menu">
+                                    <li><a href="about.html">Comunidade</a></li>
+                                    <li><a href="contact.html">Suporte</a></li>
+                                    <li><a href="blog.html">Guias em Vídeo</a></li>
+                                    <li><a href="event-details.html">Documentação</a></li>
+                                    <li><a href="about.html">Segurança</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-auto">
+                        <div class="widget footer-widget">
+                            <h3 class="widget_title">Cursos Recentes</h3>
+                            <div class="recent-post-wrap">
+                                <div class="recent-course">
+                                    <div class="media-img"><a href="course-details.html"><img src="{% static 'assets/img/course/recent-course-2-1.jpg' %}" alt="Imagem do Blog"></a></div>
+                                    <div class="media-body">
+                                        <div class="recent-course-meta"><a href="team-details.html">Por alax dongle</a></div>
+                                        <h4 class="post-title"><a class="text-inherit" href="course-details.html">Teoria de Codificação Web e Fundamentos do Apache</a></h4>
+                                    </div>
+                                </div>
+                                <div class="recent-course">
+                                    <div class="media-img"><a href="course-details.html"><img src="{% static 'assets/img/course/recent-course-2-2.jpg' %}" alt="Imagem do Blog"></a></div>
+                                    <div class="media-body">
+                                        <div class="recent-course-meta"><a href="team-details.html">Por jon smith</a></div>
+                                        <h4 class="post-title"><a class="text-inherit" href="course-details.html">O que Tadit Soul pode nos ensinar sobre Web Docan</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="text-center col-lg-auto">
+                        <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2024 <a href="index.html">Educa_Angola</a>. Todos os Direitos Reservados por <a href="#">Angola_Educa</a></p>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <div class="social-style1 footer-social">
+                            <a href="index-5.html#"><i class="fab fa-facebook-f"></i>Facebook</a>
+                            <a href="index-5.html#"><i class="fab fa-twitter"></i>Twitter</a>
+                            <a href="index-5.html#"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scroll To Top -->
+    <a href="index-5.html#" class="scrollToTop scroll-btn"><i class="far fa-arrow-up"></i></a>
+
+    <!--********************************
+			Code End  Here 
+	******************************** -->
+
+    <!--==============================
+        All Js File
+    ============================== -->
+    <script src="{% static 'assets/js/vendor/jquery-3.6.0.min.js' %}"></script>
+    <!-- Slick Slider -->
+    <script src="{% static 'assets/js/slick.min.js' %}"></script>
+    <!-- <script src="assets/js/app.min.js"></script> -->
+    <!-- Bootstrap -->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <!-- Wow.js Animation -->
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+    <!-- Magnific Popup -->
+    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <!-- Main Js File -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+
+
+</body>
+
+</html>
