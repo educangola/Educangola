@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Educa_Angola</title>
+    <title>Educa_Angola | A Plataforma de Ensino Online de Angola</title>
     <meta name="author" content="Vecuro">
     <meta name="description" content="Educino - Online Courses and Education HTML Template">
     <meta name="keywords" content="academic, artist, center, club, coach, college, drive, driving, education, entertainment, gambling, golf, jackpot, knowledge, money, multipurpose, music, song, student">
@@ -15,8 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Favicons - Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" href="{% static 'assets/img/favicon.ico' %}" type="image/x-icon">
-    <link rel="icon" href="{% static 'assets/img/favicon.ico' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'assets/img/Screenshot_20241221-130247-removebg-preview.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'assets/img/Screenshot_20241221-130247-removebg-preview.png' %}" type="image/x-icon">
 
     <!--==============================
 	  Google Fonts
@@ -59,55 +59,113 @@
         <div class="vs-menu-area text-center">
             <button class="vs-menu-toggle"><i class="fal fa-times"></i></button>
             <div class="mobile-logo">
-                <a href="index.html"><img src="{% static 'assets/img/logo.svg' %}" alt="Educino"></a>
+                <a href="index.html">
+                    <img style="width: 150px;" src="{% static 'assets/img/Artboard 1.png' %}" alt="Educino">
+                </a>
             </div>
             <div class="vs-mobile-menu">
                 <ul>
+                    <!-- Início -->
+                    <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+    
+                    <!-- Sobre Nós -->
+                    <li><a href="about.html"><i class="fas fa-users"></i> Sobre Nós</a></li>
+    
+                    <!-- Escolas -->
                     <li class="menu-item-has-children">
-                        <a href="index-5.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">Sobre Nós</a>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="course.html">Cursos</a>
+                        <a href="#"><i class="fas fa-school"></i> Escolas</a>
                         <ul class="sub-menu">
-                            <li><a href="course.html">Cursos 1</a></li>
-                            <li><a href="courses-2.html">Cursos 2</a></li>
-                            <li><a href="course-details.html">Detalhes do Curso 1</a></li>
-                            <li><a href="course-details-2.html">Detalhes do Curso 2</a></li>
+                            <li><a href="all-schools.html"><i class="fas fa-building"></i> Todas as Escolas</a></li>
+                            <li><a href="primary-schools.html"><i class="fas fa-graduation-cap"></i> Ensino Primário</a></li>
+                            <li><a href="secondary-schools.html"><i class="fas fa-graduation-cap"></i> Ensino Secundário</a></li>
+                            <li><a href="technical-schools.html"><i class="fas fa-tools"></i> Escolas Técnicas</a></li>
+                            <li><a href="language-schools.html"><i class="fas fa-language"></i> Escolas de Idiomas</a></li>
+                            <li><a href="art-schools.html"><i class="fas fa-palette"></i> Escolas de Arte</a></li>
+                            <li><a href="special-schools.html"><i class="fas fa-accessible-icon"></i> Educação Especial</a></li>
                         </ul>
                     </li>
+    
+                    <!-- Cursos -->
                     <li class="menu-item-has-children">
-                        <a href="blog.html">Blog</a>
+                        <a href="#"><i class="fas fa-chalkboard-teacher"></i> Cursos</a>
                         <ul class="sub-menu">
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="blog-details.html">Detalhes do Blog</a></li>
+                            <li><a href="course.html"><i class="fas fa-book"></i> Todos os Cursos</a></li>
+                            <li><a href="free-courses.html"><i class="fas fa-gift"></i> Cursos Gratuitos</a></li>
+                            <li><a href="languages.html"><i class="fas fa-language"></i> Idiomas</a></li>
+                            <li><a href="live-classes.html"><i class="fas fa-video"></i> Aulas ao Vivo</a></li>
+                            <li><a href="certifications.html"><i class="fas fa-certificate"></i> Certificações</a></li>
+                            <li><a href="simulations.html"><i class="fas fa-flask"></i> Simulados e Testes</a></li>
+                            <li><a href="virtual-labs.html"><i class="fas fa-laptop-code"></i> Laboratórios Virtuais</a></li>
                         </ul>
                     </li>
+    
+                    <!-- Centros de Formação -->
                     <li class="menu-item-has-children">
-                        <a href="index-5.html#">Páginas</a>
+                        <a href="#"><i class="fas fa-building"></i> Centros de Formação</a>
                         <ul class="sub-menu">
-                            <li><a href="team.html">Nossos Tutores</a></li>
-                            <li><a href="team-details.html">Detalhes do Tutor</a></li>
-                            <li><a href="become-tutor.html">Torne-se um Tutor</a></li>
-                            <li><a href="find-tutor.html">Encontre um Tutor</a></li>
-                            <li><a href="academic.html">Acadêmico</a></li>
-                            <li><a href="academic-program.html">Programa Acadêmico</a></li>
-                            <li><a href="program-details.html">Detalhes do Programa</a></li>
-                            <li><a href="find-program.html">Encontre um Programa</a></li>
-                            <li><a href="event-details.html">Detalhes do Evento</a></li>
-                            <li><a href="login-register.html">Entrar/Registrar</a></li>
-                            <li><a href="error.html">Página de Erro</a></li>
+                            <li><a href="training-centers.html"><i class="fas fa-cogs"></i> Nossos Centros</a></li>
+                            <li><a href="professional-training.html"><i class="fas fa-briefcase"></i> Formação Profissional</a></li>
+                            <li><a href="workshops.html"><i class="fas fa-cogs"></i> Workshops</a></li>
+                            <li><a href="internships.html"><i class="fas fa-users"></i> Estágios e Programas</a></li>
+                            <li><a href="certified-centers.html"><i class="fas fa-certificate"></i> Centros Certificados</a></li>
+                            <li><a href="partnerships.html"><i class="fas fa-handshake"></i> Parcerias Educacionais</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="contact.html">Contate-nos</a>
+    
+                    <!-- Desenvolvimento Profissional -->
+                    <li class="menu-item-has-children">
+                        <a href="#"><i class="fas fa-lightbulb"></i> Desenvolvimento</a>
+                        <ul class="sub-menu">
+                            <li><a href="career.html"><i class="fas fa-briefcase"></i> Carreira</a></li>
+                            <li><a href="soft-skills.html"><i class="fas fa-users"></i> Soft Skills</a></li>
+                            <li><a href="entrepreneurship.html"><i class="fas fa-chart-line"></i> Empreendedorismo</a></li>
+                            <li><a href="finance.html"><i class="fas fa-wallet"></i> Finanças Pessoais</a></li>
+                            <li><a href="design.html"><i class="fas fa-palette"></i> Criatividade e Design</a></li>
+                            <li><a href="mental-health.html"><i class="fas fa-heartbeat"></i> Saúde Mental</a></li>
+                        </ul>
                     </li>
+    
+                    <!-- Comunidade e Interação -->
+                    <li class="menu-item-has-children">
+                        <a href="#"><i class="fas fa-users"></i> Comunidade</a>
+                        <ul class="sub-menu">
+                            <li><a href="forum.html"><i class="fas fa-comments"></i> Fórum</a></li>
+                            <li><a href="mentorship.html"><i class="fas fa-chalkboard-teacher"></i> Mentoria</a></li>
+                            <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projetos</a></li>
+                            <li><a href="study-groups.html"><i class="fas fa-users"></i> Grupos de Estudo</a></li>
+                            <li><a href="hackathons.html"><i class="fas fa-hammer"></i> Hackathons</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- Recursos Acadêmicos -->
+                    <li class="menu-item-has-children">
+                        <a href="#"><i class="fas fa-book"></i> Recursos Acadêmicos</a>
+                        <ul class="sub-menu">
+                            <li><a href="library.html"><i class="fas fa-book"></i> Biblioteca</a></li>
+                            <li><a href="thesis-bank.html"><i class="fas fa-file-alt"></i> Banco de Teses</a></li>
+                            <li><a href="publications.html"><i class="fas fa-newspaper"></i> Publicações</a></li>
+                            <li><a href="tcc.html"><i class="fas fa-graduation-cap"></i> Ajuda com TCC</a></li>
+                            <li><a href="competence-map.html"><i class="fas fa-map-marker-alt"></i> Mapeamento de Competências</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- Suporte -->
+                    <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="help-center.html"><i class="fas fa-life-ring"></i> Central de Ajuda</a></li>
+                    <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contato</a></li>
+    
+                    <!-- Blog e Novidades -->
+                    <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                    <li><a href="news.html"><i class="fas fa-newspaper"></i> Notícias</a></li>
+    
+                    <!-- Entrar/Registrar -->
+                    <li><a href="login-register.html"><i class="fas fa-user"></i> Entrar/Registrar</a></li>
                 </ul>
             </div>
         </div>
     </div>
+    
+    
     
     <!--==============================
     Popup Search Box
@@ -128,77 +186,100 @@
                 <div class="container position-relative z-index-common">
                     <div class="row align-items-center justify-content-between gx-50">
                         <div class="col">
-                            <div class="vs-logo"> <a href="index.html"><img src="{% static 'assets/img/logo.svg' %}" alt="logo"></a> </div>
+                            <div class="vs-logo"> 
+                                <a href="index.html"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="logo"></a> 
+                            </div>
                         </div>
                         <div class="col-auto">
                             <nav class="main-menu menu-style1 d-none d-lg-block">
                                 <ul>
-                                    <li class="menu-item-has-children"> <a href="{% static 'index-5.html' %}">Início</a> </li>
-                                    <li> <a href="about.html">Sobre Nós</a> </li>
                                     <li class="menu-item-has-children">
-                                        <a href="course.html">Cursos</a>
+                                        <a href="#"><i class="fas fa-home"></i> Início</a>
                                         <ul class="sub-menu">
-                                            <li><a href="course.html">Cursos 1</a></li>
-                                            <li><a href="courses-2.html">Cursos 2</a></li>
-                                            <li><a href="course-details.html">Detalhes do Curso 1</a></li>
-                                            <li><a href="course-details-2.html">Detalhes do Curso 2</a></li>
+                                            <li><a href="{% url 'index' %}"><i class="fas fa-home"></i> Início1</a></li>
+                                            <li><a href="{% url 'home' %}"><i class="fas fa-home"></i> Início2</a></li>
                                         </ul>
                                     </li>
+                                    
+                                    <li><a href="about.html"><i class="fas fa-info-circle"></i></a></li>
+                                    
+                                    <!-- Escolas -->
                                     <li class="menu-item-has-children">
-                                        <a href="blog.html">Tutor</a>
+                                        <a href="#"><i class="fas fa-school"></i> </a>
                                         <ul class="sub-menu">
-                                            <li><a href="team.html">Nossos Tutores</a></li>
-                                            <li><a href="team-details.html">Detalhes do Tutor</a></li>
-                                            <li><a href="become-tutor.html">Torne-se um Tutor</a></li>
-                                            <li><a href="find-tutor.html">Encontre um Tutor</a></li>
+                                            <li><a href="all-schools.html">Todas as Escolas</a></li>
+                                            <li><a href="primary-schools.html">Ensino Primário</a></li>
+                                            <li><a href="secondary-schools.html">Ensino Secundário</a></li>
+                                            <li><a href="technical-schools.html">Escolas Técnicas</a></li>
+                                            <li><a href="language-schools.html">Escolas de Idiomas</a></li>
+                                            <li><a href="art-schools.html">Escolas de Arte</a></li>
+                                            <li><a href="special-schools.html">Educação Especial</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item-has-children mega-menu-wrap"> <a href="index-5.html#">Páginas</a>
-                                        <ul class="mega-menu">
-                                            <li><a href="index-5.html#">Lista de Páginas 1</a>
-                                                <ul>
-                                                    <li><a href="index.html">Estilo Demo 1</a></li>
-                                                    <li><a href="index-2.html">Estilo Demo 2</a></li>
-                                                    <li><a href="index-3.html">Estilo Demo 3</a></li>
-                                                    <li><a href="index-4.html">Estilo Demo 4</a></li>
-                                                    <li><a href="index-5.html">Estilo Demo 5</a></li>
-                                                    <li><a href="index-6.html">Estilo Demo 6</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="index-5.html#">Lista de Páginas 2</a>
-                                                <ul>
-                                                    <li><a href="course.html">Cursos 1</a></li>
-                                                    <li><a href="courses-2.html">Cursos 2</a></li>
-                                                    <li><a href="course-details.html">Detalhes do Curso 1</a></li>
-                                                    <li><a href="course-details-2.html">Detalhes do Curso 2</a></li>
-                                                    <li><a href="event-details.html">Detalhes do Evento</a></li>
-                                                    <li><a href="about.html">Sobre Nós</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="index-5.html#">Lista de Páginas 3</a>
-                                                <ul>
-                                                    <li><a href="academic.html">Acadêmico</a></li>
-                                                    <li><a href="academic-program.html">Programa Acadêmico</a></li>
-                                                    <li><a href="program-details.html">Detalhes do Programa</a></li>
-                                                    <li><a href="find-program.html">Encontre um Programa</a></li>
-                                                    <li><a href="login-register.html">Entrar/Registrar</a></li>
-                                                    <li><a href="error.html">Página de Erro</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="index-5.html#">Lista de Páginas 4</a>
-                                                <ul>
-                                                    <li><a href="team.html">Nossos Tutores</a></li>
-                                                    <li><a href="team-details.html">Detalhes do Tutor</a></li>
-                                                    <li><a href="become-tutor.html">Torne-se um Tutor</a></li>
-                                                    <li><a href="find-tutor.html">Encontre um Tutor</a></li>
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="blog-details.html">Detalhes do Blog</a></li>
-                                                    <li><a href="contact.html">Contate-nos</a></li>
-                                                </ul>
-                                            </li>
+    
+                                    <!-- Cursos e Aprendizado -->
+                                    <li class="menu-item-has-children">
+                                        <a href="#"><i class="fas fa-graduation-cap"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="course.html">Todos os Cursos</a></li>
+                                            <li><a href="free-courses.html">Cursos Gratuitos</a></li>
+                                            <li><a href="languages.html">Idiomas</a></li>
+                                            <li><a href="live-classes.html">Aulas ao Vivo</a></li>
+                                            <li><a href="certifications.html">Certificações</a></li>
+                                            <li><a href="simulations.html">Simulados e Testes</a></li>
+                                            <li><a href="virtual-labs.html">Laboratórios Virtuais</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="contact.html">Contate-nos</a></li>
+        
+                                    <!-- Mais Categorias -->
+                                    <li class="menu-item-has-children">
+                                        <a href="#"><i class="fas fa-th-list"></i> </a>
+                                        <ul class="sub-menu">
+                                            <li><a href="business-courses.html">Cursos de Negócios</a></li>
+                                            <li><a href="design-courses.html">Cursos de Design</a></li>
+                                            <li><a href="technology-courses.html">Cursos de Tecnologia</a></li>
+                                            <li><a href="health-courses.html">Cursos de Saúde</a></li>
+                                        </ul>
+                                    </li>
+        
+                                    <!-- Desenvolvimento Profissional -->
+                                    <li class="menu-item-has-children">
+                                        <a href="#"><i class="fas fa-briefcase"></i> </a>
+                                        <ul class="sub-menu">
+                                            <li><a href="career.html">Carreira</a></li>
+                                            <li><a href="soft-skills.html">Soft Skills</a></li>
+                                            <li><a href="entrepreneurship.html">Empreendedorismo</a></li>
+                                            <li><a href="finance.html">Finanças Pessoais</a></li>
+                                            <li><a href="design.html">Criatividade e Design</a></li>
+                                            <li><a href="mental-health.html">Saúde Mental</a></li>
+                                        </ul>
+                                    </li>
+        
+                                    <!-- Comunidade e Interação -->
+                                    <li class="menu-item-has-children">
+                                        <a href="#"><i class="fas fa-users"></i> </a>
+                                        <ul class="sub-menu">
+                                            <li><a href="forum.html">Fórum</a></li>
+                                            <li><a href="mentorship.html">Mentoria</a></li>
+                                            <li><a href="projects.html">Projetos</a></li>
+                                            <li><a href="study-groups.html">Grupos de Estudo</a></li>
+                                            <li><a href="hackathons.html">Hackathons</a></li>
+                                        </ul>
+                                    </li>
+        
+                                    <!-- Recursos e Pesquisas -->
+                                    <li class="menu-item-has-children">
+                                        <a href="#"><i class="fas fa-book"></i> </a>
+                                        <ul class="sub-menu">
+                                            <li><a href="library.html">Biblioteca</a></li>
+                                            <li><a href="thesis-bank.html">Banco de Teses</a></li>
+                                            <li><a href="publications.html">Publicações</a></li>
+                                            <li><a href="tcc.html">Ajuda com TCC</a></li>
+                                            <li><a href="competence-map.html">Mapeamento de Competências</a></li>
+                                        </ul>
+                                    </li>
+        
+                                    
                                 </ul>
                             </nav>
                             
@@ -207,7 +288,7 @@
                         <div class="col-auto d-none d-xl-block">
                             <div class="header-btns">
                                 <button type="button" class="searchBoxTggler"><i class="far fa-search"></i></button>
-                                <a href="{% url 'Cadastrar_normal' %}" class="vs-btn style6"><i class="fal fa-graduation-cap"></i>Encontrar Programa</a>
+                                <a href="{% url 'Cadastrar_normal' %}" class="vs-btn style6"><i class="fal fa-graduation-cap"></i> Encontrar Programa</a>
                             </div>
                         </div>
                     </div>
@@ -215,6 +296,7 @@
             </div>
         </div>
     </header>
+    
     <!--==============================
     Hero Area
     ==============================-->
@@ -277,75 +359,82 @@
                     </div>
                 </div>
             </div>
-            
+    
             <div class="row vs-carousel" data-slide-show="5" data-ml-slide-show="5" data-lg-slide-show="4" data-md-slide-show="3" data-sm-slide-show="2" data-xs-slide-show="1">
+                
+                <!-- Categoria: Escolas -->
                 <div class="col-auto">
                     <div class="category-item">
                         <div class="category-style3">
                             <div class="category-icon">
                                 <i class="far fa-lightbulb-on"></i>
                             </div>
-                            <h4 class="category-title"><a href="#">Escolas</a>
-                            </h4>
+                            <h4 class="category-title"><a href="#">Escolas</a></h4>
                             <p class="category-text">32 Escolas</p>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Categoria: Formadores -->
                 <div class="col-auto">
                     <div class="category-item">
                         <div class="category-style3">
                             <div class="category-icon">
                                 <i class="far fa-user-graduate"></i>
                             </div>
-                            <h4 class="category-title"><a href="#">Formadores</a>
-                            </h4>
-                            <p class="category-text">39 formadores</p>
+                            <h4 class="category-title"><a href="#">Formadores</a></h4>
+                            <p class="category-text">39 Formadores</p>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Categoria: Centros de Formação -->
                 <div class="col-auto">
                     <div class="category-item">
                         <div class="category-style3">
                             <div class="category-icon">
                                 <i class="far fa-school"></i>
                             </div>
-                            <h4 class="category-title"><a href="about.html">Centros de formacao</a>
-                            </h4>
-                            <p class="category-text">32 centros</p>
+                            <h4 class="category-title"><a href="#">Centros de Formação</a></h4>
+                            <p class="category-text">32 Centros</p>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Categoria: Cursos -->
                 <div class="col-auto">
                     <div class="category-item">
                         <div class="category-style3">
                             <div class="category-icon">
                                 <i class="far fa-laptop-code"></i>
                             </div>
-                            <h4 class="category-title"><a href="about.html">Cursos</a>
-                            </h4>
-                            <p class="category-text">32 cursos</p>
+                            <h4 class="category-title"><a href="#">Cursos</a></h4>
+                            <p class="category-text">32 Cursos</p>
                         </div>
                     </div>
                 </div>
                 
+                <!-- Categoria: Livros -->
                 <div class="col-auto">
                     <div class="category-item">
                         <div class="category-style3">
                             <div class="category-icon">
                                 <i class="fas fa-flask"></i>
                             </div>
-                            <h4 class="category-title"><a href="about.html">Livros</a>
-                            </h4>
-                            <p class="category-text">32 livros</p>
+                            <h4 class="category-title"><a href="#">Livros</a></h4>
+                            <p class="category-text">32 Livros</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    
+        <!-- Mockup Image -->
         <div class="shape-mockup jump d-none d-xxxl-block" style="top: 10%; right: 10%;">
             <img src="{% static 'assets/img/category/categori-shep1.png' %}" alt="shep">
         </div>
     </section>
+    
     <!--==============================
     About Area
     ==============================-->
@@ -388,7 +477,7 @@
     <!--==============================
     CTA Area
     ==============================-->
-    <section class="space-top cta-layout1 space-bottom" data-bg-src="{% static 'assets/img/6070859.jpg' %}">
+    <section class="space-top cta-layout1 space-bottom" data-bg-src="{% static 'assets/img/67278.jpg' %}">
         <div class="container">
             <div class="cta-style2">
                 <div class="row g-5 align-items-center">
@@ -728,12 +817,12 @@
     <div class="space-extra">
         <div class="container text-center">
             <div class="row vs-carousel wow fadeInUp" data-wow-delay="0.4s" data-slide-show="5" data-lg-slide-show="4" data-md-slide-show="3" data-sm-slide-show="2" data-xs-slide-show="2">
-                <div class="col-auto"><img src="{% static 'assets/img/brand/brand-2-1.png' %}" alt="brand"></div>
-                <div class="col-auto"><img src="{% static 'assets/img/brand/brand-2-2.png' %}" alt="brand"></div>
-                <div class="col-auto"><img src="{% static 'assets/img/brand/brand-2-3.png' %}" alt="brand"></div>
-                <div class="col-auto"><img src="{% static 'assets/img/brand/brand-2-4.png' %}" alt="brand"></div>
-                <div class="col-auto"><img src="{% static 'assets/img/brand/brand-2-5.png' %}" alt="brand"></div>
-                <div class="col-auto"><img src="{% static 'assets/img/brand/brand-2-1.png' %}" alt="brand"></div>
+                <div class="col-auto"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="brand"></div>
+                <div class="col-auto"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="brand"></div>
+                <div class="col-auto"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="brand"></div>
+                <div class="col-auto"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="brand"></div>
+                <div class="col-auto"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="brand"></div>
+                <div class="col-auto"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="brand"></div>
             </div>
         </div>
     </div>
@@ -748,11 +837,11 @@
                         <div class="widget footer-widget">
                             <div class="vs-widget-about">
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="{% static 'assets/img/logo-white.svg' %}" alt="logo"></a>
+                                    <a href="{% url 'home' %}"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="logo"></a>
                                 </div>
                                 <p class="footer-text">Lorem ipsum dolor sit amet, consectet rem ips dolor sit amet. Sum dolor sit amet, consectet e dolor sit amet, comod.</p>
-                                <p class="footer-info"><i class="fal fa-phone-alt"></i><a class="text-inherit" href="tel:++11234562228">(00) 123 456 789</a></p>
-                                <p class="footer-info"><i class="fal fa-envelope"></i><a class="text-inherit" href="mailto:info@example.com">hello@domainname.com</a></p>
+                                <p class="footer-info"><i class="fal fa-phone-alt"></i><a class="text-inherit" href="tel:++11234562228">+244 923908353</a></p>
+                                <p class="footer-info"><i class="fal fa-envelope"></i><a class="text-inherit" href="mailto:info@example.com">Educangola@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
@@ -789,16 +878,16 @@
                             <h3 class="widget_title">Cursos Recentes</h3>
                             <div class="recent-post-wrap">
                                 <div class="recent-course">
-                                    <div class="media-img"><a href="course-details.html"><img src="{% static 'assets/img/course/recent-course-2-1.jpg' %}" alt="Imagem do Blog"></a></div>
+                                    <div class="media-img"><a href="course-details.html"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="Imagem do Blog"></a></div>
                                     <div class="media-body">
-                                        <div class="recent-course-meta"><a href="team-details.html">Por alax dongle</a></div>
+                                        <div class="recent-course-meta"><a href="team-details.html">Theresa Chruz</a></div>
                                         <h4 class="post-title"><a class="text-inherit" href="course-details.html">Teoria de Codificação Web e Fundamentos do Apache</a></h4>
                                     </div>
                                 </div>
                                 <div class="recent-course">
-                                    <div class="media-img"><a href="course-details.html"><img src="{% static 'assets/img/course/recent-course-2-2.jpg' %}" alt="Imagem do Blog"></a></div>
+                                    <div class="media-img"><a href="course-details.html"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="Imagem do Blog"></a></div>
                                     <div class="media-body">
-                                        <div class="recent-course-meta"><a href="team-details.html">Por jon smith</a></div>
+                                        <div class="recent-course-meta"><a href="team-details.html">Rossana Costa</a></div>
                                         <h4 class="post-title"><a class="text-inherit" href="course-details.html">O que Tadit Soul pode nos ensinar sobre Web Docan</a></h4>
                                     </div>
                                 </div>

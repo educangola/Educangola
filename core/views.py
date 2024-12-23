@@ -9,3 +9,9 @@ def Erro(request, exception):
     except Exception as e:
         print(f"Erro ao renderizar o template: {e}")
         return render(request, 'default_error.html', status=500)
+
+
+#-------------------Area administrativa--------------------------
+
+def admin(request):
+    return render(request, 'admin.html')
