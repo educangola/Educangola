@@ -1,0 +1,342 @@
+{% load static %}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<div class="container container--xl">
+    <nav class="header-inner flex-between gap-8">
+
+        <div class="header-content-wrapper flex-align flex-grow-1">
+            <!-- Logo Start -->
+            <div class="logo">
+                <a href="{% url 'home_cursos' %}" class="link">
+                    <img src="{% static 'assets/img/Artboard 1.png' %}" alt="Logo">
+                </a>
+            </div>
+            <!-- Logo End  -->
+
+            <!-- Select Start -->
+            <div class="d-sm-block d-none">
+                <div class="header-select border border-neutral-30 bg-main-25 rounded-pill position-relative">
+                    <span class="select-icon position-absolute top-50 translate-middle-y inset-inline-start-0 z-1 ms-lg-4 ms-12 text-xl pointer-event-none d-flex">
+                        <i class="ph-bold ph-squares-four"></i>
+                    </span>
+                    <select class="js-example-basic-single border-0" name="state">
+                        <option value="1" selected disabled>Categorias</option>
+                        <option value="1">Design</option>
+                        <option value="1">Desenvolvimento</option>
+                        <option value="1">Arquitetura</option>
+                        <option value="1">Estilo de Vida</option>
+                        <option value="1">Ciência de Dados</option>
+                        <option value="1">Marketing</option>
+                        <option value="1">Música</option>
+                        <option value="1">Tipografia</option>
+                        <option value="1">Finanças</option>
+                        <option value="1">Motivação</option>
+                    </select>
+                    
+                </div>
+            </div>
+            <!-- Select End -->
+
+            <!-- Menu Start  -->
+            <div class="header-menu d-lg-block d-none">
+                
+                <ul class="nav-menu flex-align">
+                    <li class="nav-menu__item has-submenu activePage">
+                        <a href="javascript:void(0)" class="nav-menu__link">
+                            <i class="fas fa-home"></i> Início
+                        </a>
+                        <ul class="nav-submenu scroll-sm">
+                            <li class="nav-submenu__item">
+                                <a href="{% url 'index' %}" class="nav-submenu__link hover-bg-neutral-30">
+                                    <i class="fas fa-home"></i> Home
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="#" class="nav-submenu__link hover-bg-neutral-30">
+                                    <i class="fas fa-school"></i> Escolas
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="#" class="nav-submenu__link hover-bg-neutral-30">
+                                    <i class="fas fa-university"></i> Universidades
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="#" class="nav-submenu__link hover-bg-neutral-30">
+                                    <i class="fas fa-chalkboard-teacher"></i> Centros de Formação
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="#" class="nav-submenu__link hover-bg-neutral-30">
+                                    <i class="fas fa-tools"></i> Institutos Técnicos
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="#" class="nav-submenu__link hover-bg-neutral-30">
+                                    <i class="fas fa-graduation-cap"></i> Academias
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="#" class="nav-submenu__link hover-bg-neutral-30">
+                                    <i class="fas fa-book-open"></i> Biblioteca
+                                </a>
+                            </li>
+                        </ul>   
+                    </li>
+                    
+                    <li class="nav-menu__item has-submenu">
+                        <a href="javascript:void(0)" class="nav-menu__link">
+                            <i class="fas fa-school"></i>
+                        </a>
+                        <ul class="nav-submenu scroll-sm">
+                            <li class="nav-submenu__item">
+                                <a href="primario.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Ensino Primário
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="secundario.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Ensino Secundário
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="tecnicas.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Escolas Técnicas
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="idiomas.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Escolas de Idiomas
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="arte.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Escolas de Arte
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="especial.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Educação Especial
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-menu__item has-submenu">
+                        <a href="javascript:void(0)" class="nav-menu__link">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                        <ul class="nav-submenu scroll-sm">
+                            <li class="nav-submenu__item">
+                                <a href="{% url 'Todos_cursos' %}" class="nav-submenu__link hover-bg-neutral-30">
+                                    Todos os Cursos
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="cursos-gratuitos.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Cursos Gratuitos
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="idiomas.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Idiomas
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="aulas-ao-vivo.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Aulas ao Vivo
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="certificacoes.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Certificações
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="simulados.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Simulados e Testes
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="laboratorios.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Laboratórios Virtuais
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="mais-categorias.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Mais Categorias
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="negocios.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Cursos de Negócios
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="design.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Cursos de Design
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="tecnologia.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Cursos de Tecnologia
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="saude.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Cursos de Saúde
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="desenvolvimento.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Desenvolvimento Profissional
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-menu__item has-submenu">
+                        <a href="javascript:void(0)" class="nav-menu__link">
+                            <i class="fas fa-briefcase"></i>
+                        </a>
+                        <ul class="nav-submenu scroll-sm">
+                            <li class="nav-submenu__item">
+                                <a href="soft-skills.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Soft Skills
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="empreendedorismo.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Empreendedorismo
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="financas-pessoais.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Finanças Pessoais
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="criatividade-design.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Criatividade e Design
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="saude-mental.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Saúde Mental
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="comunidade.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Comunidade e Interação
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-menu__item has-submenu">
+                        <a href="javascript:void(0)" class="nav-menu__link">
+                            <i class="fas fa-users"></i>
+                        </a>
+                        <ul class="nav-submenu scroll-sm">
+                            <li class="nav-submenu__item">
+                                <a href="mentoria.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Mentoria
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="projetos.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Projetos
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="grupos-estudo.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Grupos de Estudo
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="hackathons.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Hackathons
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-menu__item has-submenu">
+                        <a href="javascript:void(0)" class="nav-menu__link">
+                            <i class="fas fa-book"></i>
+                        </a>
+                        <ul class="nav-submenu scroll-sm">
+                            <li class="nav-submenu__item">
+                                <a href="biblioteca.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Biblioteca
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="banco-teses.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Banco de Teses
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="publicacoes.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Publicações
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="ajuda-tcc.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Ajuda com TCC
+                                </a>
+                            </li>
+                            <li class="nav-submenu__item">
+                                <a href="mapeamento-competencias.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    Mapeamento de Competências
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-menu__item">
+                        <a href="contact.html" class="nav-menu__link">
+                            <i class="fas fa-envelope"></i> Contactar
+                        </a>
+                    </li>
+                    
+                    <li class="nav-menu__item">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fas fa-globe"></i> <!-- Ícone de globo -->
+                            <select class="form-select form-select-sm" aria-label="Escolher idioma" onchange="location = this.value;">
+                                <option value="pt" selected>
+                                    <span class="flag-icon flag-icon-pt" style="font-size: 18px;"></span> Português
+                                </option>
+                                <option value="en">
+                                    <span class="flag-icon flag-icon-us" style="font-size: 18px;"></span> Inglês
+                                </option>
+                                <option value="umb">
+                                    <span class="flag-icon flag-icon-ao" style="font-size: 18px;"></span> Umbundo
+                                </option>
+                                <option value="kng">
+                                    <span class="flag-icon flag-icon-ao" style="font-size: 18px;"></span> Kicongo
+                                </option>
+                            </select>
+                        </div>
+                    </li>
+                       
+                </ul>
+                
+            </div>
+            <!-- Menu End  -->
+        </div>
+
+        <!-- Header Right start -->
+        <div class="header-right flex-align">
+            <form action="index.html#" class="search-form position-relative d-xl-block d-none">
+                <input type="text" class="common-input rounded-pill bg-main-25 pe-48 border-neutral-30" placeholder="Search...">
+                <button type="submit" class="w-36 h-36 bg-main-600 hover-bg-main-700 rounded-circle flex-center text-md text-white position-absolute top-50 translate-middle-y inset-inline-end-0 me-8">
+                    <i class="ph-bold ph-magnifying-glass"></i>
+                </button>
+            </form>
+            <a href="{% url 'Login_normal' %}" class="info-action w-52 h-52 bg-main-25 hover-bg-main-600 border border-neutral-30 rounded-circle flex-center text-2xl text-neutral-500 hover-text-white hover-border-main-600">
+                <i class="ph ph-user-circle"></i>
+            </a>
+            <button type="button" class="toggle-mobileMenu d-lg-none text-neutral-200 flex-center">
+                <i class="ph ph-list"></i> 
+            </button>
+        </div>
+        <!-- Header Right End  -->
+    </nav>
+</div>

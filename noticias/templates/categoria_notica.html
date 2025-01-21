@@ -1,0 +1,1079 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Educa_Angola | A Plataforma de Ensino Online de Angola</title>
+    <meta name="author" content="Vecuro">
+    <meta name="description" content="Educino - Online Courses and Education HTML Template">
+    <meta name="keywords" content="academic, artist, center, club, coach, college, drive, driving, education, entertainment, gambling, golf, jackpot, knowledge, money, multipurpose, music, song, student">
+    <meta name="robots" content="INDEX,FOLLOW">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicons - Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" href="{% static 'assets/img/Screenshot_20241221-130247-removebg-preview.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'assets/img/Screenshot_20241221-130247-removebg-preview.png' %}" type="image/x-icon">
+
+    <!--==============================
+	  Google Fonts
+	============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <!--==============================
+	    All CSS File
+	============================== -->
+    <!-- Bootstrap -->
+<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+<!-- <link rel="stylesheet" href="{% static 'assets/css/app.min.css' %}"> -->
+<!-- Fontawesome Icon -->
+<link rel="stylesheet" href="{% static 'assets/css/fontawesome.min.css' %}">
+<!-- Magnific Popup -->
+<link rel="stylesheet" href="{% static 'assets/css/magnific-popup.min.css' %}">
+<!-- Slick Slider -->
+<link rel="stylesheet" href="{% static 'assets/css/slick.min.css' %}">
+<!-- Theme Custom CSS -->
+<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+</head>
+
+
+<body>
+
+    <div class="preloader">
+        <button class="vs-btn preloaderCls">Cancelar</button>
+        <div class="preloader-inner">
+            <div class="loader"></div>
+        </div>
+    </div>
+    <!--==============================
+    Mobile Menu
+    ============================== -->
+    <div class="vs-menu-wrapper">
+        <div class="vs-menu-area text-center">
+            <button class="vs-menu-toggle"><i class="fal fa-times"></i></button>
+            <div class="mobile-logo">
+                <a href="index.html">
+                    <img style="width: 150px;" src="{% static 'assets/img/Artboard 1.png' %}" alt="Educino">
+                </a>
+            </div>
+            <div class="vs-mobile-menu">
+                <ul>
+                    <!-- Início -->
+                    <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+    
+                    <!-- Sobre Nós -->
+                    <li><a href="about.html"><i class="fas fa-users"></i> Sobre Nós</a></li>
+    
+                    <!-- Escolas -->
+                    <li class="menu-item-has-children">
+                        <a href="#"><i class="fas fa-school"></i> Escolas</a>
+                        <ul class="sub-menu">
+                            <li><a href="all-schools.html"><i class="fas fa-building"></i> Todas as Escolas</a></li>
+                            <li><a href="primary-schools.html"><i class="fas fa-graduation-cap"></i> Ensino Primário</a></li>
+                            <li><a href="secondary-schools.html"><i class="fas fa-graduation-cap"></i> Ensino Secundário</a></li>
+                            <li><a href="technical-schools.html"><i class="fas fa-tools"></i> Escolas Técnicas</a></li>
+                            <li><a href="language-schools.html"><i class="fas fa-language"></i> Escolas de Idiomas</a></li>
+                            <li><a href="art-schools.html"><i class="fas fa-palette"></i> Escolas de Arte</a></li>
+                            
+                        </ul>
+                    </li>
+    
+                    <!-- Cursos -->
+                    <li class="menu-item-has-children">
+                        <a href="#"><i class="fas fa-chalkboard-teacher"></i> Cursos</a>
+                        <ul class="sub-menu">
+                            <li><a href="course.html"><i class="fas fa-book"></i> Todos os Cursos</a></li>
+                            <li><a href="free-courses.html"><i class="fas fa-gift"></i> Cursos Gratuitos</a></li>
+                            <li><a href="languages.html"><i class="fas fa-language"></i> Idiomas</a></li>
+                            <li><a href="live-classes.html"><i class="fas fa-video"></i> Aulas ao Vivo</a></li>
+                            <li><a href="certifications.html"><i class="fas fa-certificate"></i> Certificações</a></li>
+                            <li><a href="simulations.html"><i class="fas fa-flask"></i> Simulados e Testes</a></li>
+                            <li><a href="virtual-labs.html"><i class="fas fa-laptop-code"></i> Laboratórios Virtuais</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- Centros de Formação -->
+                    <li class="menu-item-has-children">
+                        <a href="#"><i class="fas fa-building"></i> Centros de Formação</a>
+                        <ul class="sub-menu">
+                            <li><a href="training-centers.html"><i class="fas fa-cogs"></i> Nossos Centros</a></li>
+                            <li><a href="professional-training.html"><i class="fas fa-briefcase"></i> Formação Profissional</a></li>
+                            <li><a href="workshops.html"><i class="fas fa-cogs"></i> Workshops</a></li>
+                            <li><a href="internships.html"><i class="fas fa-users"></i> Estágios e Programas</a></li>
+                            <li><a href="certified-centers.html"><i class="fas fa-certificate"></i> Centros Certificados</a></li>
+                            <li><a href="partnerships.html"><i class="fas fa-handshake"></i> Parcerias Educacionais</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- Desenvolvimento Profissional -->
+                    <li class="menu-item-has-children">
+                        <a href="#"><i class="fas fa-lightbulb"></i> Desenvolvimento</a>
+                        <ul class="sub-menu">
+                            <li><a href="career.html"><i class="fas fa-briefcase"></i> Carreira</a></li>
+                            <li><a href="soft-skills.html"><i class="fas fa-users"></i> Soft Skills</a></li>
+                            <li><a href="entrepreneurship.html"><i class="fas fa-chart-line"></i> Empreendedorismo</a></li>
+                            <li><a href="finance.html"><i class="fas fa-wallet"></i> Finanças Pessoais</a></li>
+                            <li><a href="design.html"><i class="fas fa-palette"></i> Criatividade e Design</a></li>
+                            <li><a href="mental-health.html"><i class="fas fa-heartbeat"></i> Saúde Mental</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- Comunidade e Interação -->
+                    <li class="menu-item-has-children">
+                        <a href="#"><i class="fas fa-users"></i> Comunidade</a>
+                        <ul class="sub-menu">
+                            <li><a href="forum.html"><i class="fas fa-comments"></i> Fórum</a></li>
+                            <li><a href="mentorship.html"><i class="fas fa-chalkboard-teacher"></i> Mentoria</a></li>
+                            <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projetos</a></li>
+                            <li><a href="study-groups.html"><i class="fas fa-users"></i> Grupos de Estudo</a></li>
+                            <li><a href="hackathons.html"><i class="fas fa-hammer"></i> Hackathons</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- Recursos Acadêmicos -->
+                    <li class="menu-item-has-children">
+                        <a href="#"><i class="fas fa-book"></i> Recursos Acadêmicos</a>
+                        <ul class="sub-menu">
+                            <li><a href="library.html"><i class="fas fa-book"></i> Biblioteca</a></li>
+                            <li><a href="thesis-bank.html"><i class="fas fa-file-alt"></i> Banco de Teses</a></li>
+                            <li><a href="publications.html"><i class="fas fa-newspaper"></i> Publicações</a></li>
+                            <li><a href="tcc.html"><i class="fas fa-graduation-cap"></i> Ajuda com TCC</a></li>
+                            <li><a href="competence-map.html"><i class="fas fa-map-marker-alt"></i> Mapeamento de Competências</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- Suporte -->
+                    <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="help-center.html"><i class="fas fa-life-ring"></i> Central de Ajuda</a></li>
+                    <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contato</a></li>
+    
+                    <!-- Blog e Novidades -->
+                    <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                    <li><a href="news.html"><i class="fas fa-newspaper"></i> Notícias</a></li>
+    
+                    <!-- Entrar/Registrar -->
+                    <li><a href="login-register.html"><i class="fas fa-user"></i> Entrar/Registrar</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <!--==============================
+    Popup Search Box
+    ============================== -->
+    <div class="popup-search-box d-none d-lg-block  ">
+        <button class="searchClose"><i class="fal fa-times"></i></button>
+        <form action="{% static 'index' %}">
+            <input type="text" class="border-theme" placeholder="Pesquisar">
+            <button type="submit"><i class="fal fa-search"></i></button>
+        </form>
+    </div>
+    <!--==============================
+    Header Area
+    ==============================-->
+    <header class="vs-header header-layout3">
+        <div class="sticky-wrapper">
+            <div class="sticky-active">
+                <div class="container position-relative z-index-common">
+                    <div class="row align-items-center justify-content-between gx-50">
+                        <div class="col">
+                            <div class="vs-logo"> 
+                                <a href="index.html"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="logo"></a> 
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <nav class="main-menu menu-style1 d-none d-lg-block">
+                                <ul>
+                                    <li class="menu-item-has-children">
+                                        <a href="#"><i class="fas fa-home"></i> Início</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'index' %}"><i class="fas fa-home"></i> Início1</a></li>
+                                            <li><a href="{% url 'home' %}"><i class="fas fa-home"></i> Início2</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><a href="about.html"><i class="fas fa-info-circle"></i></a></li>
+                                    
+                                    <!-- Escolas -->
+                                    <li class="menu-item-has-children">
+                                        <a href="#"><i class="fas fa-school"></i> </a>
+                                        <ul class="sub-menu">
+                                            <li><a href="all-schools.html">Todas as Escolas</a></li>
+                                            <li><a href="primary-schools.html">Ensino Primário</a></li>
+                                            <li><a href="secondary-schools.html">Ensino Secundário</a></li>
+                                            <li><a href="technical-schools.html">Escolas Técnicas</a></li>
+                                            <li><a href="language-schools.html">Escolas de Idiomas</a></li>
+                                            <li><a href="art-schools.html">Escolas de Arte</a></li>
+                                            <li><a href="special-schools.html">Educação Especial</a></li>
+                                        </ul>
+                                    </li>
+    
+                                    <!-- Cursos e Aprendizado -->
+                                    <li class="menu-item-has-children">
+                                        <a href="#"><i class="fas fa-graduation-cap"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="course.html">Todos os Cursos</a></li>
+                                            <li><a href="free-courses.html">Cursos Gratuitos</a></li>
+                                            <li><a href="languages.html">Idiomas</a></li>
+                                            <li><a href="live-classes.html">Aulas ao Vivo</a></li>
+                                            <li><a href="certifications.html">Certificações</a></li>
+                                            <li><a href="simulations.html">Simulados e Testes</a></li>
+                                            <li><a href="virtual-labs.html">Laboratórios Virtuais</a></li>
+                                        </ul>
+                                    </li>
+        
+                                    <!-- Mais Categorias -->
+                                    <li class="menu-item-has-children">
+                                        <a href="#"><i class="fas fa-th-list"></i> </a>
+                                        <ul class="sub-menu">
+                                            <li><a href="business-courses.html">Cursos de Negócios</a></li>
+                                            <li><a href="design-courses.html">Cursos de Design</a></li>
+                                            <li><a href="technology-courses.html">Cursos de Tecnologia</a></li>
+                                            <li><a href="health-courses.html">Cursos de Saúde</a></li>
+                                        </ul>
+                                    </li>
+        
+                                    <!-- Desenvolvimento Profissional -->
+                                    <li class="menu-item-has-children">
+                                        <a href="#"><i class="fas fa-briefcase"></i> </a>
+                                        <ul class="sub-menu">
+                                            <li><a href="career.html">Carreira</a></li>
+                                            <li><a href="soft-skills.html">Soft Skills</a></li>
+                                            <li><a href="entrepreneurship.html">Empreendedorismo</a></li>
+                                            <li><a href="finance.html">Finanças Pessoais</a></li>
+                                            <li><a href="design.html">Criatividade e Design</a></li>
+                                            <li><a href="mental-health.html">Saúde Mental</a></li>
+                                        </ul>
+                                    </li>
+        
+                                    <!-- Comunidade e Interação -->
+                                    <li class="menu-item-has-children">
+                                        <a href="#"><i class="fas fa-users"></i> </a>
+                                        <ul class="sub-menu">
+                                            <li><a href="forum.html">Fórum</a></li>
+                                            <li><a href="mentorship.html">Mentoria</a></li>
+                                            <li><a href="projects.html">Projetos</a></li>
+                                            <li><a href="study-groups.html">Grupos de Estudo</a></li>
+                                            <li><a href="hackathons.html">Hackathons</a></li>
+                                        </ul>
+                                    </li>
+        
+                                    <!-- Recursos e Pesquisas -->
+                                    <li class="menu-item-has-children">
+                                        <a href="#"><i class="fas fa-book"></i> </a>
+                                        <ul class="sub-menu">
+                                            <li><a href="library.html">Biblioteca</a></li>
+                                            <li><a href="thesis-bank.html">Banco de Teses</a></li>
+                                            <li><a href="publications.html">Publicações</a></li>
+                                            <li><a href="tcc.html">Ajuda com TCC</a></li>
+                                            <li><a href="competence-map.html">Mapeamento de Competências</a></li>
+                                        </ul>
+                                    </li>
+        
+                                    
+                                </ul>
+                            </nav>
+                            
+                            <button class="vs-menu-toggle d-inline-block d-lg-none"><i class="fal fa-bars"></i></button>
+                        </div>
+                        <div class="col-auto d-none d-xl-block">
+                            <div class="header-btns">
+                                <button type="button" class="searchBoxTggler"><i class="far fa-search"></i></button>
+                                <a href="{% url 'Cadastrar_normal' %}" class="vs-btn style6"><i class="fal fa-graduation-cap"></i> Encontrar Programa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+    
+    <!--==============================
+    Hero Area
+    ==============================-->
+    <section class="hero-layout2 style5" data-bg-src="{% static 'assets/img/4873411.jpg' %}">
+        <div class="container-style2">
+            <div class="row gy-5 gx-50 align-items-center">
+                <div class="col-lg-6 col-xl-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="hero-content">
+                        <span class="sec-subtitle"><i class="fas fa-book-open"></i>100% Ensino Online</span>
+                        <h1 class="hero-title animated">Plataforma <span>Online</span> de Educação</h1>
+                        <p class="hero-text animated">Ofereça cursos online e conecte-se com escolas e estudantes de toda Angola de forma simples e eficiente.</p>
+                        <div class="form-group">
+                            <div class="form-inner">
+                                <form action="{% url 'index' %}" class="">
+                                    <input type="text" placeholder="Curso, Escolas, Disciplina...">
+                                    <button class="vs-btn">Pesquisar</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="hero-bottom">
+                            <div class="brands">
+                                <div class="col-auto"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="marca"></div>
+                            </div>
+                            <div class="course-instructor">
+                                <ul class="instructor-list">
+                                    <li><img src="{% static 'assets/img/IMG-20241124-WA0029-removebg-preview.png' %}" alt="instrutor"></li>
+                                    <li><img src="{% static 'assets/img/IMG-20241124-WA0029-removebg-preview.png' %}" alt="instrutor"></li>
+                                    <li><img src="{% static 'assets/img/IMG-20241124-WA0029-removebg-preview.png' %}" alt="instrutor"></li>
+                                    <li><i class="fas fa-plus"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-xl-6 wow fadeInUp align-self-end" data-wow-delay="0.5s">
+                    <div class="picture-box4">
+                        <div class="shape-mockup jump d-none d-xxxl-block" style="top: 10%; left: 30%;">
+                            <img src="{% static 'assets/img/shape/hero-shep1.png' %}" alt="shep">
+                        </div>
+                        <div class="img-1"><img src="{% static 'assets/img/about/about-5-1.png' %}" alt="girl"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shape-mockup jump-img d-none d-xxl-block" style="bottom: 10%; left: 8%;">
+            <img src="{% static 'assets/img/shape/about-shep2.png' %}" alt="shep">
+        </div>
+    </section>
+    <!--==============================
+    Category Area
+    ==============================-->
+
+    <section class="about-layout1 space-top space-bottom">
+        <div class="container">
+            <div class="row align-items-center align-items-xxl-start">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="picture-box2">
+                        <div class="picture-1 mega-hover"><img src="{% static 'assets/img/about/about-4-2.png' %}" alt="About Img"></div>
+                        <div class="picture-2 mega-hover"><img src="{% static 'assets/img/about/about-4-1.png' %}" alt="About Img"></div>
+                        <div class="picture-3 mega-hover"><img src="{% static 'assets/img/about/about-4-3.png' %}" alt="About Img"></div>
+                        <div class="vs-circle"></div>
+                    </div>
+                    <div class="shape-mockup jump d-none d-xxxl-block" style="top: 10%; right: 0%;">
+                        <img src="{% static 'assets/img/shape/about-shep2.png' %}" alt="shep">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="about-box2">
+                        <div class="title-area3">
+                            <span class="sec-subtitle">BEM-VINDO AO EDUCAÇÃO</span>
+                            <h2 class="about-title h1">Aulas de Tutoria Online <span>no próximo nível</span></h2>
+                        </div>
+                        <div class="about-content style2">
+                            <p class="fs-md">A Educangola tem o compromisso de transformar a educação em Angola, oferecendo uma plataforma inovadora de ensino online. Nosso objetivo é proporcionar uma educação de qualidade, acessível a todos, independentemente da localização. Acreditamos que a educação é a chave para o desenvolvimento pessoal e profissional, capacitando os estudantes com o conhecimento e as habilidades necessárias para alcançar seus sonhos e contribuir para o crescimento da sociedade.</p>
+
+                
+                            <div class="media-inner">
+                                <div class="call-media">
+                                    <div class="media-icon"><i class="fas fa-phone-alt"></i></div>
+                                    <div class="media-body">
+                                        <span class="media-label">suporte</span>
+                                        <p class="media-info"><a href="tel:+26921562148" class="text-inherit">+244 923908353</a></p>
+                                    </div>
+                                </div>
+                                <div class="list-style1 vs-list">
+                                    <ul>
+                                        <li>Confiado pelos Estudantes</li>
+                                        <li>Instrutor Especializado</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="about.html" class="vs-btn style8 mt-2"><i class="far fa-angle-right"></i>Obter Mais Informações</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="shape-mockup jump-img d-none d-xxl-block" style="bottom: 10%; left: 8%;">
+            <img src="{% static 'assets/img/shape/about-shep1.png' %}" alt="shep">
+        </div>
+        <div class="shape-mockup jump d-none d-xxxl-block" style="top: 10%; right: 16%;">
+            <img src="{% static 'assets/img/shape/about-shep3.png' %}" alt="shep">
+        </div>
+    </section>
+
+
+    <section class="space position-relative">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-9 col-lg-8 col-xl-7">
+                    <div class="title-area3 text-center wow fadeInUp" data-wow-delay="0.3s">
+                        <span class="sec-subtitle style1">Nossas Principais Categorias</span>
+                        <h2 class="sec-title">Explore e Aprenda as Habilidades que Você Precisa</h2>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row vs-carousel" data-slide-show="5" data-ml-slide-show="5" data-lg-slide-show="4" data-md-slide-show="3" data-sm-slide-show="2" data-xs-slide-show="1">
+                
+                <!-- Categoria: Escolas -->
+                <div class="col-auto">
+                    <div class="category-item">
+                        <div class="category-style3">
+                            <div class="category-icon">
+                                <i class="far fa-lightbulb-on"></i>
+                            </div>
+                            <h4 class="category-title"><a href="#">Escolas</a></h4>
+                            <p class="category-text">32 Escolas</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Categoria: Formadores -->
+                <div class="col-auto">
+                    <div class="category-item">
+                        <div class="category-style3">
+                            <div class="category-icon">
+                                <i class="far fa-user-graduate"></i>
+                            </div>
+                            <h4 class="category-title"><a href="#">Formadores</a></h4>
+                            <p class="category-text">39 Formadores</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Categoria: Centros de Formação -->
+                <div class="col-auto">
+                    <div class="category-item">
+                        <div class="category-style3">
+                            <div class="category-icon">
+                                <i class="far fa-school"></i>
+                            </div>
+                            <h4 class="category-title"><a href="#">Centros de Formação</a></h4>
+                            <p class="category-text">32 Centros</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Categoria: Cursos -->
+                <div class="col-auto">
+                    <div class="category-item">
+                        <div class="category-style3">
+                            <div class="category-icon">
+                                <i class="far fa-laptop-code"></i>
+                            </div>
+                            <h4 class="category-title"><a href="#">Cursos</a></h4>
+                            <p class="category-text">32 Cursos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Categoria: Livros -->
+                <div class="col-auto">
+                    <div class="category-item">
+                        <div class="category-style3">
+                            <div class="category-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h4 class="category-title"><a href="#">Livros</a></h4>
+                            <p class="category-text">32 Livros</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mockup Image -->
+        <div class="shape-mockup jump d-none d-xxxl-block" style="top: 10%; right: 10%;">
+            <img src="{% static 'assets/img/category/categori-shep1.png' %}" alt="shep">
+        </div>
+    </section>
+
+
+    <section class="blog-layout2 space" data-bg-src="{% static 'assets/img/bg/team-bg2.jpg' %}">
+        <div class="container">
+            <div class="title-area3 text-center">
+                <span class="sec-subtitle style1">BLOG E ATUALIZAÇÕES</span>
+                <h2 class="sec-title h1">Notícias e Artigos</h2>
+            </div>
+            <div class="row vs-carousel" data-slide-show="2" data-md-slide-show="2">
+                <div class="col-lg-6">
+                    <div class="vs-blog blog-style1">
+                        <div class="blog-img">
+                            <img class="w-100" src="{% static 'assets/img/blog/blog-1-1.jpg' %}" alt="Imagem do Blog">
+                        </div>
+                        <div class="blog-content">
+                            <div class="date-box">
+                                <span class="day">12</span>
+                                <span class="post-comment">maio 2024</span>
+                            </div>
+                            <h4 class="blog-title"><a href="blog-details.html">Reunião de Outono sobre Educação Global</a></h4>
+                            <p class="blog-text">Ducamb deu as boas-vindas a toda dor evitada, mas cer mstnces devido às reivindicações de igação.</p>
+                            <a class="link-btn" href="blog-details.html">ler mais<i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="vs-blog blog-style1">
+                        <div class="blog-img">
+                            <img class="w-100" src="{% static 'assets/img/blog/blog-1-2.jpg' %}" alt="Imagem do Blog">
+                        </div>
+                        <div class="blog-content">
+                            <div class="date-box">
+                                <span class="day">12</span>
+                                <span class="post-comment">maio 2024</span>
+                            </div>
+                            <h4 class="blog-title"><a href="blog-details.html">Reunião de Outono sobre Educação Global</a></h4>
+                            <p class="blog-text">Ducamb deu as boas-vindas a toda dor evitada, mas cer mstnces devido às reivindicações de igação.</p>
+                            <a class="link-btn" href="blog-details.html">ler mais<i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="vs-blog blog-style1">
+                        <div class="blog-img">
+                            <img class="w-100" src="{% static 'assets/img/blog/blog-1-3.jpg' %}" alt="Imagem do Blog">
+                        </div>
+                        <div class="blog-content">
+                            <div class="date-box">
+                                <span class="day">13</span>
+                                <span class="post-comment">maio 2024</span>
+                            </div>
+                            <h4 class="blog-title"><a href="blog-details.html">Reunião de Outono sobre Educação Global</a></h4>
+                            <p class="blog-text">Ducamb deu as boas-vindas a toda dor evitada, mas cer mstnces devido às reivindicações de igação.</p>
+                            <a class="link-btn" href="blog-details.html">ler mais<i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!--==============================
+    About Area
+    ==============================-->
+    <section class="about-layout1 style1 space-bottom" data-bg-src="{% static 'assets/img/4873411.jpg' %}">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="about-img">
+                        <img src="{% static 'assets/img/about/about-6-1.png' %}" alt="imagem-sobre">
+                        <div class="media-box1">
+                            <h5 class="media-title">10</h5>
+                            <p class="media-text">anos de experiência</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="about-box2">
+                        <div class="title-area3">
+                            <span class="sec-subtitle">EDUCAÇÃO NAcional</span>
+                            <h2 class="about-title h1">Ensine alunos <span>de</span> mais de 16 provincias</h2>
+                        </div>
+                        <div class="about-content">
+                            <p class="fs-md">A EducaAngola conecta alunos a escolas e centros de formação de qualidade, garantindo oportunidades de aprendizado em diversas áreas e localidades.</p>
+                            <div class="list-style1 vs-list">
+                                <ul>
+                                    <li>Conexão com escolas</li>
+                                    <li>Agenda inteligente</li>
+                                    <li>Ambiente interativo</li>
+                                </ul>
+                                
+                            </div>
+                            <a href="about.html" class="vs-btn style8 mt-2"><i class="far fa-angle-right"></i>Obter Mais Informações</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!--==============================
+    CTA Area
+    ==============================-->
+    <section class="space-top cta-layout1 space-bottom" data-bg-src="{% static 'assets/img/67278.jpg' %}">
+        <div class="container">
+            <div class="cta-style2">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="cta-content">
+                            <p class="cta-text">Explore os Melhores Cursos</p>
+                            <h2 class="cta-title h1">tutores de qualidade <span>online</span> acessíveis</h2>
+                            <span class="cart-subtitle"><img src="{% static 'assets/img/icon/arraw-ico.svg' %}" alt="ícone">Encontre o ideal para você entre mais de 10.000 professores</span>
+                            <div class="cta-btn">
+                                <a href="team.html" class="vs-btn style8"><i class="far fa-angle-right"></i>Saiba Mais</a>
+                            </div>
+                        </div>
+                        
+                        <div class="shape-mockup jump d-none d-xxxl-block" style="top: 10%; right: 2%;">
+                            <img src="{% static 'assets/img/shape/hero-shape-3-1.svg' %}" alt="shep">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="cta-img">
+                            <img src="{% static 'assets/img/bg/cta-img1.png' %}" alt="About Img">
+                            <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn2 popup-video position-center"><i class="fas fa-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shape-mockup jump d-none d-xxxl-block" style="bottom: 30%; left: 10%;">
+            <img src="{% static 'assets/img/shape/cta-shep1.png' %}" alt="shep">
+        </div>
+    </section>
+    <!--==============================
+      Courses Area
+    ==============================-->
+    <section class="course-layout2 space-top space-extra-bottom" data-bg-src="{% static 'assets/img/4873411.jpg' %}">
+        <div class="container">
+            <div class="title-area3 text-center wow fadeInUp" data-wow-delay="0.3s">
+                <span class="sec-subtitle style1">Encontre as Melhores Escolas</span>
+                <h2 class="sec-title">Escolas Mais Populares</h2>
+            </div>
+            
+            <div class="row vs-carousel" data-slide-show="3" data-lg-slide-show="3" data-md-slide-show="2" data-sm-slide-show="2" data-center-mode="true">
+                <div class="col-sm-6 col-xl-4">
+                    <div class="course-style1">
+                        <div class="course-img">
+                            <a href="course-details.html"><img class="w-100" src="{% static 'assets/img/course/course-5-1.jpg' %}" alt="Imagem do Curso"></a>
+                            <div class="course-category"><a href="course.html">Tecnologia</a></div>
+                            <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="vs-btn style2 popup-video"><i class="fas fa-play"></i>Visualizar Curso</a>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-top">
+                                <div class="course-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>(5.0)</div>
+                                <span class="course-price">$45.00</span>
+                            </div>
+                            <h3 class="h5 course-name"><a href="course-details.html" class="text-inherit">Curso Avançado de Objetivos de Iniciantes e Gestão</a></h3>
+                        </div>
+                        <div class="course-meta">
+                            <span><i class="fal fa-user-circle"></i>por Alexa Bliss</span>
+                            <span><i class="fas fa-history"></i>78h 15m</span>
+                            <span><i class="far fa-calendar"></i>10 mai, 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-4">
+                    <div class="course-style1">
+                        <div class="course-img">
+                            <a href="course-details.html"><img class="w-100" src="{% static 'assets/img/course/course-5-2.jpg' %}" alt="Imagem do Curso"></a>
+                            <div class="course-category"><a href="course.html">Tecnologia</a></div>
+                            <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="vs-btn style2 popup-video"><i class="fas fa-play"></i>Visualizar Curso</a>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-top">
+                                <div class="course-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>(5.0)</div>
+                                <span class="course-price">$45.00</span>
+                            </div>
+                            <h3 class="h5 course-name"><a href="course-details.html" class="text-inherit">Exame de Computador de Mesa e Estoque na Mesa</a></h3>
+                        </div>
+                        <div class="course-meta">
+                            <span><i class="fal fa-user-circle"></i>por Alexa Bliss</span>
+                            <span><i class="fas fa-history"></i>78h 15m</span>
+                            <span><i class="far fa-calendar"></i>10 mai, 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-4">
+                    <div class="course-style1">
+                        <div class="course-img">
+                            <a href="course-details.html"><img class="w-100" src="{% static 'assets/img/course/course-5-3.jpg' %}" alt="Imagem do Curso"></a>
+                            <div class="course-category"><a href="course.html">Tecnologia</a></div>
+                            <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="vs-btn style2 popup-video"><i class="fas fa-play"></i>Visualizar Curso</a>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-top">
+                                <div class="course-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>(5.0)</div>
+                                <span class="course-price">$49.00</span>
+                            </div>
+                            <h3 class="h5 course-name"><a href="course-details.html" class="text-inherit">Torne-se um Desenvolvedor Web Certificado</a></h3>
+                        </div>
+                        <div class="course-meta">
+                            <span><i class="fal fa-user-circle"></i>por Alexa Bliss</span>
+                            <span><i class="fas fa-history"></i>78h 15m</span>
+                            <span><i class="far fa-calendar"></i>10 mai, 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-4">
+                    <div class="course-style1">
+                        <div class="course-img">
+                            <a href="course-details.html"><img class="w-100" src="{% static 'assets/img/course/course-5-4.jpg' %}" alt="Imagem do Curso"></a>
+                            <div class="course-category"><a href="course.html">Tecnologia</a></div>
+                            <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="vs-btn style2 popup-video"><i class="fas fa-play"></i>Visualizar Curso</a>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-top">
+                                <div class="course-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>(5.0)</div>
+                                <span class="course-price">$45.00</span>
+                            </div>
+                            <h3 class="h5 course-name"><a href="course-details.html" class="text-inherit">O Curso e o Objetivo do Iniciante Avançado</a></h3>
+                        </div>
+                        <div class="course-meta">
+                            <span><i class="fal fa-user-circle"></i>por Alexa Bliss</span>
+                            <span><i class="fas fa-history"></i>78h 15m</span>
+                            <span><i class="far fa-calendar"></i>10 mai, 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!--==============================
+      Pricing Area
+    ==============================-->
+    
+    <!--==============================
+      Team Area
+    ==============================-->
+    <section class="team-layout1 space-top space-extra-bottom" data-bg-src="{% static 'assets/img/bg/team-bg1.jpg' %}">
+        <div class="container">
+            <div class="title-area3 text-center">
+                <span class="sec-subtitle style1">TUTOR IDEAL PARA TODOS</span>
+                <h2 class="sec-title">Tutores Online Qualificados</h2>
+            </div>
+            <div class="row vs-carousel" data-slide-show="4" data-lg-slide-show="3" data-md-slide-show="2" data-sm-slide-show="2" data-center-mode="true">
+                <div class="col-sm-6 col-xl-3">
+                    <div class="team-style2">
+                        <div class="team-content text-center">
+                            <h4 class="team-name h5"><a href="team-details.html">Moniqa Romin</a></h4>
+                            <p class="team-degi">Desenvolvedora WP</p>
+                            <span class="team-courses">15 cursos</span>
+                            <div class="team-img">
+                                <img src="{% static 'assets/img/team/team-s-3-1.png' %}" alt="membro">
+                            </div>
+                            <span class="team-title">3k+ alunos</span>
+                            <p class="team-experi">2+ anos de experiência</p>
+                            <div class="team-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="team-style2">
+                        <div class="team-content text-center">
+                            <h4 class="team-name h5"><a href="team-details.html">Emelia Jack</a></h4>
+                            <p class="team-degi">Tutora de Matemática e Física</p>
+                            <span class="team-courses">15 cursos</span>
+                            <div class="team-img">
+                                <img src="{% static 'assets/img/team/team-s-3-2.png' %}" alt="membro">
+                            </div>
+                            <span class="team-title">4k+ alunos</span>
+                            <p class="team-experi">2+ anos de experiência</p>
+                            <div class="team-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="team-style2">
+                        <div class="team-content text-center">
+                            <h4 class="team-name h5"><a href="team-details.html">Dani Grace</a></h4>
+                            <p class="team-degi">JavaScript</p>
+                            <span class="team-courses">13 cursos</span>
+                            <div class="team-img">
+                                <img src="{% static 'assets/img/team/team-s-3-3.png' %}" alt="membro">
+                            </div>
+                            <span class="team-title">3k+ alunos</span>
+                            <p class="team-experi">2+ anos de experiência</p>
+                            <div class="team-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="team-style2">
+                        <div class="team-content text-center">
+                            <h4 class="team-name h5"><a href="team-details.html">Alexa Bliss</a></h4>
+                            <p class="team-degi">React Web</p>
+                            <span class="team-courses">15 cursos</span>
+                            <div class="team-img">
+                                <img src="{% static 'assets/img/team/team-s-3-4.png' %}" alt="membro">
+                            </div>
+                            <span class="team-title">2k+ alunos</span>
+                            <p class="team-experi">3+ anos de experiência</p>
+                            <div class="team-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="team-style2">
+                        <div class="team-content text-center">
+                            <h4 class="team-name h5"><a href="team-details.html">Moniqa Romin</a></h4>
+                            <p class="team-degi">Tutora de Matemática e Física</p>
+                            <span class="team-courses">15 cursos</span>
+                            <div class="team-img">
+                                <img src="{% static 'assets/img/team/team-s-3-5.png' %}" alt="membro">
+                            </div>
+                            <span class="team-title">3k+ alunos</span>
+                            <p class="team-experi">2+ anos de experiência</p>
+                            <div class="team-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <!--==============================
+    CTA Area
+    ==============================-->
+    <section class="cta-layout1 style2" data-bg-src="{% static 'assets/img/young-woman-with-afro-haircut-wearing-pink-sweater-holding-textbooks.jpg' %}">
+        <div class="container">
+            <div class="cta-style2">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="cta-content">
+                            <h2 class="cta-title h1">Quer se tornar um<span>tutor?</span></h2>
+                            <span class="cart-subtitle"><img src="{% static 'assets/img/icon/arraw-ico.svg' %}" alt="ícone">Encontre o ideal para você entre mais de 10.000 professores</span>
+                            <a href="team.html" class="vs-btn style8"><i class="far fa-angle-right"></i>Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="shape-mockup jump d-none d-xxl-block" style="bottom: 35%; right: 14%;">
+            <img src="{% static 'assets/img/shape/cta-shep2.png' %}" alt="shep">
+        </div>
+        <div class="shape-mockup jump d-none d-xxl-block" style="bottom: 30%; right: 40%;">
+            <img src="{% static 'assets/img/shape/cta-shep1.png' %}" alt="shep">
+        </div>
+    </section>
+    <!--==============================
+      Blog Area
+    ==============================-->
+    <section class="course-layout2 space-top space-extra-bottom" data-bg-src="{% static 'assets/img/4873411.jpg' %}">
+        <div class="container">
+            <div class="title-area3 text-center wow fadeInUp" data-wow-delay="0.3s">
+                <span class="sec-subtitle style1">Encontre as Melhores cursos</span>
+                <h2 class="sec-title">Cursos Mais Populares</h2>
+            </div>
+            
+            <div class="row vs-carousel" data-slide-show="3" data-lg-slide-show="3" data-md-slide-show="2" data-sm-slide-show="2" data-center-mode="true">
+                <div class="col-sm-6 col-xl-4">
+                    <div class="course-style1">
+                        <div class="course-img">
+                            <a href="course-details.html"><img class="w-100" src="{% static 'assets/img/course/course-5-1.jpg' %}" alt="Imagem do Curso"></a>
+                            <div class="course-category"><a href="course.html">Tecnologia</a></div>
+                            <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="vs-btn style2 popup-video"><i class="fas fa-play"></i>Visualizar Curso</a>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-top">
+                                <div class="course-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>(5.0)</div>
+                                <span class="course-price">$45.00</span>
+                            </div>
+                            <h3 class="h5 course-name"><a href="course-details.html" class="text-inherit">Curso Avançado de Objetivos de Iniciantes e Gestão</a></h3>
+                        </div>
+                        <div class="course-meta">
+                            <span><i class="fal fa-user-circle"></i>por Alexa Bliss</span>
+                            <span><i class="fas fa-history"></i>78h 15m</span>
+                            <span><i class="far fa-calendar"></i>10 mai, 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-4">
+                    <div class="course-style1">
+                        <div class="course-img">
+                            <a href="course-details.html"><img class="w-100" src="{% static 'assets/img/course/course-5-2.jpg' %}" alt="Imagem do Curso"></a>
+                            <div class="course-category"><a href="course.html">Tecnologia</a></div>
+                            <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="vs-btn style2 popup-video"><i class="fas fa-play"></i>Visualizar Curso</a>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-top">
+                                <div class="course-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>(5.0)</div>
+                                <span class="course-price">$45.00</span>
+                            </div>
+                            <h3 class="h5 course-name"><a href="course-details.html" class="text-inherit">Exame de Computador de Mesa e Estoque na Mesa</a></h3>
+                        </div>
+                        <div class="course-meta">
+                            <span><i class="fal fa-user-circle"></i>por Alexa Bliss</span>
+                            <span><i class="fas fa-history"></i>78h 15m</span>
+                            <span><i class="far fa-calendar"></i>10 mai, 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-4">
+                    <div class="course-style1">
+                        <div class="course-img">
+                            <a href="course-details.html"><img class="w-100" src="{% static 'assets/img/course/course-5-3.jpg' %}" alt="Imagem do Curso"></a>
+                            <div class="course-category"><a href="course.html">Tecnologia</a></div>
+                            <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="vs-btn style2 popup-video"><i class="fas fa-play"></i>Visualizar Curso</a>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-top">
+                                <div class="course-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>(5.0)</div>
+                                <span class="course-price">$49.00</span>
+                            </div>
+                            <h3 class="h5 course-name"><a href="course-details.html" class="text-inherit">Torne-se um Desenvolvedor Web Certificado</a></h3>
+                        </div>
+                        <div class="course-meta">
+                            <span><i class="fal fa-user-circle"></i>por Alexa Bliss</span>
+                            <span><i class="fas fa-history"></i>78h 15m</span>
+                            <span><i class="far fa-calendar"></i>10 mai, 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-4">
+                    <div class="course-style1">
+                        <div class="course-img">
+                            <a href="course-details.html"><img class="w-100" src="{% static 'assets/img/course/course-5-4.jpg' %}" alt="Imagem do Curso"></a>
+                            <div class="course-category"><a href="course.html">Tecnologia</a></div>
+                            <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="vs-btn style2 popup-video"><i class="fas fa-play"></i>Visualizar Curso</a>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-top">
+                                <div class="course-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>(5.0)</div>
+                                <span class="course-price">$45.00</span>
+                            </div>
+                            <h3 class="h5 course-name"><a href="course-details.html" class="text-inherit">O Curso e o Objetivo do Iniciante Avançado</a></h3>
+                        </div>
+                        <div class="course-meta">
+                            <span><i class="fal fa-user-circle"></i>por Alexa Bliss</span>
+                            <span><i class="fas fa-history"></i>78h 15m</span>
+                            <span><i class="far fa-calendar"></i>10 mai, 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    
+    <!--==============================
+      Brand Area
+    ==============================-->
+    <div class="space-extra">
+        <div class="container text-center">
+            <div class="row vs-carousel wow fadeInUp" data-wow-delay="0.4s" data-slide-show="5" data-lg-slide-show="4" data-md-slide-show="3" data-sm-slide-show="2" data-xs-slide-show="2">
+                <div class="col-auto"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="brand"></div>
+                <div class="col-auto"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="brand"></div>
+                <div class="col-auto"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="brand"></div>
+                <div class="col-auto"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="brand"></div>
+                <div class="col-auto"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="brand"></div>
+                <div class="col-auto"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="brand"></div>
+            </div>
+        </div>
+    </div>
+    <!--==============================
+    Footer Area
+    ==============================-->
+    <footer class="footer-wrapper footer-layout1 style4">
+        <div class="widget-area" data-bg-src="{% static 'assets/img/bg/footer-bg1.png' %}">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-6 col-xl-auto">
+                        <div class="widget footer-widget">
+                            <div class="vs-widget-about">
+                                <div class="footer-logo">
+                                    <a href="{% url 'home' %}"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="logo"></a>
+                                </div>
+                                <p class="footer-text">Lorem ipsum dolor sit amet, consectet rem ips dolor sit amet. Sum dolor sit amet, consectet e dolor sit amet, comod.</p>
+                                <p class="footer-info"><i class="fal fa-phone-alt"></i><a class="text-inherit" href="tel:++11234562228">+244 923908353</a></p>
+                                <p class="footer-info"><i class="fal fa-envelope"></i><a class="text-inherit" href="mailto:info@example.com">Educangola@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6 col-xl-auto">
+                        <div class="widget nav_menu footer-widget">
+                            <h3 class="widget_title">Links de Estudo</h3>
+                            <div class="menu-all-pages-container footer-menu">
+                                <ul class="menu">
+                                    <li><a href="course.html">Todos os Cursos</a></li>
+                                    <li><a href="blog.html">Sessões de Verão</a></li>
+                                    <li><a href="course.html">Melhores Cursos</a></li>
+                                    <li><a href="https://html.vecurosoft.com/educino/demo/find-tutor.htm">Contratar professores</a></li>
+                                    <li><a href="academic-program.html">FAQs do Programa</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6 col-xl-auto">
+                        <div class="widget nav_menu footer-widget">
+                            <h3 class="widget_title">Links Rápidos</h3>
+                            <div class="menu-all-pages-container footer-menu">
+                                <ul class="menu">
+                                    <li><a href="about.html">Comunidade</a></li>
+                                    <li><a href="contact.html">Suporte</a></li>
+                                    <li><a href="blog.html">Guias em Vídeo</a></li>
+                                    <li><a href="event-details.html">Documentação</a></li>
+                                    <li><a href="about.html">Segurança</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-auto">
+                        <div class="widget footer-widget">
+                            <h3 class="widget_title">Cursos Recentes</h3>
+                            <div class="recent-post-wrap">
+                                <div class="recent-course">
+                                    <div class="media-img"><a href="course-details.html"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="Imagem do Blog"></a></div>
+                                    <div class="media-body">
+                                        <div class="recent-course-meta"><a href="team-details.html">Theresa Chruz</a></div>
+                                        <h4 class="post-title"><a class="text-inherit" href="course-details.html">Teoria de Codificação Web e Fundamentos do Apache</a></h4>
+                                    </div>
+                                </div>
+                                <div class="recent-course">
+                                    <div class="media-img"><a href="course-details.html"><img src="{% static 'assets/img/Artboard 1.png' %}" alt="Imagem do Blog"></a></div>
+                                    <div class="media-body">
+                                        <div class="recent-course-meta"><a href="team-details.html">Rossana Costa</a></div>
+                                        <h4 class="post-title"><a class="text-inherit" href="course-details.html">O que Tadit Soul pode nos ensinar sobre Web Docan</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="text-center col-lg-auto">
+                        <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2024 <a href="index.html">Educa_Angola</a>. Todos os Direitos Reservados por <a href="#">Angola_Educa</a></p>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <div class="social-style1 footer-social">
+                            <a href="index-5.html#"><i class="fab fa-facebook-f"></i>Facebook</a>
+                            <a href="index-5.html#"><i class="fab fa-twitter"></i>Twitter</a>
+                            <a href="index-5.html#"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scroll To Top -->
+    <a href="index-5.html#" class="scrollToTop scroll-btn"><i class="far fa-arrow-up"></i></a>
+
+    <!--********************************
+			Code End  Here 
+	******************************** -->
+
+    <!--==============================
+        All Js File
+    ============================== -->
+    
+    <script src="{% static 'assets/js/vendor/jquery-3.6.0.min.js' %}"></script>
+    <!-- Slick Slider -->
+    <script src="{% static 'assets/js/slick.min.js' %}"></script>
+    <!-- <script src="assets/js/app.min.js"></script> -->
+    <!-- Bootstrap -->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <!-- Wow.js Animation -->
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+    <!-- Magnific Popup -->
+    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <!-- Main Js File -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+
+
+</body>
+
+</html>

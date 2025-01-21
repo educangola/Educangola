@@ -53,134 +53,49 @@
         </div>
     </div>
     
-    <div class="breadcumb-wrapper " data-bg-src="{% static 'assets/img/breadcumb/breadcumb-bg.png' %}">
-        <div class="container z-index-common">
-            <div class="breadcumb-content">
-                <h1 class="breadcumb-title">Pagina de erro</h1>
-                <div class="breadcumb-menu-wrap">
-                    <ul class="breadcumb-menu">
-                        <li><a href="{% url 'index' %}">Home</a></li>
-                        <li>Pagina de erro</li>
-                    </ul>
+   
+    <section class="d-flex align-items-center min-vh-100 bg-light">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="mb-4">
+                        <!-- Ícone do Bootstrap para indicar desenvolvimento -->
+                        <i class="bi bi-tools text-warning display-1"></i>
+                    </div>
+                    <h1 class="fw-bold display-4">Em Desenvolvimento</h1>
+                    <p class="lead text-muted mt-3">
+                        Estamos trabalhando para finalizar esta página.  
+                        Em breve estará disponível para você.  
+                    </p>
+                    <a href="{% url 'index' %}" class="btn btn-primary btn-lg mt-4">
+                        <i class="bi bi-house-door me-2"></i>Home
+                    </a>
                 </div>
             </div>
-        </div>
-    </div><!--==============================
-    Error Area 
-    ==============================-->
-    <section class="vs-error-wrapper  ">
-        <div class="container">
-            <div class="row flex-row-reverse text-center text-xl-start">
-                <div class="col-xl-6 col-xxl-7 text-xl-end">
-                    <div class="error-img">
-                        <!-- Substituindo a imagem pelo ícone do Bootstrap -->
-                        <i class="bi bi-exclamation-circle-fill text-danger" style="font-size: 8rem;"></i>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-xxl-5 align-self-center">
-                    <div class="error-content">
-                        <h1 class="error-title">Ops!</h1>
-                        <h2 class="error-title2">Página não encontrada</h2>
-                        <p class="error-text">O recurso que você está procurando pode ter sido removido, teve seu nome alterado ou está temporariamente indisponível.</p>
-                        <form action="#" class="search-inline">
-                            <input type="text" class="form-control" placeholder="Digite sua palavra-chave...">
-                            <button><i class="far fa-search"></i></button>
-                        </form>
-                        <a href="{% url 'index' %}" class="vs-btn"><i class="fas fa-home me-2 pe-1"></i>Voltar para a Página Inicial</a>
-                    </div>
-                </div>
-            </div>
-            
         </div>
     </section>
+    
+    <!-- CSS personalizado opcional -->
+    <style>
+        .bi-tools {
+            animation: spin 4s linear infinite;
+        }
+    
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    
+    
     <!--==============================
     Footer Area
     ==============================-->
-    <footer class="footer-wrapper footer-layout1 style4">
-        <div class="widget-area" data-bg-src="{% static 'assets/img/bg/footer-bg1.png' %}">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-md-6 col-xl-auto">
-                        <div class="widget footer-widget">
-                            <div class="vs-widget-about">
-                                <div class="footer-logo">
-                                    <a href="index.html"><img src="{% static 'assets/img/logo-white.svg' %}" alt="logo"></a>
-                                </div>
-                                <p class="footer-text">Lorem ipsum dolor sit amet, consectet rem ips dolor sit amet. Sum dolor sit amet, consectet e dolor sit amet, comod.</p>
-                                <p class="footer-info"><i class="fal fa-phone-alt"></i><a class="text-inherit" href="tel:++11234562228">(00) 123 456 789</a></p>
-                                <p class="footer-info"><i class="fal fa-envelope"></i><a class="text-inherit" href="mailto:info@example.com">hello@domainname.com</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-6 col-xl-auto">
-                        <div class="widget nav_menu footer-widget">
-                            <h3 class="widget_title">Links de Estudo</h3>
-                            <div class="menu-all-pages-container footer-menu">
-                                <ul class="menu">
-                                    <li><a href="course.html">Todos os Cursos</a></li>
-                                    <li><a href="blog.html">Sessões de Verão</a></li>
-                                    <li><a href="course.html">Melhores Cursos</a></li>
-                                    <li><a href="https://html.vecurosoft.com/educino/demo/find-tutor.htm">Contratar professores</a></li>
-                                    <li><a href="academic-program.html">FAQs do Programa</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-6 col-xl-auto">
-                        <div class="widget nav_menu footer-widget">
-                            <h3 class="widget_title">Links Rápidos</h3>
-                            <div class="menu-all-pages-container footer-menu">
-                                <ul class="menu">
-                                    <li><a href="about.html">Comunidade</a></li>
-                                    <li><a href="contact.html">Suporte</a></li>
-                                    <li><a href="blog.html">Guias em Vídeo</a></li>
-                                    <li><a href="event-details.html">Documentação</a></li>
-                                    <li><a href="about.html">Segurança</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-auto">
-                        <div class="widget footer-widget">
-                            <h3 class="widget_title">Cursos Recentes</h3>
-                            <div class="recent-post-wrap">
-                                <div class="recent-course">
-                                    <div class="media-img"><a href="course-details.html"><img src="{% static 'assets/img/course/recent-course-2-1.jpg' %}" alt="Imagem do Blog"></a></div>
-                                    <div class="media-body">
-                                        <div class="recent-course-meta"><a href="team-details.html">Por alax dongle</a></div>
-                                        <h4 class="post-title"><a class="text-inherit" href="course-details.html">Teoria de Codificação Web e Fundamentos do Apache</a></h4>
-                                    </div>
-                                </div>
-                                <div class="recent-course">
-                                    <div class="media-img"><a href="course-details.html"><img src="{% static 'assets/img/course/recent-course-2-2.jpg' %}" alt="Imagem do Blog"></a></div>
-                                    <div class="media-body">
-                                        <div class="recent-course-meta"><a href="team-details.html">Por jon smith</a></div>
-                                        <h4 class="post-title"><a class="text-inherit" href="course-details.html">O que Tadit Soul pode nos ensinar sobre Web Docan</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright-wrap">
-            <div class="container">
-                <div class="row justify-content-between align-items-center">
-                    <div class="text-center col-lg-auto">
-                        <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2024 <a href="index.html">Educa_Angola</a>. Todos os Direitos Reservados por <a href="#">Angola_Educa</a></p>
-                    </div>
-                    <div class="col-auto d-none d-lg-block">
-                        <div class="social-style1 footer-social">
-                            <a href="index-5.html#"><i class="fab fa-facebook-f"></i>Facebook</a>
-                            <a href="index-5.html#"><i class="fab fa-twitter"></i>Twitter</a>
-                            <a href="index-5.html#"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    
     
     <!-- Scroll To Top -->
     <a href="index-5.html#" class="scrollToTop scroll-btn"><i class="far fa-arrow-up"></i></a>

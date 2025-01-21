@@ -1,0 +1,953 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Educangola | home Cursos</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'assets/img/Artboard 1.png' %}">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+    {% include 'includes/links_css.html' %}
+</head> 
+<body>
+    
+<!--==================== Preloader Start ====================-->
+  <div class="preloader">
+    <img src="{% static 'assets3/images/icons/preloader.gif' %}" alt="">
+  </div>
+<!--==================== Preloader End ====================-->
+
+<!--==================== Overlay Start ====================-->
+<div class="overlay"></div>
+<!--==================== Overlay End ====================-->
+
+<!--==================== Sidebar Overlay End ====================-->
+<div class="side-overlay"></div>
+<!--==================== Sidebar Overlay End ====================-->
+
+<!-- ==================== Scroll to Top End Here ==================== -->
+<div class="progress-wrap">
+  <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+  </svg>
+</div>
+<!-- ==================== Scroll to Top End Here ==================== -->
+
+<!-- ==================== Mobile Menu Start Here ==================== -->
+{% include 'includes/mobile_menu.html' %}
+<!-- ==================== Mobile Menu End Here ==================== -->
+
+
+    <!-- ==================== Header Start Here ==================== -->
+<header class="header">
+    {% include 'includes/header.html' %}
+</header>
+<!-- ==================== Header End Here ==================== -->
+
+    <!-- ========================= Banner Section Start =============================== -->
+<section class="banner py-80 position-relative overflow-hidden">
+
+    <img src="{% static 'assets3/images/shapes/shape1.png' %}" alt="" class="shape one animation-rotation">
+    <img src="{% static 'assets3/images/shapes/shape2.png' %}" alt="" class="shape two animation-scalation">
+    <img src="{% static 'assets3/images/shapes/shape3.png' %}" alt="" class="shape three animation-walking">
+    <img src="{% static 'assets3/images/shapes/shape4.png' %}" alt="" class="shape four animation-scalation">
+    <img src="{% static 'assets3/images/shapes/shape5.png' %}" alt="" class="shape five animation-walking">
+
+    <div class="container">
+        <div class="row gy-5 align-items-center">
+            <div class="col-xl-6">
+                <div class="banner-content pe-md-4">
+                    <div class="flex-align gap-8 mb-16" data-aos="fade-down">
+                        <span class="w-8 h-8 bg-main-600 rounded-circle"></span>
+                        <h5 class="text-main-600 mb-0">Seu Futuro, Alcance o Sucesso</h5>
+                    </div>
+                    
+                    <h1 class="display2 mb-24 wow bounceInLeft">Encontre seu <span class="text-main-two-600 wow bounceInRight" data-wow-duration="2s" data-wow-delay=".5s">Ideal</span>
+                        Curso, Construa <span class="text-main-600 wow bounceInUp" data-wow-duration="1s" data-wow-delay=".5s">Habilidades</span>
+                    </h1>
+                    <p class="text-neutral-500 text-line-2 wow bounceInUp">Bem-vindo a Educangola, onde o aprendizado não tem limites. Seja você um estudante, profissional ou aprendiz contínuo...</p>
+                    <div class="buttons-wrapper flex-align flex-wrap gap-24 mt-40">
+                        <a href="course.html" class="btn btn-main rounded-pill flex-align gap-8" data-aos="fade-right">
+                            Ver Cursos
+                            <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
+                        </a>
+                        <a href="about.html" class="btn btn-outline-main rounded-pill flex-align gap-8" data-aos="fade-left">
+                            Sobre Nós
+                            <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            {% load static %}
+
+            <div class="col-xl-6">
+                <div class="banner-thumb position-relative">
+                    <img src="{% static 'assets3/images/pexels-katerina-holmes-5905625.jpg' %}" alt="" class="banner-thumb__img rounded-12 wow bounceIn" data-wow-duration="3s" data-wow-delay=".5s" data-tilt data-tilt-max="12" data-tilt-speed="500" data-tilt-perspective="5000" data-tilt-full-page-listening data-tilt-scale="1.02">
+
+                    <img src="{% static 'assets3/images/shapes/curve-arrow.png' %}" alt="" class="curve-arrow position-absolute">
+
+                    <div class="banner-box one px-24 py-12 rounded-12 bg-white fw-medium box-shadow-lg d-inline-block" data-aos="fade-down">
+                        <span class="text-main-600">36k+</span> Estudantes Matriculados
+                        <div class="enrolled-students mt-12">
+                            <img src="{% static 'assets3/images/thumbs/enroll-student-img1.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover transition-2">
+                            <img src="{% static 'assets3/images/thumbs/enroll-student-img2.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover transition-2">
+                            <img src="{% static 'assets3/images/thumbs/enroll-student-img3.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover transition-2">
+                            <img src="{% static 'assets3/images/thumbs/enroll-student-img4.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover transition-2">
+                            <img src="{% static 'assets3/images/thumbs/enroll-student-img5.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover transition-2">
+                            <img src="{% static 'assets3/images/thumbs/enroll-student-img6.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover transition-2">
+                        </div>
+                    </div>
+                    
+                    <div class="banner-box two px-24 py-12 rounded-12 bg-white fw-medium box-shadow-lg flex-align d-inline-flex gap-16" data-aos="fade-up">
+                        <span class="banner-box__icon flex-shrink-0 w-48 h-48 bg-purple-400 text-white text-2xl flex-center rounded-circle"><i class="ph ph-watch"></i></span>
+                        <div>
+                            <h6 class="mb-4">20% DE DESCONTO</h6>
+                            <span class="">Para Todos os Cursos</span>
+                        </div>
+                        
+                    </div>
+                    <div class="banner-box three px-24 py-12 rounded-12 bg-white fw-medium box-shadow-lg flex-align d-inline-flex gap-16" data-aos="fade-left">
+                        <span class="banner-box__icon flex-shrink-0 w-48 h-48 bg-main-50 text-main-600 text-2xl flex-center rounded-circle"><i class="ph ph-phone-call"></i></span>
+                        <div>
+                            <span class="">Suporte Online</span>
+                            <a href="tel:(704)555-0127" class="mt-8 fw-medium text-xl d-block text-main-600 hover-text-main-500">+244 923908353</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="explore-course py-120 bg-main-25 position-relative z-1">
+    <img src="{% static 'assets3/images/shapes/shape2.png' %}" alt="" class="shape six animation-scalation">
+
+    <div class="container">
+        <div class="section-heading text-center style-flex gap-24">
+            <div class="section-heading__inner text-start">
+                <h2 class="mb-0 wow bounceIn">Explore Mais de 4.000 Cursos Online Gratuitos para Estudantes</h2>
+            </div>
+            <div class="section-heading__content">
+                <p class="section-heading__desc text-start mt-0 text-line-2 wow bounceInUp">Bem-vindo ao nosso catálogo diversificado e dinâmico de cursos. Estamos dedicados a fornecer a você...</p>
+                <a href="{% url 'Todos_cursos' %}" class="item-hover__text flex-align gap-8 text-main-600 mt-24 hover-text-decoration-underline transition-1" tabindex="0">
+                    Ver Todos os Cursos
+                    <i class="ph ph-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="nav-tab-wrapper bg-white p-16 mb-40" data-aos="zoom-out">
+            <ul class="nav nav-pills common-tab gap-16" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria_selecionada is None %} active {% endif %}" href="{% url 'home_cursos' %}">
+                        <i class="text-xl d-flex ph-bold ph-squares-four"></i>
+                        Todas as Categorias
+                    </a>
+                </li>
+                {% for categoria in categorias %}
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria.id == categoria_selecionada %} active {% endif %}" href="{% url 'home_cursos' %}?categoria={{ categoria.id }}" data-categoria-id="{{ categoria.id }}">
+                        <i class="text-xl d-flex ph-bold ph-magic-wand"></i>
+                        {{ categoria.nome }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-categories" role="tabpanel" aria-labelledby="pills-categories-tab" tabindex="0">
+                <div class="row gy-4" id="cursos-list">
+                    {% for todos_cursos in cursos|slice:":12" %}
+                    <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="600">
+                        <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
+                            <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
+                                <a href="course-details.html" class="w-100 h-100">
+                                    <img src="{{todos_cursos.imagem.url}}" alt="Course Image" class="course-item__img rounded-12 cover-img transition-2">
+                                </a>
+                                <div class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
+                                    <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
+                                    <span class="text-lg fw-medium">{{todos_cursos.duracao}}</span>
+                                </div>
+                                <button type="button" class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
+                                    <i class="ph ph-heart"></i>
+                                </button>
+                            </div>
+                            <div class="course-item__content">
+                                <div class="">
+                                    <h4 class="mb-28">
+                                        <a href="course-details.html" class="link text-line-2">{{todos_cursos.nome}}</a>
+                                    </h4>
+                                    <div class="flex-between gap-8 flex-wrap mb-16">
+                                        <div class="flex-align gap-8">
+                                            <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-video-camera"></i></span>
+                                            <span class="text-neutral-700 text-lg fw-medium">20 Aulas</span>
+                                        </div>
+                                        <div class="flex-align gap-8">
+                                            <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-monitor"></i></span>
+                                            <span class="text-neutral-700 text-lg fw-medium">Modalidade: {{todos_cursos.modalidade}}</span>
+                                        </div>
+                                        <div class="flex-align gap-8">
+                                            <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-chart-bar"></i></span>
+                                            <span class="text-neutral-700 text-lg fw-medium">{{todos_cursos.nivel}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-between gap-8 flex-wrap">
+                                        <div class="flex-align gap-4">
+                                            <span class="text-2xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                            <span class="text-lg text-neutral-700">
+                                                4.7
+                                                <span class="text-neutral-100">(6.4k)</span>
+                                            </span>
+                                        </div>
+                                        <div class="flex-align gap-8">
+                                            <span class="text-neutral-700 text-2xl d-flex">
+                                                <img src="{% static 'assets3/images/thumbs/user-img6.png' %}" alt="User Image" class="w-32 h-32 object-fit-cover rounded-circle">
+                                            </span>
+                                            <span class="text-neutral-700 text-lg fw-medium">{{todos_cursos.instituicao}}</span>
+                                        </div>
+                                        <div class="flex-align gap-8">
+                                            <span class="text-neutral-700 text-2xl d-flex">
+                                                
+                                            </span>
+                                            <span class="text-neutral-700 text-lg fw-medium"> Publicado em: {{todos_cursos.data_criacao}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
+                                    <h4 class="mb-0 text-main-two-600">kz {{todos_cursos.preco}}</h4>
+                                    <a href="{% url 'incricao_curso' todos_cursos.id %}" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold" tabindex="0">
+                                        Inscreva-se
+                                        <i class="ph ph-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================= Banner SEction End =============================== -->
+
+    <!-- ========================== Brand Section Start =========================== -->
+    {% load static %}
+
+    <div class="brand wow fadeInUpBig" data-wow-duration="1s" data-wow-delay=".5s">
+        <div class="container container--lg">
+            <div class="brand-box py-80 px-16 bg-main-25 border border-neutral-30 rounded-16">
+                <h5 class="mb-40 text-center text-neutral-500">CONFIADO POR MAIS DE 17.300 GRANDES EQUIPES</h5>
+                <div class="container">
+                    <div class="brand-slider">
+                        <div class="brand-slider__item px-24">
+                            <img src="{% static 'assets3/images/thumbs/brand-img1.png' %}" alt="">
+                        </div>
+                        <div class="brand-slider__item px-24">
+                            <img src="{% static 'assets3/images/thumbs/brand-img2.png' %}" alt="">
+                        </div>
+                        <div class="brand-slider__item px-24">
+                            <img src="{% static 'assets3/images/thumbs/brand-img3.png' %}" alt="">
+                        </div>
+                        <div class="brand-slider__item px-24">
+                            <img src="{% static 'assets3/images/thumbs/brand-img4.png' %}" alt="">
+                        </div>
+                        <div class="brand-slider__item px-24">
+                            <img src="{% static 'assets3/images/thumbs/brand-img5.png' %}" alt="">
+                        </div>
+                        <div class="brand-slider__item px-24">
+                            <img src="{% static 'assets3/images/thumbs/brand-img6.png' %}" alt="">
+                        </div>
+                        <div class="brand-slider__item px-24">
+                            <img src="{% static 'assets3/images/thumbs/brand-img7.png' %}" alt="">
+                        </div>
+                        <div class="brand-slider__item px-24">
+                            <img src="{% static 'assets3/images/thumbs/brand-img3.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+<!-- ========================== Brand Section End =========================== -->
+
+    <!-- ============================= Features Section Start ============================== -->
+    <section class="features py-120 position-relative overflow-hidden">
+        <img src="{% static 'assets3/images/shapes/shape2.png' %}" alt="" class="shape two animation-scalation">
+        <img src="{% static 'assets3/images/shapes/shape4.png' %}" alt="" class="shape six animation-walking">
+    
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2 class="mb-24 wow bounceIn">Explore Mais de 4.000 Cursos Online para Estudantes</h2>
+                <p class="wow bounceInUp">Bem-vindo ao nosso catálogo de cursos diversificado e dinâmico. Estamos dedicados a proporcionar acesso a uma educação de alta qualidade</p>
+            </div>
+            
+            <div class="features-slider">
+                {% for categoria in categorias %}      
+                <div class="px-8" data-aos="zoom-in" data-aos-duration="1600">
+                    <div class="features-item item-hover animation-item bg-main-25 border border-neutral-30 rounded-16 transition-1 hover-bg-main-600 hover-border-main-600">
+                        <span class="mb-32 w-110 h-110 flex-center bg-white rounded-circle">
+                            <img src="{% static 'assets3/images/icons/feature-icon2.png' %}" class="animate__bounce" alt="">
+                        </span>
+                        <h4 class="mb-16 transition-1 item-hover__text">{{categoria.nome}}</h4>
+                        <p class="transition-1 item-hover__text text-line-2">{{categoria.descricao}}</p>
+                        <a href="{% url 'cursos_por_categoria' id=categoria.id %}" class="item-hover__text flex-align gap-8 text-main-600 mt-24 hover-text-decoration-underline transition-1">
+                            Ver Categoria
+                            <i class="ph ph-arrow-right"></i>
+                        </a>
+                    </div>
+                </div> 
+                {% endfor %}
+            </div>
+            
+            <div class="flex-align gap-16 mt-40 justify-content-center">
+                <button type="button" id="features-prev" class="slick-prev slick-arrow flex-center rounded-circle border border-gray-100 hover-border-main-600 text-xl hover-bg-main-600 hover-text-white transition-1 w-48 h-48">
+                    <i class="ph ph-caret-left"></i>
+                </button>
+                <button type="button" id="features-next" class="slick-next slick-arrow flex-center rounded-circle border border-gray-100 hover-border-main-600 text-xl hover-bg-main-600 hover-text-white transition-1 w-48 h-48">
+                    <i class="ph ph-caret-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+<!-- ============================= Features Section End ============================== -->
+
+    <!-- ================================== Explore Course Section Start =========================== -->
+ <section class="explore-course py-120 bg-main-25 position-relative z-1">
+    <img src="{% static 'assets3/images/shapes/shape2.png' %}" alt="" class="shape six animation-scalation">
+
+    <div class="container">
+        <div class="section-heading text-center style-flex gap-24">
+            <div class="section-heading__inner text-start">
+                <h2 class="mb-0 wow bounceIn">Explore Mais de 4.000 Centros para Estudantes</h2>
+            </div>
+            <div class="section-heading__content">
+                <p class="section-heading__desc text-start mt-0 text-line-2 wow bounceInUp">Bem-vindo ao nosso catálogo diversificado e dinâmico de cursos. Estamos dedicados a fornecer a você...</p>
+                <a href="course-list-view.html" class="item-hover__text flex-align gap-8 text-main-600 mt-24 hover-text-decoration-underline transition-1" tabindex="0">
+                    Ver Todos os Cursos
+                    <i class="ph ph-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        
+
+        <div class="nav-tab-wrapper bg-white p-16 mb-40"  data-aos="zoom-out">
+            <ul class="nav nav-pills common-tab gap-16" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 active" id="pills-categories-tab" data-bs-toggle="pill" data-bs-target="#pills-categories" type="button" role="tab" aria-controls="pills-categories" aria-selected="true">
+                        <i class="text-xl d-flex ph-bold ph-squares-four"></i>
+                        Todas as Categorias
+                    </button>
+                </li>
+                
+            </ul>
+        </div>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-categories" role="tabpanel" aria-labelledby="pills-categories-tab" tabindex="0">
+                <div class="row gy-4">
+                    {% for todos_cursos in cursos|slice:":12" %}
+                    <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="600">
+                        <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
+                            <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
+                                <a href="course-details.html" class="w-100 h-100">
+                                    <img src="{{todos_cursos.imagem.url}}" alt="Course Image" class="course-item__img rounded-12 cover-img transition-2">
+                                </a>
+                                <div class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
+                                    <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
+                                    <span class="text-lg fw-medium">{{todos_cursos.duracao}}</span>
+                                </div>
+                                <button type="button" class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
+                                    <i class="ph ph-heart"></i>
+                                </button>
+                            </div>
+                            <div class="course-item__content">
+                                <div class="">
+                                    <h4 class="mb-28">
+                                        <a href="course-details.html" class="link text-line-2">{{todos_cursos.nome}}</a>
+                                    </h4>
+                                    <div class="flex-between gap-8 flex-wrap mb-16">
+                                        <div class="flex-align gap-8">
+                                            <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-video-camera"></i></span>
+                                            <span class="text-neutral-700 text-lg fw-medium">20 Aulas</span>
+                                        </div>
+                                        <div class="flex-align gap-8">
+                                            <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-monitor"></i></span>
+                                            <span class="text-neutral-700 text-lg fw-medium">Modalidade: {{todos_cursos.modalidade}}</span>
+                                        </div>
+                                        <div class="flex-align gap-8">
+                                            <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-chart-bar"></i></span>
+                                            <span class="text-neutral-700 text-lg fw-medium">{{todos_cursos.nivel}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-between gap-8 flex-wrap">
+                                        <div class="flex-align gap-4">
+                                            <span class="text-2xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                            <span class="text-lg text-neutral-700">
+                                                4.7
+                                                <span class="text-neutral-100">(6.4k)</span>
+                                            </span>
+                                        </div>
+                                        <div class="flex-align gap-8">
+                                            <span class="text-neutral-700 text-2xl d-flex">
+                                                <img src="{% static 'assets3/images/thumbs/user-img6.png' %}" alt="User Image" class="w-32 h-32 object-fit-cover rounded-circle">
+                                            </span>
+                                            <span class="text-neutral-700 text-lg fw-medium">{{todos_cursos.instituicao}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
+                                    <h4 class="mb-0 text-main-two-600">kz {{todos_cursos.preco}}</h4>
+                                    <a href="{% url 'incricao_curso' todos_cursos.id %}" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold" tabindex="0">
+                                        Inscreva-se
+                                        <i class="ph ph-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+<!-- ================================== Explore Course Section End =========================== -->
+    
+    <!-- ================================ About Section Start ==================================== -->
+ <section class="about py-120 position-relative z-1 mash-bg-main mash-bg-main-two">
+    <img src="{% static 'assets3/images/shapes/shape2.png' %}" alt="" class="shape one animation-scalation">
+    <img src="{% static 'assets3/images/shapes/shape6.png' %}" alt="" class="shape four animation-scalation">
+
+    <div class="position-relative">
+        <div class="container">
+            <div class="row gy-xl-0 gy-5 flex-wrap-reverse align-items-center">
+                <div class="col-xl-6">
+                    <div class="about-thumbs position-relative pe-lg-5">
+                        <img src="{% static 'assets3/images/shapes/shape7.png' %}" alt="" class="shape seven animation-scalation">
+    
+                        <div class="offer-message px-24 py-12 rounded-12 bg-main-two-50 fw-medium flex-align d-inline-flex gap-16 border border-neutral-30 animation-upDown">
+                            <span class="flex-shrink-0 w-48 h-48 bg-main-two-600 text-white text-2xl flex-center rounded-circle"><i class="ph ph-watch"></i></span>
+                            <div>
+                                <h6 class="mb-4">20% OFF</h6>
+                                <span class="text-neutral-500">Para Todos os Cursos</span>
+                            </div>
+                        </div>
+                        <div class="row gy-4">
+                            <div class="col-sm-6">
+                                <img src="{% static 'assets3/images/thumbs/about-img1.png' %}" alt="" class="rounded-12 w-100" data-tilt data-tilt-max="15" data-tilt-speed="500" data-tilt-perspective="5000" data-tilt-full-page-listening>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="flex-align gap-24 mb-24">
+                                    <div class="bg-main-600 rounded-12 text-center py-24 px-2 w-50-percent" data-aos="fade-right">    
+                                        <h1 class="mb-0 text-white counter">16+</h1>
+                                        <span class="text-white">Anos de experiência</span>
+                                    </div>
+                                    <div class="bg-neutral-700 rounded-12 text-center py-24 px-2 w-50-percent" data-aos="fade-left">    
+                                        <h1 class="mb-0 text-white counter">3.2k</h1>
+                                        <span class="text-white">Cursos</span>
+                                    </div>
+                                </div>
+                                <img src="{% static 'assets3/images/thumbs/about-img2.png' %}" alt="" class="rounded-12 w-100" data-tilt data-tilt-max="20" data-tilt-speed="500" data-tilt-perspective="5000" data-tilt-full-page-listening>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="about-content">
+                        <div class="mb-40">
+                            <div class="flex-align gap-8 mb-16 wow bounceInDown">
+                                <span class="w-8 h-8 bg-main-600 rounded-circle"></span>
+                                <h5 class="text-main-600 mb-0 ">Sobre o Educangola</h5>
+                            </div>
+                            <h2 class="mb-24 wow bounceIn">O Lugar Onde Você Pode Alcançar</h2>
+                            <p class="text-neutral-500 text-line-2 wow bounceInUp">Bem-vindo ao Educangola, onde o aprendizado não tem limites. Seja você um estudante, profissional ou aprendiz ao longo da vida...</p>
+                        </div>
+    
+                        <div class="flex-align align-items-start gap-28 mb-32" data-aos="fade-left" data-aos-duration="200">
+                            <span class="w-80 h-80 bg-main-25 border border-neutral-30 flex-center rounded-circle flex-shrink-0">
+                                <img src="{% static 'assets3/images/icons/about-img1.png' %}" alt="">
+                            </span>
+                            <div class="flex-grow-1">
+                                <h4 class="text-neutral-500 mb-12">Nossa Missão</h4>
+                                <p class="text-neutral-500">Impulsionados por uma equipe de educadores, tecnólogos e visionários dedicados, buscamos criar um ambiente de apoio</p>
+                            </div>
+                        </div>
+                        <div class="flex-align align-items-start gap-28 mb-0" data-aos="fade-left" data-aos-duration="400">
+                            <span class="w-80 h-80 bg-main-25 border border-neutral-30 flex-center rounded-circle flex-shrink-0">
+                                <img src="{% static 'assets3/images/icons/about-img2.png' %}" alt="">
+                            </span>
+                            <div class="flex-grow-1">
+                                <h4 class="text-neutral-500 mb-12">Nossa Visão</h4>
+                                <p class="text-neutral-500">Seja você um profissional buscando aprimorar suas habilidades ou um aprendiz ao longo da vida, estamos aqui para acompanhá-lo em cada passo do caminho.</p>
+                            </div>
+                        </div>
+    
+                        <div class="flex-align flex-wrap gap-32 pt-40 border-top border-neutral-50 mt-40 border-dashed border-0" data-aos="fade-left" data-aos-duration="600">
+                            <a href="{% url 'Todos_cursos' %}" class="btn btn-main rounded-pill flex-align gap-8">
+                                Ler Mais
+                                <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
+                            </a>
+                            <div class="flex-align gap-20">
+                                <img src="{% static 'assets3/images/thumbs/ceo-img.png' %}" alt="" class="w-52 h-52 rounded-circle object-fit-cover flex-shrink-0">
+                                <div class="flex-grow-1">
+                                    <span class="mb-4">
+                                        <img src="{% static 'assets3/images/thumbs/signature.png' %}" alt="">
+                                    </span>
+                                    <span class="text-sm d-block">CEO da Empresa</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ </section>
+<!-- ================================ About Section End ==================================== -->
+    
+    <!-- ================================ Instructor Section Start ==================================== -->
+    <section class="instructor py-120 bg-main-25 position-relative z-1">
+        <img src="{% static 'assets3/images/shapes/shape2.png' %}" alt="" class="shape one animation-scalation">
+        <img src="{% static 'assets3/images/shapes/shape6.png' %}" alt="" class="shape six animation-scalation">
+        
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2 class="mb-24 wow bounceIn">Instruções do Curso</h2>
+                <p class=" wow bounceInUp">Junte-se a nós nesta jornada de descoberta, crescimento e transformação. Juntos, vamos moldar um futuro mais brilhante</p>
+            </div>
+            <div class="instructor-slider">
+                {% for instrutor in instrutores %}
+                <div class="instructor-item scale-hover-item bg-white rounded-16 p-12 h-100 border border-neutral-30" data-aos="fade-up"  data-aos-duration="200">
+                        <div class="rounded-12 overflow-hidden position-relative bg-dark-yellow">
+                            <a href="instructor-details.html" class="w-100 h-100 d-flex align-items-end">
+                                <img src="{% static 'assets3/images/thumbs/instructor-img1.png' %}" alt="Imagem do Curso" class="scale-hover-item__img rounded-12 cover-img transition-2">
+                            </a>
+                        </div>
+                        <div class="p-24 position-relative">
+                            <div class="social-infos">
+                                <ul class="social-list flex-align flex-column gap-12 mb-12">
+                                    <li class="social-list__item">
+                                        <a href="https://www.facebook.com" class=" flex-center border border-white text-white w-44 h-44 rounded-circle text-xl hover-text-main hover-bg-white"><i class="ph-bold ph-facebook-logo"></i></a>
+                                    </li>
+                                    <li class="social-list__item">
+                                        <a href="https://www.twitter.com" class=" flex-center border border-white text-white w-44 h-44 rounded-circle text-xl hover-text-main hover-bg-white"><i class="ph-bold ph-twitter-logo"></i></a>
+                                    </li>
+                                    <li class="social-list__item">
+                                        <a href="https://www.linkedin.com" class=" flex-center border border-white text-white w-44 h-44 rounded-circle text-xl hover-text-main hover-bg-white"><i class="ph-bold ph-instagram-logo"></i></a>
+                                    </li>
+                                </ul>
+                                <button class="social-infos__button flex-center w-44 h-44 bg-white text-main-600 rounded-circle text-2xl transition-2">
+                                    <i class="ph-bold ph-plus"></i>
+                                </button>
+                            </div>
+                            <div class="">
+                                <h4 class="mb-28 pb-24 border-bottom border-neutral-50 mb-24 border-dashed border-0">
+                                    <a href="instructor-details.html" class="link text-line-2">{{instrutor.nome}}</a>
+                                </h4>
+                                <div class="flex-between gap-8 flex-wrap mb-16">
+                                    <div class="flex-align gap-8">
+                                        <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-lightbulb"></i></span>
+                                        <span class="text-neutral-700 text-lg fw-medium">Desenvolvedor Web</span>
+                                    </div>
+                                    <div class="flex-align gap-8">
+                                        <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-watch"></i></span>
+                                        <span class="text-neutral-700 text-lg fw-medium">7 Cursos</span>
+                                    </div>
+                                </div>
+                                <div class="flex-between gap-8 flex-wrap">
+                                    <div class="flex-align gap-8">
+                                        <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-users"></i></span>
+                                        <span class="text-neutral-700 text-lg fw-medium">15k Estudantes</span>
+                                    </div>
+                                    <div class="flex-align gap-4">
+                                        <span class="text-2xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                        <span class="text-lg text-neutral-700">
+                                            4.6
+                                            <span class="text-neutral-100">(2.4k)</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
+                                <a href="instructor-details.html" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold" tabindex="0">
+                                    Ver Perfil
+                                    <i class="ph ph-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+</section>
+
+    
+<!-- ================================ Instructor Section End ==================================== -->
+
+
+    <!-- =========================== CHoose Us Section Start ================================ -->
+<section class="choose-us pt-120 position-relative z-1 mash-bg-main mash-bg-main-two">
+<img src="{% static 'assets3/images/shapes/shape2.png' %}" alt="" class="shape one animation-scalation">
+<img src="{% static 'assets3/images/shapes/shape2.png' %}" alt="" class="shape six animation-scalation">
+
+<div class="container">
+    <div class="row gy-4">
+        <div class="col-xl-6">
+            <div class="choose-us__content">
+                <div class="mb-40">
+                    <div class="flex-align gap-8 mb-16 wow bounceInDown">
+                        <span class="w-8 h-8 bg-main-600 rounded-circle"></span>
+                        <h5 class="text-main-600 mb-0">Why Choose Us</h5>
+                    </div>
+                    <h2 class="mb-24  wow bounceIn">Our Commitment to Excellence, Learn, Grow & Success.</h2>
+                    <p class="text-neutral-500 text-line-2  wow bounceInUp">We are passionate about transforming lives through education. Founded with a vision to make learning accessible to all, we believe in the power of knowledge to unlock opportunities and shape the future.</p>
+                </div>
+
+                <ul>
+                    <li class="flex-align gap-12 mb-16" data-aos="fade-up-left"  data-aos-duration="200">
+                        <span class="flex-shrink-0 text-xl text-main-600 d-flex"><i class="ph-bold ph-checks"></i></span>
+                        <span class="flex-grow-1 text-neutral-500">9/10 Average Satisfaction Rate</span>
+                    </li>
+                    <li class="flex-align gap-12 mb-16" data-aos="fade-up-left"  data-aos-duration="400">
+                        <span class="flex-shrink-0 text-xl text-main-600 d-flex"><i class="ph-bold ph-checks"></i></span>
+                        <span class="flex-grow-1 text-neutral-500">96% Completitation Rate</span>
+                    </li>
+                    <li class="flex-align gap-12 mb-16" data-aos="fade-up-left"  data-aos-duration="500">
+                        <span class="flex-shrink-0 text-xl text-main-600 d-flex"><i class="ph-bold ph-checks"></i></span>
+                        <span class="flex-grow-1 text-neutral-500">Friendly Environment & Expert Teacher</span>
+                    </li>
+                </ul>
+
+                <div class="pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
+                    <a href="about.html" class="btn btn-main rounded-pill flex-align d-inline-flex gap-8">
+                        Read More
+                        <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-xl-6">
+            <div class="choose-us__thumbs position-relative">
+
+                <div class="offer-message style-two px-24 py-12 rounded-12 bg-white fw-medium flex-align d-inline-flex gap-16 box-shadow-lg animation-upDown">
+                    <span class="flex-shrink-0 w-48 h-48 bg-dark-yellow text-white text-2xl flex-center rounded-circle">
+                        <img src="{% static 'assets3/images/icons/stars.png' %}" alt="">
+                    </span>
+                    <div>
+                        <span class="text-lg text-neutral-700 d-block">
+                            4.6
+                            <span class="text-neutral-100">(2.4k)</span>
+                        </span>
+                        <span class="text-neutral-500">AVG Reviews</span>
+                    </div>
+                </div>
+
+                <div class="banner-box one style-two px-24 py-12 rounded-12 bg-white fw-medium box-shadow-lg d-inline-block" data-aos="fade-left">
+                    <span class="text-main-600">36k+</span> Enrolled Students
+                    <div class="enrolled-students mt-12">
+                        <img src="{% static 'assets3/images/thumbs/enroll-student-img1.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover">
+                        <img src="{% static 'assets3/images/thumbs/enroll-student-img2.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover">
+                        <img src="{% static 'assets3/images/thumbs/enroll-student-img3.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover">
+                        <img src="{% static 'assets3/images/thumbs/enroll-student-img4.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover">
+                        <img src="{% static 'assets3/images/thumbs/enroll-student-img5.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover">
+                        <img src="{% static 'assets3/images/thumbs/enroll-student-img6.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover">
+                    </div>
+                </div>
+
+                <div class="text-end" data-aos="zoom-out">
+                    <div class="d-sm-inline-block d-block position-relative">
+                        <img src="{% static 'assets3/images/thumbs/choose-us-img1.png' %}" alt="" class="choose-us__img rounded-12" data-tilt data-tilt-max="16" data-tilt-speed="500" data-tilt-perspective="5000" data-tilt-full-page-listening>
+                        <span class="shadow-main-two w-80 h-80 flex-center bg-main-two-600 rounded-circle position-absolute inset-block-start-0 inset-inline-start-0 mt-40 ms--40 animation-upDown">
+                            <img src="{% static 'assets3/images/icons/book.png' %}" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="animation-video"  data-aos="zoom-in">
+                    <img src="{% static 'assets3/images/thumbs/choose-us-img2.png' %}" alt="" class="border border-white rounded-circle border-3" data-tilt>
+                    <a href="https://www.youtube.com/watch?v=MFLVmAE4cqg" class="play-button w-48 h-48 flex-center bg-main-600 text-white rounded-circle text-xl position-absolute top-50 start-50 translate-middle">
+                        <i class="ph-fill ph-play"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- =========================== CHoose Us Section End ================================ -->
+
+    <!-- ========================== Counter Section start ============================== -->
+ <section class="counter py-120">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-xl-3 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-duration="200" >
+                <div class="counter-item animation-item h-100 text-center px-16 py-32 rounded-12 bg-main-25 border border-neutral-30">
+                    <span class="w-80 h-80 flex-center d-inline-flex bg-white text-main-600 text-40 rounded-circle box-shadow-md mb-24">
+                        <i class="animate__wobble ph ph-users"></i>
+                    </span>
+                    <h2 class="display-four mb-16 text-neutral-700 counter">1.6K</h2>
+                    <span class="text-neutral-500 text-lg">Successfully Trained</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-duration="400" >
+                <div class="counter-item animation-item h-100 text-center px-16 py-32 rounded-12 bg-main-two-25 border border-neutral-30">
+                    <span class="w-80 h-80 flex-center d-inline-flex bg-white text-main-two-600 text-40 rounded-circle box-shadow-md mb-24">
+                        <i class="animate__wobble ph ph-video-camera"></i>
+                    </span>
+                    <h2 class="display-four mb-16 text-neutral-700 counter"> 16.5K</h2>
+                    <span class="text-neutral-500 text-lg">Courses Completed</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-duration="600" >
+                <div class="counter-item animation-item h-100 text-center px-16 py-32 rounded-12 bg-main-25 border border-neutral-30">
+                    <span class="w-80 h-80 flex-center d-inline-flex bg-white text-main-600 text-40 rounded-circle box-shadow-md mb-24">
+                        <i class="animate__wobble ph ph-thumbs-up"></i>
+                    </span>
+                    <h2 class="display-four mb-16 text-neutral-700 counter">45.8K</h2>
+                    <span class="text-neutral-500 text-lg">Satisfaction Rate</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-duration="800" >
+                <div class="counter-item animation-item h-100 text-center px-16 py-32 rounded-12 bg-main-two-25 border border-neutral-30">
+                    <span class="w-80 h-80 flex-center d-inline-flex bg-white text-main-two-600 text-40 rounded-circle box-shadow-md mb-24">
+                        <i class="animate__wobble ph ph-users-three"></i>
+                    </span>
+                    <h2 class="display-four mb-16 text-neutral-700 counter">55.6K</h2>
+                    <span class="text-neutral-500 text-lg">Students Community</span>
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+<!-- ========================== Counter Section End ============================== -->
+
+    <!-- ================================= testimonials Section Start ========================================= -->
+ 
+<!-- ================================= testimonials Section End ========================================= -->
+    
+    <!-- ================================= Blog Section Start ========================================= -->
+    <section class="blog py-120 mash-bg-main mash-bg-main-two position-relative">
+        <img src="{% static 'assets3/images/shapes/shape2.png' %}" alt="" class="shape two animation-scalation">
+        <img src="{% static 'assets3/images/shapes/shape6.png' %}" alt="" class="shape four animation-scalation">
+    
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2 class="mb-24 wow bounceIn">Recent Articles</h2>
+                <p class="wow bounceInUp">Consectetur adipisicing elit, sed do eiusmod tempor inc idid unt ut labore et dolore magna aliqua enim ad...</p>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
+                    <div class="blog-item scale-hover-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30">
+                        <div class="rounded-12 overflow-hidden position-relative">
+                            <a href="blog-details.html" class="w-100 h-100">
+                                <img src="{% static 'assets3/images/thumbs/blog-img1.png' %}" alt="Blog Image" class="scale-hover-item__img rounded-12 cover-img transition-2">
+                            </a>
+                        </div>
+                        <div class="p-24 pt-32">
+                            <div class="">
+                                <span class="px-20 py-8 bg-main-two-600 rounded-8 text-white fw-medium mb-20">Student life</span>
+                                <h4 class="mb-28">
+                                    <a href="blog-details.html" class="link text-line-2">The Importance of Diversity in Higher Education</a>
+                                </h4>
+                                <div class="flex-align gap-14 flex-wrap my-20">
+                                    <div class="flex-align gap-8">
+                                        <span class="text-neutral-500 text-2xl d-flex"><i class="ph ph-user-circle"></i></span>
+                                        <span class="text-neutral-500 text-lg">Jeswal</span>
+                                    </div>
+                                    <span class="w-8 h-8 bg-neutral-100 rounded-circle"></span>
+                                    <div class="flex-align gap-8">
+                                        <span class="text-neutral-500 text-2xl d-flex"><i class="ph ph-calendar-dot"></i></span>
+                                        <span class="text-neutral-500 text-lg">12 May, 24</span>
+                                    </div>
+                                    <span class="w-8 h-8 bg-neutral-100 rounded-circle"></span>
+                                    <div class="flex-align gap-8">
+                                        <span class="text-neutral-500 text-2xl d-flex"><i class="ph ph-chat-dots"></i></span>
+                                        <span class="text-neutral-500 text-lg">24</span>
+                                    </div>
+                                </div>
+                                <p class="text-neutral-500 text-line-2">Unlock the secrets to effective time management in the digital learning space...</p>
+                            </div>
+                            <div class="pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
+                                <a href="blog-details.html" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold" tabindex="0">
+                                    Read More
+                                    <i class="ph ph-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-duration="400">
+                    <div class="blog-item scale-hover-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30">
+                        <div class="rounded-12 overflow-hidden position-relative">
+                            <a href="blog-details.html" class="w-100 h-100">
+                                <img src="{% static 'assets3/images/thumbs/blog-img2.png' %}" alt="Blog Image" class="scale-hover-item__img rounded-12 cover-img transition-2">
+                            </a>
+                        </div>
+                        <div class="p-24 pt-32">
+                            <div class="">
+                                <span class="px-20 py-8 bg-success-600 rounded-8 text-white fw-medium mb-20">Freedom</span>
+                                <h4 class="mb-28">
+                                    <a href="blog-details.html" class="link text-line-2">The Importance of Diversity in Higher Education</a>
+                                </h4>
+                                <div class="flex-align gap-14 flex-wrap my-20">
+                                    <div class="flex-align gap-8">
+                                        <span class="text-neutral-500 text-2xl d-flex"><i class="ph ph-user-circle"></i></span>
+                                        <span class="text-neutral-500 text-lg">Jeswal</span>
+                                    </div>
+                                    <span class="w-8 h-8 bg-neutral-100 rounded-circle"></span>
+                                    <div class="flex-align gap-8">
+                                        <span class="text-neutral-500 text-2xl d-flex"><i class="ph ph-calendar-dot"></i></span>
+                                        <span class="text-neutral-500 text-lg">12 May, 24</span>
+                                    </div>
+                                    <span class="w-8 h-8 bg-neutral-100 rounded-circle"></span>
+                                    <div class="flex-align gap-8">
+                                        <span class="text-neutral-500 text-2xl d-flex"><i class="ph ph-chat-dots"></i></span>
+                                        <span class="text-neutral-500 text-lg">24</span>
+                                    </div>
+                                </div>
+                                <p class="text-neutral-500 text-line-2">Unlock the secrets to effective time management in the digital learning space...</p>
+                            </div>
+                            <div class="pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
+                                <a href="blog-details.html" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold" tabindex="0">
+                                    Read More
+                                    <i class="ph ph-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-duration="600">
+                    <div class="blog-item scale-hover-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30">
+                        <div class="rounded-12 overflow-hidden position-relative">
+                            <a href="blog-details.html" class="w-100 h-100">
+                                <img src="{% static 'assets3/images/thumbs/blog-img3.png' %}" alt="Blog Image" class="scale-hover-item__img rounded-12 cover-img transition-2">
+                            </a>
+                        </div>
+                        <div class="p-24 pt-32">
+                            <div class="">
+                                <span class="px-20 py-8 bg-main-two-600 rounded-8 text-white fw-medium mb-20">Online</span>
+                                <h4 class="mb-28">
+                                    <a href="blog-details.html" class="link text-line-2">The Importance of Diversity in Higher Education</a>
+                                </h4>
+                                <div class="flex-align gap-14 flex-wrap my-20">
+                                    <div class="flex-align gap-8">
+                                        <span class="text-neutral-500 text-2xl d-flex"><i class="ph ph-user-circle"></i></span>
+                                        <span class="text-neutral-500 text-lg">Jeswal</span>
+                                    </div>
+                                    <span class="w-8 h-8 bg-neutral-100 rounded-circle"></span>
+                                    <div class="flex-align gap-8">
+                                        <span class="text-neutral-500 text-2xl d-flex"><i class="ph ph-calendar-dot"></i></span>
+                                        <span class="text-neutral-500 text-lg">12 May, 24</span>
+                                    </div>
+                                    <span class="w-8 h-8 bg-neutral-100 rounded-circle"></span>
+                                    <div class="flex-align gap-8">
+                                        <span class="text-neutral-500 text-2xl d-flex"><i class="ph ph-chat-dots"></i></span>
+                                        <span class="text-neutral-500 text-lg">24</span>
+                                    </div>
+                                </div>
+                                <p class="text-neutral-500 text-line-2">Unlock the secrets to effective time management in the digital learning space...</p>
+                            </div>
+                            <div class="pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
+                                <a href="blog-details.html" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold" tabindex="0">
+                                    Read More
+                                    <i class="ph ph-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- ================================= Blog Section End ========================================= -->
+
+
+    <!-- ================================= Certificate Section Start ================================= -->
+<div class="certificate">
+    <div class="container container--lg">
+        <div class="certificate-box px-16 bg-main-600 rounded-16">
+            <div class="container">
+                <div class="position-relative py-80">
+                    <div class="row align-items-center">
+                        <div class="col-xl-6">
+                            <div class="certificate__content">
+                                <div class="flex-align gap-8 mb-16 wow bounceInDown">
+                                    <span class="w-8 h-8 bg-white rounded-circle"></span>
+                                    <h5 class="text-white mb-0">Get Certificate</h5>
+                                </div>
+                                <h2 class="text-white mb-40 fw-medium wow bounceIn">Get Quality Skills Certificate From the EduAll</h2>
+                                <a href="index.html" class="btn btn-white rounded-pill flex-align d-inline-flex gap-8 hover-bg-main-800 wow bounceInUp">
+                                    Get Started Now
+                                    <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 d-xl-block d-none">
+                            <div class="certificate__thumb" data-aos="fade-up-left">    
+                                <img src="{% static 'assets3/images/thumbs/certificate-img.png' %}" alt="" data-tilt data-tilt-max="8" data-tilt-speed="500" data-tilt-perspective="5000" data-tilt-full-page-listening>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+<!-- ================================= Certificate Section End ================================= -->
+    
+    
+<!-- ==================== Footer Start Here ==================== -->
+<footer class="footer bg-main-25 position-relative z-1">
+    {% include 'includes/footer.html' %}
+</footer>
+<!-- ==================== Footer End Here ==================== -->
+  
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const categoryLinks = document.querySelectorAll('.nav-link');
+        const cursosList = document.getElementById('cursos-list');
+    
+        categoryLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const categoriaId = this.getAttribute('href').split('categoria=')[1];
+                
+                // Requisição AJAX para carregar os cursos
+                fetch(`{% url 'home_cursos' %}?categoria=${categoriaId}`, {
+                    method: 'GET',
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    cursosList.innerHTML = data.html;
+                })
+                .catch(error => console.log('Erro ao carregar cursos:', error));
+            });
+        });
+    });
+    </script>
+    
+        
+    {% include 'includes/links_java.html' %}
+        
+    </body>
+</html>

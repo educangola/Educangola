@@ -1,0 +1,47 @@
+{% load static %}
+        <script src="{% static 'assets3/js/jquery-3.7.1.min.js' %}"></script>
+        <!-- Bootstrap Bundle Js -->
+        <script src="{% static 'assets3/js/boostrap.bundle.min.js' %}"></script>
+        <!-- select2 Js -->
+        <script src="{% static 'assets3/js/select2.min.js' %}"></script>
+        <!-- Phosphor Icon Js -->
+        <script src="{% static 'assets3/js/phosphor-icon.js' %}"></script>
+        <!-- Slick js -->
+        <script src="{% static 'assets3/js/slick.min.js' %}"></script>
+        <!-- Counter js -->
+        <script src="{% static 'assets3/js/counter.min.js' %}"></script>
+        <!-- Magnific Popup -->
+        <script src="{% static 'assets3/js/magnific-popup.min.js' %}"></script>
+        <!-- jQuery UI js -->
+        <script src="{% static 'assets3/js/jquery-ui.js' %}"></script>
+        <!-- Plyr Js -->
+        <script src="{% static 'assets3/js/plyr.js' %}"></script>
+        <!-- Vanilla Tilt -->
+        <script src="{% static 'assets3/js/vanilla-tilt.min.js' %}"></script>
+        <!-- Wow -->
+        <script src="{% static 'assets3/js/wow.min.js' %}"></script>
+        <!-- AOS -->
+        <script src="{% static 'assets3/js/aos.js' %}"></script>
+        <!-- Main js -->
+        <script src="{% static 'assets3/js/main.js' %}"></script>
+
+
+        <script>
+                const socket = new WebSocket('ws://' + window.location.host + '/ws/mensagem/');
+            
+                socket.onmessage = function(e) {
+                    const data = JSON.parse(e.data);
+                    alert("Mensagem recebida: " + data.message);
+                };
+            
+                socket.onclose = function(e) {
+                    console.error('A conexão WebSocket foi fechada');
+                };
+            
+                function enviarMensagem(mensagem) {
+                    socket.send(JSON.stringify({
+                        'message': mensagem
+                    }));
+                }
+            </script>
+            

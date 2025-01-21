@@ -4,8 +4,8 @@ from instituicoes.models import Instituicao
 from cursos.models import Curso
 
 class ComentarioInstituicao(models.Model):
-    usuario = models.ForeignKey(Usuario, related_name='comentarios_instituicao', on_delete=models.CASCADE)
-    instituicao = models.ForeignKey(Instituicao, related_name='comentarios_instituicao', on_delete=models.CASCADE)
+    usuario = models.ForeignKey(Usuario, related_name='comentarios_instituicao', on_delete=models.DO_NOTHING)
+    instituicao = models.ForeignKey(Instituicao, related_name='comentarios_instituicao', on_delete=models.DO_NOTHING)
     texto = models.TextField()
     data_comentario = models.DateTimeField(auto_now_add=True)
 
@@ -13,8 +13,8 @@ class ComentarioInstituicao(models.Model):
         return f"Comentário de {self.usuario.username} sobre {self.instituicao.nome}"
 
 class ComentarioCurso(models.Model):
-    usuario = models.ForeignKey(Usuario, related_name='comentarios_curso', on_delete=models.CASCADE)
-    curso = models.ForeignKey(Curso, related_name='comentarios_curso', on_delete=models.CASCADE)
+    usuario = models.ForeignKey(Usuario, related_name='comentarios_curso', on_delete=models.DO_NOTHING)
+    curso = models.ForeignKey(Curso, related_name='comentarios_curso', on_delete=models.DO_NOTHING)
     texto = models.TextField()
     data_comentario = models.DateTimeField(auto_now_add=True)
 

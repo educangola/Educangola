@@ -1,0 +1,259 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Educangola | Inscrição | {{curso.nome}}</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png">
+
+    {% include 'includes/links_css.html' %}
+</head> 
+<body>
+    
+<!--==================== Preloader Start ====================-->
+  <div class="preloader">
+    <img src="{% static 'assets3/images/icons/preloader.gif' %}" alt="">
+  </div>
+<!--==================== Preloader End ====================-->
+
+<!--==================== Overlay Start ====================-->
+<div class="overlay"></div>
+<!--==================== Overlay End ====================-->
+
+<!--==================== Sidebar Overlay End ====================-->
+<div class="side-overlay"></div>
+<!--==================== Sidebar Overlay End ====================-->
+
+<!-- ==================== Scroll to Top End Here ==================== -->
+<div class="progress-wrap">
+  <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+  </svg>
+</div>
+<!-- ==================== Scroll to Top End Here ==================== -->
+
+<!-- ==================== Mobile Menu Start Here ==================== -->
+{% include 'includes/mobile_menu.html' %}
+<!-- ==================== Mobile Menu End Here ==================== -->
+
+
+    <!-- ==================== Header Start Here ==================== -->
+<header class="header">
+    {% include 'includes/header.html' %}
+</header>
+<!-- ==================== Header End Here ==================== -->
+
+    <!-- ==================== Breadcrumb Start Here ==================== -->
+<section class="breadcrumb py-120 bg-main-25 position-relative z-1 overflow-hidden mb-0">
+    <img src="{% static 'assets3/images/shapes/shape1.png' %}" alt="" class="shape one animation-rotation d-md-block d-none">
+    <img src="{% static 'assets3/images/shapes/shape2.png' %}" alt="" class="shape two animation-scalation d-md-block d-none">
+    <img src="{% static 'assets3/images/shapes/shape3.png' %}" alt="" class="shape eight animation-walking d-md-block d-none">
+    <img src="{% static 'assets3/images/shapes/shape5.png' %}" alt="" class="shape six animation-walking d-md-block d-none">
+    <img src="{% static 'assets3/images/shapes/shape4.png' %}" alt="" class="shape four animation-scalation">
+    <img src="{% static 'assets3/images/shapes/shape4.png' %}" alt="" class="shape nine animation-scalation">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="breadcrumb__wrapper">
+                    <h1 class="breadcrumb__title display-4 fw-semibold text-center"> Inscreva-se para Admissão</h1>
+                    <ul class="breadcrumb__list d-flex align-items-center justify-content-center gap-4">
+                        <li class="breadcrumb__item">
+                            <a href="{% url 'Todos_cursos' %}" class="breadcrumb__link text-neutral-500 hover-text-main-600 fw-medium"> 
+                                <i class="text-lg d-inline-flex ph-bold ph-house"></i> Início</a>
+                        </li>
+                        <li class="breadcrumb__item">
+                            <i class="text-neutral-500 d-flex ph-bold ph-caret-right"></i>
+                        </li>
+                        <li class="breadcrumb__item">
+                            <a href="course.html" class="breadcrumb__link text-neutral-500 hover-text-main-600 fw-medium"> </a> 
+                        </li>
+                        <li class="breadcrumb__item d-none">
+                            <i class="text-neutral-500 d-flex ph-bold ph-caret-right"></i>
+                        </li>
+                        <li class="breadcrumb__item"> 
+                            <span class="text-main-two-600"> Inscreva-se para Admissão </span> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+<!-- ==================== Breadcrumb End Here ==================== -->
+
+    <!-- ================================ Apply For Admission Section Start =================================== -->
+    <section class="py-120">
+        <div class="container">
+            <div class="border border-neutral-30 rounded-12 bg-main-25 p-24 bg-main-25">
+                <form action="{% url 'inscricao_create' curso.id %}" method="POST">
+                    {% csrf_token %}
+                    <h3 class="mb-24">Inscreva-se para Admissão</h3>
+                    <p style="color: rgb(78, 78, 189);" >{{ curso.instituicao }}</p>
+                    <br>
+                    <p style="color: rgb(78, 78, 189);" >{{ curso.nome }}</p>
+                
+                    <!-- Informações Pessoais Início -->
+                    <div class="border border-neutral-30 rounded-12 bg-white p-24">
+                        <h5 class="mb-0">Informações Pessoais</h5>
+                        <span class="d-block border border-main-50 my-24 border-dashed"></span>
+                        <div class="row gy-4">
+                            <!-- Nome -->
+                            <div class="col-sm-6">
+                                <label for="nome" class="text-neutral-700 text-lg fw-medium mb-12">Nome do Estudante <span class="text-danger-600">*</span> </label>
+                                <input type="text" name="nome" class="common-input bg-main-25 rounded-pill border-transparent focus-border-main-600" id="nome" placeholder="Insira seu nome...">
+                            </div>
+                
+                            <!-- Email -->
+                            <div class="col-sm-6">
+                                <label for="email" class="text-neutral-700 text-lg fw-medium mb-12">E-mail <span class="text-danger-600">*</span> </label>
+                                <input type="email" name="email" class="common-input bg-main-25 rounded-pill border-transparent focus-border-main-600" id="email" placeholder="Insira seu e-mail...">
+                            </div>
+                
+                            <!-- Telefone -->
+                            <div class="col-sm-12">
+                                <label for="telefone" class="text-neutral-700 text-lg fw-medium mb-12">Telefone <span class="text-danger-600">*</span> </label>
+                                <input type="tel" name="telefone" class="common-input bg-main-25 rounded-pill border-transparent focus-border-main-600" id="telefone" placeholder="Insira seu número...">
+                            </div>
+                
+                            <!-- Gênero -->
+                            <div class="col-sm-12">
+                                <label class="text-neutral-700 text-lg fw-medium mb-12">Gênero <span class="text-danger-600">*</span> </label>
+                                <div class="flex-align gap-24">
+                                    <div class="form-check common-check common-radio mb-0">
+                                        <input class="form-check-input" type="radio" name="genero" value="Masculino" id="Male">
+                                        <label class="form-check-label fw-normal flex-grow-1" for="Male">Masculino</label>
+                                    </div>
+                                    <div class="form-check common-check common-radio mb-0">
+                                        <input class="form-check-input" type="radio" name="genero" value="Feminino" id="Female">
+                                        <label class="form-check-label fw-normal flex-grow-1" for="Female">Feminino</label>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <!-- Data de Nascimento -->
+                            <div class="col-sm-6">
+                                <label for="data_nascimento" class="text-neutral-700 text-lg fw-medium mb-12">Data de Nascimento <span class="text-danger-600">*</span> </label>
+                                <input type="date" name="data_nascimento" class="common-input bg-main-25 rounded-pill border-transparent focus-border-main-600" id="data_nascimento">
+                            </div>
+                
+                            <!-- Cidade -->
+                            <div class="col-sm-6">
+                                <label for="cidade" class="text-neutral-700 text-lg fw-medium mb-12">Selecione a Cidade <span class="text-danger-600">*</span> </label>
+                                <select name="cidade" class="common-input bg-main-25 rounded-pill border-transparent focus-border-main-600 form-select py-14" id="selectCity">
+                                    <option value="Dhaka">Luanda</option>
+                                    <option value="Chandpur">Benguela</option>
+                                    <option value="Rajshahi">Bengo</option>
+                                    <option value="Rangpur">Rangpur</option>
+                                    <option value="Sylhet">Sylhet</option>
+                                    <option value="Khulna">Khulna</option>
+                                </select>
+                            </div>
+                
+                            <!-- Bairro -->
+                            <div class="col-sm-6">
+                                <label for="bairro" class="text-neutral-700 text-lg fw-medium mb-12">Selecione o Bairro <span class="text-danger-600">*</span> </label>
+                                <select name="bairro" class="common-input bg-main-25 rounded-pill border-transparent focus-border-main-600 form-select py-14" id="selectState">
+                                    <option value="Uttara">Walale</option>
+                                    <option value="Mirpur">Mgimbi</option>
+                                    <option value="Baddha">Sembele</option>
+                                    <option value="Gulshan">Gulshan</option>
+                                    <option value="Banani">Banani</option>
+                                </select>
+                            </div>
+                
+                            <!-- País -->
+                            <div class="col-sm-6">
+                                <label for="pais" class="text-neutral-700 text-lg fw-medium mb-12">Selecione o País <span class="text-danger-600">*</span> </label>
+                                <select name="pais" class="common-input bg-main-25 rounded-pill border-transparent focus-border-main-600 form-select py-14" id="selectCountry">
+                                    <option value="Bangladesh">Angola</option>
+                                    <option value="Paquistão">Portugal</option>
+                                    <option value="Butão">Brasil</option>
+                                    <option value="Nepal">Cabo-Verde</option>
+                                    <option value="Austrália">Austrália</option>
+                                    <option value="Inglaterra">Inglaterra</option>
+                                </select>
+                            </div>
+                
+                            <!-- Código Postal -->
+                            <div class="col-sm-12">
+                                <label for="codigo_postal" class="text-neutral-700 text-lg fw-medium mb-12">Código Postal <span class="text-danger-600">*</span> </label>
+                                <input type="text" name="codigo_postal" class="common-input bg-main-25 rounded-pill border-transparent focus-border-main-600" id="zipCode" placeholder="Ex: Luanda-091">
+                            </div>
+                
+                            <!-- Endereço -->
+                            <div class="col-sm-12">
+                                <label for="endereco" class="text-neutral-700 text-lg fw-medium mb-12">Seu Endereço </label>
+                                <textarea name="endereco" class="common-input bg-main-25 rounded-24 border-transparent focus-border-main-600" id="address" placeholder="Insira seu endereço..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Botão de Envio -->
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-main rounded-pill flex-center gap-8 mt-16">
+                            Enviar Agora
+                            <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
+                        </button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </section>
+    <!-- ================================ Apply For Admission Section End =================================== -->
+    
+    <!-- ================================= Certificate Section Start ================================= -->
+<div class="certificate">
+    <div class="container container--lg">
+        <div class="certificate-box px-16 bg-main-600 rounded-16">
+            <div class="container">
+                <div class="position-relative py-80">
+                    <div class="row align-items-center">
+                        <div class="col-xl-6">
+                            <div class="certificate__content">
+                                <div class="flex-align gap-8 mb-16 wow bounceInDown">
+                                    <span class="w-8 h-8 bg-white rounded-circle"></span>
+                                    <h5 class="text-white mb-0">Obtenha Certificado</h5>
+                                </div>
+                                <h2 class="text-white mb-40 fw-medium wow bounceIn">Obtenha um Certificado de Habilidades de Qualidade com a Educangola</h2>
+                                <a href="apply-admission.html" class="btn btn-white rounded-pill flex-align d-inline-flex gap-8 hover-bg-main-800 wow bounceInUp">
+                                    Comece Agora
+                                    <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
+                                </a>
+                            </div>
+                            
+                        </div>
+                        <div class="col-xl-6 d-xl-block d-none">
+                            <div class="certificate__thumb" data-aos="fade-up-left">    
+                                <img src="{% static 'assets3/images/thumbs/certificate-img.png' %}" alt="" data-tilt data-tilt-max="8" data-tilt-speed="500" data-tilt-perspective="5000" data-tilt-full-page-listening>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+<!-- ================================= Certificate Section End ================================= -->
+    
+    
+<!-- ==================== Footer Start Here ==================== -->
+<footer class="footer bg-main-25 position-relative z-1">
+    {% include 'includes/footer.html' %}
+</footer>
+<!-- ==================== Footer End Here ==================== -->
+  
+
+        <!-- Jquery js -->
+    {% include 'includes/links_java.html' %}
+
+
+
+    </body>
+</html>
