@@ -147,13 +147,14 @@ def conformacao_mensagem(request, inscricao_id):
 
     # Agora, vamos enviar a mensagem em tempo real via WebSocket
     channel_layer = get_channel_layer()
-    async_to_sync(channel_layer.group_send)(
-        'mensagens_group',  
-        {
-            'type': 'mensagem_enviada', 
-            'message': f"O status da inscrição {inscricao.id} foi alterado para {inscricao.status}."
-        }
-    )
+    if channel_layer:
+        async_to_sync(channel_layer.group_send)(
+            'mensagens_group',  # Nome do grupo
+            {
+                'type': 'mensagem_enviada',
+                'message': f"O status da inscrição {inscricao.id} foi alterado para {inscricao.status}."
+            }
+        )
 
     cursos = Curso.objects.all()
     categorias = Categoria.objects.prefetch_related('cursos').all()
