@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-3o1kdr_xi3whqs618fafoy@!(^bj*d04plqzwsa8@iyrvr97vf
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -145,6 +145,8 @@ LOCALE_PATHS = [
 LANGUAGES = [
     ('pt-br', _('Português')),
     ('en', _('Inglês')),
+    ('umb', _('umbundo'))
+
 ]
 
 # Static files (CSS, JavaScript, Images)

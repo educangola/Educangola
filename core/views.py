@@ -2,10 +2,36 @@ from django.shortcuts import render
 from django.shortcuts import render, get_object_or_404
 from django.shortcuts import redirect
 from django.utils.translation import activate
-from cursos.models import Curso
+from cursos.models import Curso, Categoria, Instrutor, PerfilInstrutor
+from .models import Contactar
+
+
 
 def index(request):
-    return render(request, 'index.html')
+    cursos = Curso.objects.all()
+    instrutores = Instrutor.objects.all()
+    cursos_actualizados = Curso.objects.all().order_by('-data_criacao')
+    categorias = Categoria.objects.all()
+    return render(request, 'index.html', {'cursos': cursos, 'categorias':categorias, 'cursos_actualizados':cursos_actualizados, 'instrutores':instrutores})
+
+def contactar(request):
+    if request.method == 'POST':
+        nome = request.POST.get('nome')
+        email = request.POST.get('email')
+        telefone = request.POST.get('telefone')
+        assunto = request.POST.get('assunto')
+        mensagem = request.POST.get('mensagem')
+
+
+    
+        contactar = Contactar(nome = nome, email = email, telefone = telefone, assunto = assunto, mensagem = mensagem)
+        contactar.save()
+
+        return redirect('/Educa_Angola/contactar?status=1')
+    else:
+        return redirect('/Educa_Angola/contactar?status=4')
+
+    
 
 
 def sobre_nos(request):

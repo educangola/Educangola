@@ -12,4 +12,5 @@ urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
     path('sobre_nos/', viewerro.sobre_nos, name="sobre_nos"),
     path('Todos_cursos/', viewerro.Todos_cursos, name="Todos_cursos"),
+    path('contactar/', viewerro.contactar, name='contactar')
 ]
