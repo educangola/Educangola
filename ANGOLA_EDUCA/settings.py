@@ -75,6 +75,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'ANGOLA_EDUCA.wsgi.application'
 ASGI_APPLICATION = 'ANGOLA_EDUCA.asgi.application'
 
+#============================AWS=============================
+
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
