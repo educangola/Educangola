@@ -15,8 +15,10 @@ Django==5.1.4
 django-jazzmin==3.0.1
 django-localflavor==4.0
 django-storages==1.14.4
+gunicorn==23.0.0
 jmespath==1.0.1
 kombu==5.4.2
+packaging==24.2
 pillow==11.0.0
 prompt_toolkit==3.0.50
 python-dateutil==2.9.0.post0
