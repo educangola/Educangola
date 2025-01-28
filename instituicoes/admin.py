@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Instituicao, Categoria, SeguirInstituicao, Curso, Inscricao, PerfilInstituicao, Postagem, DadosUpload, Status
+from .models import Instituicao, Categoria, SeguirInstituicao, Curso, PerfilInstituicao, Postagem, DadosUpload, Status
 
 # Personalizando a interface de cada modelo
 
@@ -36,10 +36,7 @@ class CursoAdmin(admin.ModelAdmin):
         return ", ".join([instituicao.nome for instituicao in obj.instituicoes.all()])
     instituicoes_nomes.short_description = 'Instituições'
 
-@admin.register(Inscricao)
-class InscricaoAdmin(admin.ModelAdmin):
-    list_display = ('usuario', 'curso', 'data_inscricao')
-    icon = 'fas fa-pencil-alt'
+
 
 @admin.register(PerfilInstituicao)
 class PerfilInstituicaoAdmin(admin.ModelAdmin):

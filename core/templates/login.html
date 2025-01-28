@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title> Educangola | Login</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png">
+
+    <!-- Bootstrap -->
+    {% include 'includes/links_css.html' %}
+</head> 
+<body>
+    
+<!--==================== Preloader Start ====================-->
+<div class="preloader">
+    <img src="{% static 'assets3/images/icons/preloader.gif' %}" alt="">
+  </div>
+<!--==================== Preloader End ====================-->
+
+<!--==================== Overlay Start ====================-->
+<div class="overlay"></div>
+<!--==================== Overlay End ====================-->
+
+<!--==================== Sidebar Overlay End ====================-->
+<div class="side-overlay"></div>
+<!--==================== Sidebar Overlay End ====================-->
+
+<!-- ==================== Scroll to Top End Here ==================== -->
+<div class="progress-wrap">
+  <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+  </svg>
+</div>
+<!-- ==================== Scroll to Top End Here ==================== -->
+
+<!-- ==================== Mobile Menu Start Here ==================== -->
+{% include 'includes/mobile_menu.html' %}
+<!-- ==================== Mobile Menu End Here ==================== -->
+
+
+<!-- ==================== Header inicio ==================== -->
+<header class="header">
+    {% include 'includes/header.html' %}
+</header>
+<!-- ==================== Header fim ==================== -->
+
+    <!-- ==================== Breadcrumb Start Here ==================== -->
+<section class="breadcrumb py-120 bg-main-25 position-relative z-1 overflow-hidden mb-0">
+    <img src="{% static 'assets3/images/shapes/shape1.png' %}" alt="" class="shape one animation-rotation d-md-block d-none">
+    <img src="{% static 'assets3/images/shapes/shape2.png' %}" alt="" class="shape two animation-scalation d-md-block d-none">
+    <img src="{% static 'assets3/images/shapes/shape3.png' %}" alt="" class="shape eight animation-walking d-md-block d-none">
+    <img src="{% static 'assets3/images/shapes/shape5.png' %}" alt="" class="shape six animation-walking d-md-block d-none">
+    <img src="{% static 'assets3/images/shapes/shape4.png' %}" alt="" class="shape four animation-scalation">
+    <img src="{% static 'assets3/images/shapes/shape4.png' %}" alt="" class="shape nine animation-scalation">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="breadcrumb__wrapper">
+                    <h1 class="breadcrumb__title display-4 fw-semibold text-center"> Entrar </h1>
+                    <ul class="breadcrumb__list d-flex align-items-center justify-content-center gap-4">
+                        <li class="breadcrumb__item">
+                            <a href="index.html" class="breadcrumb__link text-neutral-500 hover-text-main-600 fw-medium"> 
+                                <i class="text-lg d-inline-flex ph-bold ph-house"></i> Início</a>
+                        </li>
+                        <li class="breadcrumb__item">
+                            <i class="text-neutral-500 d-flex ph-bold ph-caret-right"></i>
+                        </li>
+                        <li class="breadcrumb__item">
+                            <a href="course.html" class="breadcrumb__link text-neutral-500 hover-text-main-600 fw-medium"> </a> 
+                        </li>
+                        <li class="breadcrumb__item d-none">
+                            <i class="text-neutral-500 d-flex ph-bold ph-caret-right"></i>
+                        </li>
+                        <li class="breadcrumb__item"> 
+                            <span class="text-main-two-600"> Entrar </span> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+<!-- ==================== Breadcrumb End Here ==================== -->
+
+    <!-- ============================== Tutor Details Section Start ============================== -->
+    <div class="account py-120 position-relative">
+        <div class="container">
+            <div class="row gy-4 align-items-center">
+                <div class="col-lg-6">
+                    <div class="bg-main-25 border border-neutral-30 rounded-8 p-32">
+                        <div class="mb-40">
+                            <h3 class="mb-16 text-neutral-500">Bem-vindo de volta!</h3>
+                            <p class="text-neutral-500">Entre na sua conta e junte-se a nós</p>
+                        </div>
+                        <form action="{% url 'Login_normal' %}" method="POST">{% csrf_token %}
+                            <div class="mb-24">
+                                <label for="email" class="fw-medium text-lg text-neutral-500 mb-16">Digite seu e-mail</label>
+                                <input name="email" type="email" class="common-input rounded-pill" id="email" placeholder="Digite seu e-mail...">
+                            </div>
+                            <div class="mb-16">
+                                <label for="password" class="fw-medium text-lg text-neutral-500 mb-16">Digite sua senha</label>
+                                <div class="position-relative">
+                                    <input name="senha" type="password" class="common-input rounded-pill pe-44" id="password" placeholder="Digite sua senha...">
+                                    <span class="toggle-password position-absolute top-50 inset-inline-end-0 me-16 translate-middle-y ph-bold ph-eye-closed" id="#password"></span>
+                                </div>
+                            </div>
+                            <div class="mb-16 text-end">
+                                <a href="javascript:void(0)" class="text-warning-600 hover-text-decoration-underline">Esqueceu a senha?</a>
+                            </div>
+                            <div class="mb-16">
+                                <p class="text-neutral-500">Não tem uma conta?  
+                                    <a href="{% url 'Cadastrar_normal' %}" class="fw-semibold text-main-600 hover-text-decoration-underline">Cadastre-se</a> 
+                                </p>
+                            </div>
+                            <div class="mt-40">
+                                <button type="submit" class="btn btn-main rounded-pill flex-center gap-8 mt-40">
+                                    Entrar
+                                    <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-lg-block d-none">
+                    <div class="account-img">
+                        <img src="{% static 'assets3/images/thumbs/account-img.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ============================== Tutor Details Section End ============================== -->
+    
+    
+<!-- ==================== Footer Start Here ==================== -->
+<footer class="footer bg-main-25 position-relative z-1">
+    {% include 'includes/footer.html' %}
+</footer>
+<!-- ==================== Footer End Here ==================== -->
+  
+
+        <!-- Jquery js -->
+        {% include 'includes/links_java.html' %}
+
+
+
+    </body>
+</html>

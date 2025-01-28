@@ -8,3 +8,5 @@ def Instituicao(request):
     return render(request, 'escolas.html')
 
 
+def detalhe_instituicao(request):
+    return render(request, 'detalhe_instituicao.html')

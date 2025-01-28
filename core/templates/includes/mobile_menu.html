@@ -9,19 +9,22 @@
             
 <ul class="nav-menu flex-align nav-menu--mobile">
     <li class="nav-menu__item has-submenu activePage">
-        <a href="javascript:void(0)" class="nav-menu__link">Início</a>
+        <a href="javascript:void(0)" class="nav-menu__link">home</a>
         <ul class="nav-submenu scroll-sm">
             <li class="nav-submenu__item activePage">
-                <a href="index.html" class="nav-submenu__link hover-bg-neutral-30"> Início LMS</a>
+                <a href="{% url 'index' %}" class="nav-submenu__link hover-bg-neutral-30"> home</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="index-2.html" class="nav-submenu__link hover-bg-neutral-30"> Início Curso Online</a>
+                <a href="{% url 'universidade' %}l" class="nav-submenu__link hover-bg-neutral-30"> home escolas</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="index-3.html" class="nav-submenu__link hover-bg-neutral-30"> Início Universidade</a>
+                <a href="{% url 'home_cursos' %}" class="nav-submenu__link hover-bg-neutral-30">Home cursos</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="index-4.html" class="nav-submenu__link hover-bg-neutral-30"> Início Tutor</a>
+                <a href="index-4.html" class="nav-submenu__link hover-bg-neutral-30"> Centros de formacao</a>
+            </li>
+            <li class="nav-submenu__item">
+                <a href="index-4.html" class="nav-submenu__link hover-bg-neutral-30"> home biblioteca</a>
             </li>
         </ul>   
     </li>

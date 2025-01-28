@@ -1,0 +1,1226 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Educangola | Instituicao | nome</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png">
+
+    <!-- Bootstrap -->
+    {% include 'includes/links_css.html' %}
+</head> 
+<body>
+    
+<!--==================== Preloader Start ====================-->
+  <div class="preloader">
+    <img src="assets/images/icons/preloader.gif" alt="">
+  </div>
+<!--==================== Preloader End ====================-->
+
+<!--==================== Preloader Start ====================-->
+<div class="preloader">
+    <img src="{static 'assets3/images/icons/preloader.gif'}" alt="">
+  </div>
+<!--==================== Preloader End ====================-->
+
+<!--==================== Overlay Start ====================-->
+<div class="overlay"></div>
+<!--==================== Overlay End ====================-->
+
+<!--==================== Sidebar Overlay End ====================-->
+<div class="side-overlay"></div>
+<!--==================== Sidebar Overlay End ====================-->
+
+<!-- ==================== Scroll to Top End Here ==================== -->
+<div class="progress-wrap">
+  <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+  </svg>
+</div>
+<!-- ==================== Scroll to Top End Here ==================== -->
+
+<!-- ==================== Mobile Menu Start Here ==================== -->
+{% include 'includes/mobile_menu.html' %}
+<!-- ==================== Mobile Menu End Here ==================== -->
+
+
+    <!-- ==================== Header Start Here ==================== -->
+<header class="header">
+    {% include 'includes/header.html' %}
+</header>
+<!-- ==================== Header End Here ==================== -->
+
+    <!-- ==================== Breadcrumb Start Here ==================== -->
+<section class="breadcrumb py-120 bg-main-25 position-relative z-1 overflow-hidden mb-0">
+    <img src="{% static 'assets3/images/shapes/shape1.png' %}" alt="" class="shape one animation-rotation d-md-block d-none">
+    <img src="{% static 'assets3/images/shapes/shape2.png' %}" alt="" class="shape two animation-scalation d-md-block d-none">
+    <img src="{% static 'assets3/images/shapes/shape3.png' %}" alt="" class="shape eight animation-walking d-md-block d-none">
+    <img src="{% static 'assets3/images/shapes/shape5.png' %}" alt="" class="shape six animation-walking d-md-block d-none">
+    <img src="{% static 'assets3/images/shapes/shape4.png' %}" alt="" class="shape four animation-scalation">
+    <img src="{% static 'assets3/images/shapes/shape4.png' %}" alt="" class="shape nine animation-scalation">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="breadcrumb__wrapper">
+                    <h1 class="breadcrumb__title display-4 fw-semibold text-center">Instituiçao: ISPTEC</h1>
+                    <ul class="breadcrumb__list d-flex align-items-center justify-content-center gap-4">
+                        <li class="breadcrumb__item">
+                            <a href="index.html" class="breadcrumb__link text-neutral-500 hover-text-main-600 fw-medium"> 
+                                <i class="text-lg d-inline-flex ph-bold ph-house"></i> Home</a>
+                         </li>
+                        <li class="breadcrumb__item">
+                            <i class="text-neutral-500 d-flex ph-bold ph-caret-right"></i>
+                        </li>
+                        <li class="breadcrumb__item">
+                            <a href="course.html" class="breadcrumb__link text-neutral-500 hover-text-main-600 fw-medium"> </a> 
+                        </li>
+                        <li class="breadcrumb__item d-none">
+                            <i class="text-neutral-500 d-flex ph-bold ph-caret-right"></i>
+                        </li>
+                        <li class="breadcrumb__item"> 
+                            <span class="text-main-two-600">Instituições</span> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==================== Breadcrumb End Here ==================== -->
+
+    <!-- ============================== Tutor Details Section Start ============================== -->
+    <section class="tutor-details py-120">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <div class="border border-neutral-30 rounded-12 bg-white p-8">
+                        <div class="border border-neutral-30 rounded-12 bg-main-25 p-32 bg-main-25">
+                            <div class="p-16 border border-neutral-50 rounded-circle aspect-ratio-1 max-w-150 max-h-150 mx-auto">
+                                <div class="position-relative">
+                                    <img src="{% static 'assets/img/ipiz.png' %}" alt="" class="rounded-circle bg-dark-white aspect-ratio-1 cover-img">
+                                    <span class="w-32 h-32 bg-success-600 rounded-circle border border-main-25 border-3 flex-center text-white position-absolute inset-block-end-0 inset-inline-end-0 me-4">
+                                        <i class="ph-bold ph-check"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="mb-16 text-center mt-40">ISPTEC</h4>
+                            <div class="flex-center gap-10 flex-wrap my-20">
+                                <span class="text-neutral-500 text-md">Ano ex: <span class="text-main-600 fw-medium">950</span></span>
+                                <span class="w-4 h-4 bg-main-600 rounded-circle"></span>
+                                <span class="text-neutral-500 text-md">categoria: <span class="text-main-600 fw-medium">Universidade </span></span>
+                                <span class="w-4 h-4 bg-main-600 rounded-circle"></span>
+                                <div class="flex-align gap-4">
+                                    <span class="text-lg fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                    <span class="text-md text-neutral-700">
+                                        4.8
+                                        <span class="text-neutral-100"> (114)</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <ul class="social-list flex-center gap-16 mt-28">
+                                <li class="social-list__item">
+                                    <a href="https://www.facebook.com" class="text-main-600 text-xl hover-text-white w-40 h-40 rounded-circle border border-main-600 hover-bg-main-600 flex-center"><i class="ph-bold ph-facebook-logo"></i></a>
+                                </li>
+                                <li class="social-list__item">
+                                    <a href="https://www.twitter.com" class="text-main-600 text-xl hover-text-white w-40 h-40 rounded-circle border border-main-600 hover-bg-main-600 flex-center"> <i class="ph-bold ph-twitter-logo"></i></a>
+                                </li>
+                                <li class="social-list__item">
+                                    <a href="https://www.linkedin.com" class="text-main-600 text-xl hover-text-white w-40 h-40 rounded-circle border border-main-600 hover-bg-main-600 flex-center"><i class="ph-bold ph-instagram-logo"></i></a>
+                                </li>
+                                <li class="social-list__item">
+                                    <a href="https://www.pinterest.com" class="text-main-600 text-xl hover-text-white w-40 h-40 rounded-circle border border-main-600 hover-bg-main-600 flex-center"><i class="ph-bold ph-pinterest-logo"></i></a>
+                                </li>
+                            </ul>
+                            <span class="d-block border border-neutral-30 my-20 border-dashed"></span>
+                            <div class="d-flex flex-column gap-16">
+                                <div class="flex-align gap-16">
+                                    <span class="text-2xl text-main-600">
+                                        <i class="ph-bold ph-phone-call"></i>
+                                    </span>
+                                    <a href="tel:923908353" class="text-neutral-700 hover-text-main-600">+244 923908353</a>
+                                </div>
+                                <div class="flex-align gap-16">
+                                    <span class="text-2xl text-success-600">
+                                        <i class="ph-bold ph-envelope-simple"></i>
+                                    </span>
+                                    <a href="mailto:demo@gmail.com" class="text-neutral-700 hover-text-main-600">ipstec@gmail.com</a>
+                                </div>
+                                <div class="flex-align gap-16">
+                                    <span class="text-2xl text-warning-600">
+                                        <i class="ph-bold ph-map-pin-line"></i>
+                                    </span>
+                                    <span class="text-neutral-700">Angola, Luanda, viana, zango 800, bloco k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border border-neutral-30 rounded-12 bg-white p-8 mt-24">
+                        <div class="border border-neutral-30 rounded-12 bg-main-25 p-32 bg-main-25">
+                            <h4 class="mb-16">Entre em Contato</h4>
+                            <span class="d-block border border-neutral-30 my-24 border-dashed"></span>
+                            <form action="tutor-details.html#" class="d-flex flex-column gap-20">
+                                <div class="">
+                                    <label for="myName" class="text-lg fw-semibold text-neutral-700 mb-8">Nome</label>
+                                    <input type="text" class="common-input border-transparent rounded-pill focus-border-main-600" id="myName" placeholder="Digite seu nome...">
+                                </div>
+                                <div class="">
+                                    <label for="Email" class="text-lg fw-semibold text-neutral-700 mb-8">Email</label>
+                                    <input type="email" class="common-input border-transparent rounded-pill focus-border-main-600" id="Email" placeholder="Digite seu email...">
+                                </div>
+                                <div class="">
+                                    <label for="Phone" class="text-lg fw-semibold text-neutral-700 mb-8">Telefone</label>
+                                    <input type="tel" class="common-input border-transparent rounded-pill focus-border-main-600" id="Phone" placeholder="Digite seu número...">
+                                </div>
+                                <div class="">
+                                    <label for="Message" class="text-lg fw-semibold text-neutral-700 mb-8">Mensagem</label>
+                                    <textarea class="common-input border-transparent rounded-24 focus-border-main-600" id="Message" placeholder="Digite sua mensagem..."></textarea>
+                                </div>
+                                <div class="">
+                                    <button type="submit" class="btn btn-main rounded-pill flex-center gap-8 mt-20">
+                                        Enviar Avaliação
+                                        <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-8">
+
+                    <ul class="nav nav-pills common-tab d-inline-flex gap-16 bg-white p-12 border border-neutral-30 rounded-pill" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 active" id="pills-tutionInfo-tab" data-bs-toggle="pill" data-bs-target="#pills-tutionInfo" type="button" role="tab" aria-controls="pills-tutionInfo" aria-selected="true">
+                                <i class="text-xl text-main-600 d-flex ph-bold ph-house"></i>
+                                Home
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8" id="pills-qualification-tab" data-bs-toggle="pill" data-bs-target="#pills-qualification" type="button" role="tab" aria-controls="pills-qualification" aria-selected="false">
+                                <i class="text-xl text-main-600 d-flex ph-bold ph-graduation-cap"></i>
+                                Cursos
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8" id="pills-qualification-tab" data-bs-toggle="pill" data-bs-target="#pills-eventos" type="button" role="tab" aria-controls="pills-qualification" aria-selected="false">
+                                <i class="text-xl text-main-600 d-flex ph-bold ph-newspaper"></i>
+                                Eventos e Noticias
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8" id="pills-qualification-tab" data-bs-toggle="pill" data-bs-target="#pills-cursos" type="button" role="tab" aria-controls="pills-qualification" aria-selected="false">
+                                <i class="text-xl text-main-600 d-flex ph-bold ph-building"></i>
+                                Infraestrutura
+                            </button>
+                        </li>
+                    </ul>
+                      
+                    
+
+                    <div class="tab-content" id="pills-tabContent">
+                        
+                        <div class="tab-pane fade show active" id="pills-tutionInfo" role="tabpanel" aria-labelledby="pills-tutionInfo-tab" tabindex="0">
+                             <!-- Tuition Info Start -->
+                             <div class="tutor-details__content">
+                                
+                                <div class="border border-neutral-30 rounded-12 bg-white p-8 mt-24">
+                                    <div class="border border-neutral-30 rounded-12 bg-main-25 p-32 bg-main-25">
+                                        <header class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4 py-3">
+                                            <div class="container-fluid">
+                                                <a class="navbar-brand fw-bold text-main-600 d-flex align-items-center" href="#">
+                                                    <img src="{% static 'assets/img/ipiz.png' %}" alt="Logo" class="me-2" style="height: 40px;">
+                                                </a>
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+                                                <div class="collapse navbar-collapse" id="navbarNav">
+                                                    <ul class="navbar-nav ms-auto">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link text-neutral-700" href="#">Consultar Nota</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link text-neutral-700" href="#">Calendário</a>
+                                                        </li>
+                                                        
+                                                        <li class="nav-item">
+                                                            <a class="nav-link text-neutral-700" href="#">Pedir Certificado</a>
+                                                        </li>
+                                                        <!-- Sugestões de links adicionais -->
+                                                        <li class="nav-item">
+                                                            <a class="nav-link text-neutral-700" href="#">FAQ</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link text-neutral-700" href="#">Testemunho</a>
+                                                        </li>
+                                                        
+                                                        <li class="nav-item">
+                                                            <a class="btn btn-main-600 text-white px-4 py-2 rounded-pill" href="#">Get Started</a>
+                                                        </li>
+                                                    </ul>
+                                                    
+                                                </div>
+                                            </div>
+                                        </header>
+                                        
+                                        
+                                        <!-- Espaçamento entre o Header e o Carrossel -->
+                                        <div style="margin-top: 20px;"></div>
+                                        
+                                        <!-- Carrossel de Imagens -->
+                                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                            <div class="carousel-indicators">
+                                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                            </div>
+                                            <div class="carousel-inner">
+                                                <!-- Slide 1 -->
+                                                <div class="carousel-item active">
+                                                    <img src="{% static 'assets/img/boy-helping-his-friend-with-books.jpg' %}" class="d-block w-100" alt="Slide 1" style="height: 400px; object-fit: cover;">
+                                                    <div class="carousel-caption d-flex justify-content-center align-items-center">
+                                                        <div class="text-center text-white">
+                                                            <h5>Aprendizado Acessível</h5>
+                                                            <p>Aqui, buscamos oferecer uma educação de qualidade para todos.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Slide 2 -->
+                                                <div class="carousel-item">
+                                                    <img src="{% static 'assets/img/boy-helping-his-friend-with-books.jpg' %}" class="d-block w-100" alt="Slide 2" style="height: 400px; object-fit: cover;">
+                                                    <div class="carousel-caption d-flex justify-content-center align-items-center">
+                                                        <div class="text-center text-white">
+                                                            <h5>Inovação no Ensino</h5>
+                                                            <p>Nosso método é baseado na inovação e criatividade.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Slide 3 -->
+                                                <div class="carousel-item">
+                                                    <img src="{% static 'assets/img/boy-helping-his-friend-with-books.jpg' %}" class="d-block w-100" alt="Slide 3" style="height: 400px; object-fit: cover;">
+                                                    <div class="carousel-caption d-flex justify-content-center align-items-center">
+                                                        <div class="text-center text-white">
+                                                            <h5>Juntos para o Futuro</h5>
+                                                            <p>Acreditamos que o trabalho em equipe é fundamental para o sucesso.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                        
+                                        
+                                        <section class="about-two py-120 position-relative z-1 bg-main-25">
+                                            <div class="position-relative">
+                                                <div class="container">
+                                                    <div class="row gy-xl-0 gy-5 flex-wrap-reverse align-items-center">
+                                                        <div class="col-xl-6 pe-xl-5">
+                                                            <div class="about-two__thumb position-relative">
+                                                                <img src="{% static 'assets3/images/thumbs/about-two-img.png' %}" class="rounded-16 cover-img wow bounceIn" alt="" data-tilt data-tilt-max="10" data-tilt-speed="500" data-tilt-perspective="5000" data-tilt-full-page-listening>
+                                                                
+                                                                <span class="shadow-main-three w-80 h-80 flex-center bg-main-three-600 rounded-circle position-absolute inset-block-start-0 inset-inline-start-0 mt-40 ms--40 animation-upDown">
+                                                                    <img src="{% static 'assets3/images/icons/bulb-icon.png' %}" class="" alt="">
+                                                                </span>
+                                        
+                                                                <div class="offer-message style-two me-lg-0 me-24 px-24 py-12 rounded-12 bg-white fw-medium flex-align d-inline-flex gap-16 box-shadow-lg animation-upDown">
+                                                                    <span class="flex-shrink-0 w-48 h-48 bg-main-two-600 text-white text-2xl flex-center rounded-circle">
+                                                                        <img src="{% static 'assets3/images/icons/stars-white.png' %}" alt="">
+                                                                    </span>
+                                                                    <div>
+                                                                        <span class="text-lg text-neutral-700 d-block">
+                                                                            4.6
+                                                                            <span class="text-neutral-100">(2.4k)</span>
+                                                                        </span>
+                                                                        <span class="text-neutral-500">Avaliação média</span>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="position-absolute inset-block-end-0 inset-inline-end-0 me-lg-0 me-24 px-24 py-12 rounded-12 bg-white fw-medium flex-align d-inline-flex gap-16 box-shadow-lg animation-upDown">
+                                                                    <div class="text-center">
+                                                                        <img src="{% static 'assets3/images/icons/circle-progress.png' %}" class="d-sm-flex d-none mb-24" alt="">
+                                                                        <h6 class="mb-4 text-neutral-700 text-2xl">Excelente</h6>
+                                                                        <span class="text-sm text-neutral-500">90% de clientes satisfeitos</span>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6">
+                                                            <div class="about-two-content">
+                                                                <div class="mb-40">
+                                                                    <div class="flex-align d-inline-flex gap-8 mb-16 wow bounceInDown">
+                                                                        <span class="text-main-600 text-2xl d-flex"><i class="ph-bold ph-book"></i></span>
+                                                                        <h5 class="text-main-600 mb-0">Por que escolher a gente?</h5>
+                                                                    </div>
+                                                                    <h2 style="font-size: 18px;" class="mb-24 wow bounceIn">Mais de 16 anos de aprendizado para o desenvolvimento de habilidades</h2>
+                                                                    <p class="text-neutral-500 text-line-2 wow bounceInUp">Somos apaixonados por transformar vidas através da educação. Fundada com a visão de tornar o aprendizado acessível a todos, acreditamos no poder do conhecimento para desbloquear oportunidades e moldar o futuro.</p>
+                                                                </div>
+                                        
+                                                                <div class="grid-cols-2">
+                                                                    <div class="flex-align align-items-start gap-20 animation-item" data-aos="fade-up" data-aos-duration="600">
+                                                                        <span class="flex-shrink-0 w-60 h-60 flex-center d-inline-flex bg-white text-main-600 text-40 rounded-circle box-shadow-md">
+                                                                            <img src="{% static 'assets3/images/icons/choose-us-icon1.png' %}" class="animate__swing" alt="">
+                                                                        </span>
+                                                                        <div class="flex-grow-1">
+                                                                            <h6 class="text-neutral-800 text-xl fw-medium mb-8">Excelência acadêmica</h6>
+                                                                            <p class="text-neutral-500 text-line-2">Através dos nossos cursos selecionados, conteúdo interativo</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex-align align-items-start gap-20 animation-item" data-aos="fade-up" data-aos-duration="800">
+                                                                        <span class="flex-shrink-0 w-60 h-60 flex-center d-inline-flex bg-white text-main-600 text-40 rounded-circle box-shadow-md">
+                                                                            <img src="{% static 'assets3/images/icons/choose-us-icon2.png' %}" class="animate__swing" alt="">
+                                                                        </span>
+                                                                        <div class="flex-grow-1">
+                                                                            <h6 class="text-neutral-800 text-xl fw-medium mb-8">Ofertas de cursos</h6>
+                                                                            <p class="text-neutral-500 text-line-2">Caminhos de aprendizagem personalizados, capacitando os alunos a adquirir</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    <div class="flex-align align-items-start gap-20 animation-item" data-aos="fade-up" data-aos-duration="1200">
+                                                                        <span class="flex-shrink-0 w-60 h-60 flex-center d-inline-flex bg-white text-main-600 text-40 rounded-circle box-shadow-md">
+                                                                            <img src="{% static 'assets3/images/icons/choose-us-icon4.png' %}" class="animate__swing" alt="">
+                                                                        </span>
+                                                                        <div class="flex-grow-1">
+                                                                            <h6 class="text-neutral-800 text-xl fw-medium mb-8">Iniciativa de sustentabilidade</h6>
+                                                                            <p class="text-neutral-500 text-line-2">Faça parte de uma instituicao que se importa com o planeta.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                        
+                                                                <div class="pt-40 border-top border-neutral-50 mt-40 border-dashed border-0">
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        
+                                        
+                                        
+                                        <h4 style="margin-top: 19px;" class="mb-16">Blog e Noticias</h4>
+                                        <span class="d-block border border-neutral-30 my-24 border-dashed"></span>
+
+                                        <!-- Carousel de Cursos -->
+                                        <div id="cursoCarousel" class="carousel slide" data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <!-- Card 1 -->
+                                                <div class="carousel-item active">
+                                                    <div class="row mt-5">
+                                                        <div class="col-md-6">
+                                                            <div class="card">
+                                                                <img src="{% static 'assets/img/course/course-3-2.jpg' %}" class="card-img-top" alt="Curso 1">
+                                                                <div class="card-body">
+                                                                    <h5 class="card-title">Curso de Matemática Avançada</h5>
+                                                                    <p class="card-text">Aprofunde seus conhecimentos em álgebra, cálculo e geometria com este curso avançado.</p>
+                                                                    <a href="#" class="btn btn-primary">Saiba Mais</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Card 2 -->
+                                                        <div class="col-md-6">
+                                                            <div class="card">
+                                                                <img src="{% static 'assets/img/course/course-3-2.jpg' %}" class="card-img-top" alt="Curso 2">
+                                                                <div class="card-body">
+                                                                    <h5 class="card-title">Curso de Programação Python</h5>
+                                                                    <p class="card-text">Aprenda a programar em Python e desenvolva habilidades para criar aplicativos e automações.</p>
+                                                                    <a href="#" class="btn btn-primary">Saiba Mais</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Card 3 (caso tenha mais cursos) -->
+                                                <div class="carousel-item">
+                                                    <div class="row mt-5">
+                                                        <div class="col-md-6">
+                                                            <div class="card">
+                                                                <img src="{% static 'assets/img/course/course-3-2.jpg' %}" class="card-img-top" alt="Curso 3">
+                                                                <div class="card-body">
+                                                                    <h5 class="card-title">Curso de Física Avançada</h5>
+                                                                    <p class="card-text">Estude os conceitos fundamentais da física, incluindo termodinâmica e mecânica quântica.</p>
+                                                                    <a href="#" class="btn btn-primary">Saiba Mais</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Card 4 -->
+                                                        <div class="col-md-6">
+                                                            <div class="card">
+                                                                <img src="{% static 'assets/img/course/course-3-2.jpg' %}" class="card-img-top" alt="Curso 4">
+                                                                <div class="card-body">
+                                                                    <h5 class="card-title">Curso de Design Gráfico</h5>
+                                                                    <p class="card-text">Domine as principais ferramentas de design gráfico e crie artes profissionais.</p>
+                                                                    <a href="#" class="btn btn-primary">Saiba Mais</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Controles do Carousel -->
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#cursoCarousel" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#cursoCarousel" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tuition Info End -->
+                        </div>
+
+                        <div class="tab-pane fade" id="pills-qualification" role="tabpanel" aria-labelledby="pills-qualification-tab" tabindex="0">
+                            <!-- Qualification Start -->
+                            <div class="tutor-details__content">
+                                <div class="border border-neutral-30 rounded-12 bg-white p-8 mt-24">
+                                    <div class="border border-neutral-30 rounded-12 bg-main-25 p-32 bg-main-25">
+                                        <h4 class="mb-16">Cursos da nossa Instituicao</h4>
+                                        <span class="d-block border border-neutral-30 my-24 border-dashed"></span>
+                                    
+                                        <div class="overflow-x-auto">
+                                            <ul class="tution-info-list style-two bg-white rounded-8 border border-white border-2 rounded-12">
+                                                <li class="px-32 py-16">
+                                                    <span class="fw-semibold text-neutral-700">Nome do curso</span>
+                                                    <span class="fw-semibold text-neutral-700">Área de formação</span>
+                                                    <span class="fw-semibold text-neutral-700">Ação</span>
+                                                </li>
+                                                <!-- Exemplo de Curso -->
+                                                <li class="px-32 py-16">
+                                                    <span class="fw-normal text-neutral-700">Técnica de Programação</span>
+                                                    <span class="fw-normal text-neutral-700">Informática</span>
+                                                    <span class="fw-normal text-neutral-700">
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#courseModal" data-course-name="Técnica de Programação" data-course-area="Informática" data-course-description="Aprenda as principais técnicas de programação para desenvolver softwares e soluções tecnológicas.">
+                                                            Saber mais
+                                                        </a>
+                                                    </span>
+                                                </li>
+                                                <li class="px-32 py-16">
+                                                    <span class="fw-normal text-neutral-700">Técnica de Programação</span>
+                                                    <span class="fw-normal text-neutral-700">Informática</span>
+                                                    <span class="fw-normal text-neutral-700">
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#courseModal" data-course-name="Técnica de Programação" data-course-area="Informática" data-course-description="Aprofunde seus conhecimentos em programação com práticas avançadas e desenvolva projetos reais.">Saber mais</a>
+                                                    </span>
+                                                </li>
+                                                <li class="px-32 py-16">
+                                                    <span class="fw-normal text-neutral-700">Desenvolvimento Web</span>
+                                                    <span class="fw-normal text-neutral-700">Tecnologia</span>
+                                                    <span class="fw-normal text-neutral-700">
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#courseModal" data-course-name="Desenvolvimento Web" data-course-area="Tecnologia" data-course-description="Aprenda a criar websites dinâmicos e responsivos, utilizando as tecnologias mais recentes da web.">Saber mais</a>
+                                                    </span>
+                                                </li>
+                                                <li class="px-32 py-16">
+                                                    <span class="fw-normal text-neutral-700">Design Gráfico</span>
+                                                    <span class="fw-normal text-neutral-700">Design</span>
+                                                    <span class="fw-normal text-neutral-700">
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#courseModal" data-course-name="Design Gráfico" data-course-area="Design" data-course-description="Desenvolva habilidades em design e criação de artes gráficas para comunicação visual.">Saber mais</a>
+                                                    </span>
+                                                </li>
+                                                <li class="px-32 py-16">
+                                                    <span class="fw-normal text-neutral-700">Redes de Computadores</span>
+                                                    <span class="fw-normal text-neutral-700">Informática</span>
+                                                    <span class="fw-normal text-neutral-700">
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#courseModal" data-course-name="Redes de Computadores" data-course-area="Informática" data-course-description="Aprenda a configurar, gerenciar e solucionar problemas em redes de computadores." >Saber mais</a>
+                                                    </span>
+                                                </li>
+                                                <li class="px-32 py-16">
+                                                    <span class="fw-normal text-neutral-700">Análise de Sistemas</span>
+                                                    <span class="fw-normal text-neutral-700">Tecnologia</span>
+                                                    <span class="fw-normal text-neutral-700">
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#courseModal" data-course-name="Análise de Sistemas" data-course-area="Tecnologia" data-course-description="Adquira habilidades para projetar e analisar sistemas de software complexos, trabalhando com requisitos e arquitetura." >Saber mais</a>
+                                                    </span>
+                                                </li>
+                                                <li class="px-32 py-16">
+                                                    <span class="fw-normal text-neutral-700">Segurança da Informação</span>
+                                                    <span class="fw-normal text-neutral-700">Tecnologia</span>
+                                                    <span class="fw-normal text-neutral-700">
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#courseModal" data-course-name="Segurança da Informação" data-course-area="Tecnologia" data-course-description="Aprenda as melhores práticas para proteger dados e sistemas, garantindo a segurança das informações." >Saber mais</a>
+                                                    </span>
+                                                </li>
+                                                <li class="px-32 py-16">
+                                                    <span class="fw-normal text-neutral-700">Marketing Digital</span>
+                                                    <span class="fw-normal text-neutral-700">Negócios</span>
+                                                    <span class="fw-normal text-neutral-700">
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#courseModal" data-course-name="Marketing Digital" data-course-area="Negócios" data-course-description="Desenvolva estratégias de marketing eficazes para o ambiente digital, utilizando ferramentas como SEO e redes sociais." >Saber mais</a>
+                                                    </span>
+                                                </li>
+                                                <li class="px-32 py-16">
+                                                    <span class="fw-normal text-neutral-700">Gestão Empresarial</span>
+                                                    <span class="fw-normal text-neutral-700">Administração</span>
+                                                    <span class="fw-normal text-neutral-700">
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#courseModal" data-course-name="Gestão Empresarial" data-course-area="Administração" data-course-description="Aprenda técnicas de gestão para administrar com sucesso os recursos humanos e financeiros de uma empresa." >Saber mais</a>
+                                                    </span>
+                                                </li>
+                                                <li class="px-32 py-16">
+                                                    <span class="fw-normal text-neutral-700">Contabilidade</span>
+                                                    <span class="fw-normal text-neutral-700">Administração</span>
+                                                    <span class="fw-normal text-neutral-700">
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#courseModal" data-course-name="Contabilidade" data-course-area="Administração" data-course-description="Domine as práticas contábeis e financeiras, incluindo o planejamento e a análise fiscal." >Saber mais</a>
+                                                    </span>
+                                                </li>
+                                                <li class="px-32 py-16">
+                                                    <span class="fw-normal text-neutral-700">Engenharia Mecânica</span>
+                                                    <span class="fw-normal text-neutral-700">Engenharia</span>
+                                                    <span class="fw-normal text-neutral-700">
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#courseModal" data-course-name="Engenharia Mecânica" data-course-area="Engenharia" data-course-description="Adquira conhecimentos em construção, manutenção e melhoria de sistemas mecânicos." >Saber mais</a>
+                                                    </span>
+                                                </li>
+                                                <li class="px-32 py-16">
+                                                    <span class="fw-normal text-neutral-700">Técnico em Eletrônica</span>
+                                                    <span class="fw-normal text-neutral-700">Eletrônica</span>
+                                                    <span class="fw-normal text-neutral-700">
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#courseModal" data-course-name="Técnico em Eletrônica" data-course-area="Eletrônica" data-course-description="Estude os fundamentos da eletrônica e como aplicar esses conhecimentos no desenvolvimento e manutenção de dispositivos eletrônicos." >Saber mais</a>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                            
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header" style="background: linear-gradient(135deg, #4e5a6f, #303c49); color: white; border-radius: 12px 12px 0 0;">
+                                                            <i class="bi bi-book-fill fs-4 text-warning me-2"></i>
+                                                            <h5 class="modal-title" id="courseModalLabel" style="font-family: 'Georgia', serif;">Detalhes do Curso</h5>
+                                                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body" style="background: #f8f9fa; padding: 30px; font-family: 'Times New Roman', serif; border-radius: 0 0 12px 12px;">
+                                                            <p><strong style="font-size: 18px;">Nome do Curso:</strong> <span id="modalCourseName" style="font-size: 16px;"></span></p>
+                                                            <p><strong style="font-size: 18px;">Área de Formação:</strong> <span id="modalCourseArea" style="font-size: 16px;"></span></p>
+                                                            <hr>
+                                                            <p><strong style="font-size: 18px;">Descrição:</strong> <span id="modalCourseDescription" style="font-size: 16px;"></span></p>
+                                                        </div>
+                                                        <div class="modal-footer" style="background: #f0f0f0; text-align: center;">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- Qualification End -->
+                        </div>
+
+                        <div class="tab-pane fade show active" id="pills-eventos" role="tabpanel" aria-labelledby="pills-tutionInfo-tab" tabindex="0">
+                            <!-- Tuition Info Start -->
+                            <div class="tutor-details__content">
+                               
+                               <div class="border border-neutral-30 rounded-12 bg-white p-8 mt-24">
+                                   <div class="border border-neutral-30 rounded-12 bg-main-25 p-32 bg-main-25">
+                                       
+                                       
+                                       
+                                       <!-- Espaçamento entre o Header e o Carrossel -->
+                                       <div style="margin-top: 20px;"></div>
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       <h4 style="margin-top: 19px;" class="mb-16">Eventos e Noticias</h4>
+                                       <span class="d-block border border-neutral-30 my-24 border-dashed"></span>
+
+                                       <!-- Carousel de Cursos -->
+                                       <div id="cursoCarousel" class="carousel slide" data-bs-ride="carousel">
+                                           <div class="carousel-inner">
+                                               <!-- Card 1 -->
+                                               <div class="carousel-item active">
+                                                   <div class="row mt-5">
+                                                       <div class="col-md-6">
+                                                           <div class="card">
+                                                               <img src="{% static 'assets/img/course/course-3-2.jpg' %}" class="card-img-top" alt="Curso 1">
+                                                               <div class="card-body">
+                                                                   <h5 class="card-title">Curso de Matemática Avançada</h5>
+                                                                   <p class="card-text">Aprofunde seus conhecimentos em álgebra, cálculo e geometria com este curso avançado.</p>
+                                                                   <a href="#" class="btn btn-primary">Saiba Mais</a>
+                                                               </div>
+                                                           </div>
+                                                       </div>
+
+                                                       <!-- Card 2 -->
+                                                       <div class="col-md-6">
+                                                           <div class="card">
+                                                               <img src="{% static 'assets/img/course/course-3-2.jpg' %}" class="card-img-top" alt="Curso 2">
+                                                               <div class="card-body">
+                                                                   <h5 class="card-title">Curso de Programação Python</h5>
+                                                                   <p class="card-text">Aprenda a programar em Python e desenvolva habilidades para criar aplicativos e automações.</p>
+                                                                   <a href="#" class="btn btn-primary">Saiba Mais</a>
+                                                               </div>
+                                                           </div>
+                                                       </div>
+                                                   </div>
+                                               </div>
+
+                                               <!-- Card 3 (caso tenha mais cursos) -->
+                                               <div class="carousel-item">
+                                                   <div class="row mt-5">
+                                                       <div class="col-md-6">
+                                                           <div class="card">
+                                                               <img src="{% static 'assets/img/course/course-3-2.jpg' %}" class="card-img-top" alt="Curso 3">
+                                                               <div class="card-body">
+                                                                   <h5 class="card-title">Curso de Física Avançada</h5>
+                                                                   <p class="card-text">Estude os conceitos fundamentais da física, incluindo termodinâmica e mecânica quântica.</p>
+                                                                   <a href="#" class="btn btn-primary">Saiba Mais</a>
+                                                               </div>
+                                                           </div>
+                                                       </div>
+
+                                                       <!-- Card 4 -->
+                                                       <div class="col-md-6">
+                                                           <div class="card">
+                                                               <img src="{% static 'assets/img/course/course-3-2.jpg' %}" class="card-img-top" alt="Curso 4">
+                                                               <div class="card-body">
+                                                                   <h5 class="card-title">Curso de Design Gráfico</h5>
+                                                                   <p class="card-text">Domine as principais ferramentas de design gráfico e crie artes profissionais.</p>
+                                                                   <a href="#" class="btn btn-primary">Saiba Mais</a>
+                                                               </div>
+                                                           </div>
+                                                       </div>
+                                                   </div>
+                                               </div>
+                                           </div>
+
+                                           <!-- Controles do Carousel -->
+                                           <button class="carousel-control-prev" type="button" data-bs-target="#cursoCarousel" data-bs-slide="prev">
+                                               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                               <span class="visually-hidden">Previous</span>
+                                           </button>
+                                           <button class="carousel-control-next" type="button" data-bs-target="#cursoCarousel" data-bs-slide="next">
+                                               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                               <span class="visually-hidden">Next</span>
+                                           </button>
+                                       </div>
+
+
+                                   </div>
+                               </div>
+                           </div>
+                           <!-- Tuition Info End -->
+                       </div>
+
+                       <div class="tab-pane fade" id="pills-qualification" role="tabpanel" aria-labelledby="pills-qualification-tab" tabindex="0">
+                           <!-- Qualification Start -->
+                           <div class="tutor-details__content">
+                               <div class="border border-neutral-30 rounded-12 bg-white p-8 mt-24">
+                                   <div class="border border-neutral-30 rounded-12 bg-main-25 p-32 bg-main-25">
+                                       <h4 class="mb-16">Cursos da nossa Instituicao</h4>
+                                       <span class="d-block border border-neutral-30 my-24 border-dashed"></span>
+
+                                       <div class="overflow-x-auto">
+                                           <ul class="tution-info-list style-two bg-white rounded-8 border border-white border-2 rounded-12">
+                                               <li class="px-32 py-16">
+                                                   <span class="fw-semibold text-neutral-700">Nome do curso</span>
+                                                   <span class="fw-semibold text-neutral-700">Área de formação</span>
+                                                   <span class="fw-semibold text-neutral-700">Ação</span>
+                                               </li>
+                                               <li class="px-32 py-16">
+                                                   <span class="fw-normal text-neutral-700">Técnica de Programação</span>
+                                                   <span class="fw-normal text-neutral-700">Informática</span>
+                                                   <span class="fw-normal text-neutral-700">
+                                                       <a href="#" data-bs-toggle="modal" data-bs-target="#courseModal" data-course-name="Técnica de Programação" data-course-area="Informática" data-course-description="Aprenda as principais técnicas de programação para desenvolver softwares e soluções tecnológicas.">Saber mais</a>
+                                                   </span>
+                                               </li>
+                                               <li class="px-32 py-16">
+                                                   <span class="fw-normal text-neutral-700">Técnica de Programação</span>
+                                                   <span class="fw-normal text-neutral-700">Informática</span>
+                                                   <span class="fw-normal text-neutral-700">
+                                                       <a href="#" data-bs-toggle="modal" data-bs-target="#courseModal" data-course-name="Técnica de Programação" data-course-area="Informática" data-course-description="Aprofunde seus conhecimentos em programação com práticas avançadas e desenvolva projetos reais.">Saber mais</a>
+                                                   </span>
+                                               </li>
+                                           </ul>
+                                           
+                                           <!-- Modal -->
+                                           <div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
+                                             <div class="modal-dialog">
+                                               <div class="modal-content">
+                                                 <div class="modal-header">
+                                                   <h5 class="modal-title" id="courseModalLabel">Detalhes do Curso</h5>
+                                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                 </div>
+                                                 <div class="modal-body">
+                                                   <p><strong>Nome do Curso:</strong> <span id="modalCourseName"></span></p>
+                                                   <p><strong>Área de Formação:</strong> <span id="modalCourseArea"></span></p>
+                                                   <hr>
+                                                   <p><strong></strong> <span id="modalCourseDescription"></span></p>
+                                                 </div>
+                                                 <div class="modal-footer">
+                                                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                                 </div>
+                                               </div>
+                                             </div>
+                                           </div>
+                                           
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <!-- Qualification End -->
+                       </div>
+
+                        <div class="tab-pane fade" id="pills-cursos" role="tabpanel" aria-labelledby="pills-qualification-tab" tabindex="0">
+                            <!-- Qualification Start -->
+                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                
+                                <div class="carousel-inner">
+                                    <!-- Slide 1 -->
+                                    <div class="carousel-item active">
+                                        <img src="{% static 'assets/img/boy-helping-his-friend-with-books.jpg' %}" class="d-block w-100" alt="Slide 1" style="height: 400px; object-fit: cover;">
+                                        
+                                    </div>
+                                    <!-- Slide 2 -->
+                                    
+                                </div>
+                                
+                            </div>
+
+                            <div style="margin-top: 29px;"></div>
+                            
+                            <div class="tutor-details__content">
+                                <div class="border border-neutral-30 rounded-12 bg-white p-8 mt-24">
+                                    <div class="border border-neutral-30 rounded-12 bg-main-25 p-32 bg-main-25">
+                                        <h4 class="mb-16">Infraestrutura da escola</h4>
+                                        <span class="d-block border border-neutral-30 my-24 border-dashed"></span>
+
+                                        <div class="overflow-x-auto">
+                                            <ul class="tution-info-list style-two bg-white rounded-8 border border-white border-2 rounded-12">
+                                                <li class="px-32 py-16 d-flex justify-content-between align-items-center flex-nowrap">
+                                                    <span class="fw-normal text-neutral-700">Cantina</span>
+                                                    <span class="fw-normal text-neutral-700">3 </span>
+                                                    <span class="fw-normal text-neutral-700">07h - 18h</span>
+                                                </li>
+                                                <li class="px-32 py-16 d-flex justify-content-between align-items-center flex-nowrap">
+                                                    <span class="fw-normal text-neutral-700">Biblioteca</span>
+                                                    <span class="fw-normal text-neutral-700">1 </span>
+                                                    <span class="fw-normal text-neutral-700">Capacidade: 150 pessoas</span>
+                                                </li>
+                                                <li class="px-32 py-16 d-flex justify-content-between align-items-center flex-nowrap">
+                                                    <span class="fw-normal text-neutral-700">Laboratório de Informática</span>
+                                                    <span class="fw-normal text-neutral-700">2 </span>
+                                                    <span class="fw-normal text-neutral-700">Equipamentos: 50 PCs</span>
+                                                </li>
+                                                <li class="px-32 py-16 d-flex justify-content-between align-items-center flex-nowrap">
+                                                    <span class="fw-normal text-neutral-700">Laboratório de Ciências</span>
+                                                    <span class="fw-normal text-neutral-700">1</span>
+                                                    <span class="fw-normal text-neutral-700">Equipado para química e física</span>
+                                                </li>
+                                                <li class="px-32 py-16 d-flex justify-content-between align-items-center flex-nowrap">
+                                                    <span class="fw-normal text-neutral-700">Auditório</span>
+                                                    <span class="fw-normal text-neutral-700">1 </span>
+                                                    <span class="fw-normal text-neutral-700">Capacidade: 300 pessoas</span>
+                                                </li>
+                                                <li class="px-32 py-16 d-flex justify-content-between align-items-center flex-nowrap">
+                                                    <span class="fw-normal text-neutral-700">Ginásio</span>
+                                                    <span class="fw-normal text-neutral-700">1 </span>
+                                                    <span class="fw-normal text-neutral-700">Aberto das 06h - 22h</span>
+                                                </li>
+                                                <li class="px-32 py-16 d-flex justify-content-between align-items-center flex-nowrap">
+                                                    <span class="fw-normal text-neutral-700">Campo de Futebol</span>
+                                                    <span class="fw-normal text-neutral-700">1 </span>
+                                                    <span class="fw-normal text-neutral-700">Disponível para agendamento</span>
+                                                </li>
+                                                <li class="px-32 py-16 d-flex justify-content-between align-items-center flex-nowrap">
+                                                    <span class="fw-normal text-neutral-700">Sala de Estudo</span>
+                                                    <span class="fw-normal text-neutral-700">5 </span>
+                                                    <span class="fw-normal text-neutral-700">Silêncio obrigatório</span>
+                                                </li>
+                                            </ul>
+                                            
+                                            
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
+                                              <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                  <div class="modal-header">
+                                                    <h5 class="modal-title" id="courseModalLabel">Detalhes do Curso</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                    <p><strong>Nome do Curso:</strong> <span id="modalCourseName"></span></p>
+                                                    <p><strong>Área de Formação:</strong> <span id="modalCourseArea"></span></p>
+                                                    <hr>
+                                                    <p><strong></strong> <span id="modalCourseDescription"></span></p>
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Qualification End -->
+                        </div>
+                        <div class="tab-pane fade" id="pills-reviews" role="tabpanel" aria-labelledby="pills-reviews-tab" tabindex="0">
+                            <!-- Reviews Start -->
+                            <div class="tutor-details__content">
+                                <div class="border border-neutral-30 rounded-12 bg-white p-8 mt-24">
+                                    <div class="border border-neutral-30 rounded-12 bg-main-25 p-32">
+                                        <h5 class="mb-0">Average Reviews</h5>
+                                        <span class="d-block border border-neutral-30 my-32 border-dashed"></span>
+                
+                                        <div class="d-flex flex-sm-row flex-column gap-36">
+                                            <div class="rounded-16 px-40 py-24 flex-center flex-column flex-shrink-0 text-center bg-main-600 text-white">
+                                                <h2 class="mb-8 text-white">4.8</h2>
+                                                <div class="flex-center gap-4">
+                                                    <span class="text-15 fw-medium text-white d-flex"><i class="ph-fill ph-star"></i></span>
+                                                    <span class="text-15 fw-medium text-white d-flex"><i class="ph-fill ph-star"></i></span>
+                                                    <span class="text-15 fw-medium text-white d-flex"><i class="ph-fill ph-star"></i></span>
+                                                    <span class="text-15 fw-medium text-white d-flex"><i class="ph-fill ph-star"></i></span>
+                                                    <span class="text-15 fw-medium text-white d-flex"><i class="ph-fill ph-star-half"></i></span>
+                                                </div>
+                                                <span class="mt-8 text-gray-500">26 Rating</span>
+                                            </div>
+                
+                                            <div class="flex-grow-1">
+                                                <div class="flex-align gap-20 mb-8">
+                                                    <div class="flex-align gap-8">
+                                                        <span class="text-lg fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                                        <span class="text-gray-900 flex-shrink-0">5</span>
+                                                    </div>
+                                                    <div class="progress w-100 bg-white rounded-pill h-12" role="progressbar" aria-label="Basic example" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-main-600 rounded-pill" style="width: 90%"></div>
+                                                    </div>
+                                                    <span class="text-gray-900 flex-shrink-0">90%</span>
+                                                </div>
+                                                <div class="flex-align gap-20 mb-8">
+                                                    <div class="flex-align gap-8">
+                                                        <span class="text-lg fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                                        <span class="text-gray-900 flex-shrink-0">5</span>
+                                                    </div>
+                                                    <div class="progress w-100 bg-white rounded-pill h-12" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-main-600 rounded-pill" style="width: 75%"></div>
+                                                    </div>
+                                                    <span class="text-gray-900 flex-shrink-0">75%</span>
+                                                </div>
+                                                <div class="flex-align gap-20 mb-8">
+                                                    <div class="flex-align gap-8">
+                                                        <span class="text-lg fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                                        <span class="text-gray-900 flex-shrink-0">5</span>
+                                                    </div>
+                                                    <div class="progress w-100 bg-white rounded-pill h-12" role="progressbar" aria-label="Basic example" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-main-600 rounded-pill" style="width: 67%"></div>
+                                                    </div>
+                                                    <span class="text-gray-900 flex-shrink-0">67%</span>
+                                                </div>
+                                                <div class="flex-align gap-20 mb-8">
+                                                    <div class="flex-align gap-8">
+                                                        <span class="text-lg fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                                        <span class="text-gray-900 flex-shrink-0">5</span>
+                                                    </div>
+                                                    <div class="progress w-100 bg-white rounded-pill h-12" role="progressbar" aria-label="Basic example" aria-valuenow="44" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-main-600 rounded-pill" style="width: 44%"></div>
+                                                    </div>
+                                                    <span class="text-gray-900 flex-shrink-0">44%</span>
+                                                </div>
+                                                <div class="flex-align gap-20">
+                                                    <div class="flex-align gap-8">
+                                                        <span class="text-lg fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                                        <span class="text-gray-900 flex-shrink-0">5</span>
+                                                    </div>
+                                                    <div class="progress w-100 bg-white rounded-pill h-12" role="progressbar" aria-label="Basic example" aria-valuenow="21" aria-valuemin="0" aria-valuemax="100">
+                                                        <div class="progress-bar bg-main-600 rounded-pill" style="width: 21%"></div>
+                                                    </div>
+                                                    <span class="text-gray-900 flex-shrink-0">21%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="d-block border border-neutral-30 my-32 border-dashed"></span>
+                                        <div class="flex-between gap-16 flex-wrap mb-24">
+                                            <h6 class="mb-0">All Reviews</h6>
+                                            <div class="flex-align gap-16">
+                                                <div class="flex-align gap-8">
+                                                    <span class="text-neutral-500 flex-shrink-0">Sort By :</span>
+                                                    <select class="form-select ps-20 pe-28 py-8 fw-medium rounded-pill bg-main-25 border border-neutral-30 text-neutral-700">
+                                                        <option value="1">Newest</option>
+                                                        <option value="1">Trending</option>
+                                                        <option value="1">Popular</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                
+                                        <!-- Review Item -->
+                                        <div class="border border-neutral-30 rounded-12 bg-white p-32">
+                                            <div class="flex-align gap-8 mb-16">
+                                                <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                                <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                                <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                                <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                                <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star-half"></i></span>
+                                            </div>
+                                            <p class="text-neutral-700">"This course was fantastic! The instructor's explanations were clear and concise, making it easy to understand even the more complex topics."</p>
+                                            <span class="d-block border border-neutral-30 my-24 border-dashed"></span>
+                                            <div class="flex-align gap-24">
+                                                <img src="{% static 'assets3/images/thumbs/reviewer-img1.png' %}" alt="" class="w-60 h-60 rounded-circle cover-img">
+                                                <div class="">
+                                                    <h6 class="text-xl mb-8 fw-medium">Mary Johnson</h6>
+                                                    <span class="text-neutral-700 text-sm">Project Manager</span>
+                                                </div>
+                                            </div>
+                                            <span class="d-block border border-neutral-30 my-24 border-dashed"></span>
+                
+                                            <div class="flex-align flex-wrap gap-40">
+                                                <button type="button" class="like-button flex-align gap-8 text-neutral-500 hover-text-main-600">
+                                                    <span class="like-button__icon text-xl d-flex"><i class="ph-bold ph-thumbs-up"></i></span>
+                                                    <span class="like-button__text">178</span>
+                                                </button>
+                                                <a href="tutor-details.html#commentForm" class="flex-align gap-8 text-neutral-500 hover-text-main-600">
+                                                    <i class="text-xl d-flex ph-bold ph-chat-centered-text"></i>
+                                                    Reply
+                                                </a>
+                                            </div>
+                                            <div class="flex-align gap-20 mt-24">
+                                                <img src="{% static 'assets3/images/thumbs/reviewer-img2.png' %}" alt="" class="w-60 h-60 rounded-circle cover-img">
+                                                <input type="text" class="common-input rounded-pill bg-main-25 border-neutral-30 py-16" placeholder="Join the discussion...">
+                                            </div>
+                                        </div>
+                                        <!-- Review Item -->
+                
+                                        <!-- Review Item -->
+                                        <div class="border border-neutral-30 rounded-12 bg-white p-32 mt-24">
+                                            <div class="flex-align gap-8 mb-16">
+                                                <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                                <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                                <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                                <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                                <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star-half"></i></span>
+                                            </div>
+                                            <p class="text-neutral-700">"Great course for beginners and advanced learners alike. The projects were particularly helpful in applying what I learned. Highly recommend!"</p>
+                                            <span class="d-block border border-neutral-30 my-24 border-dashed"></span>
+                                            <div class="flex-align gap-24">
+                                                <img src="{% static 'assets3/images/thumbs/reviewer-img2.png"' %} alt="" class="w-60 h-60 rounded-circle cover-img">
+                                                <div class="">
+                                                    <h6 class="text-xl mb-8 fw-medium">Alice Brown</h6>
+                                                    <span class="text-neutral-700 text-sm">Software Developer</span>
+                                                </div>
+                                            </div>
+                                            <span class="d-block border border-neutral-30 my-24 border-dashed"></span>
+                
+                                            <div class="flex-align flex-wrap gap-40">
+                                                <button type="button" class="like-button flex-align gap-8 text-neutral-500 hover-text-main-600">
+                                                    <span class="like-button__icon text-xl d-flex"><i class="ph-bold ph-thumbs-up"></i></span>
+                                                    <span class="like-button__text">178</span>
+                                                </button>
+                                                <a href="tutor-details.html#commentForm" class="flex-align gap-8 text-neutral-500 hover-text-main-600">
+                                                    <i class="text-xl d-flex ph-bold ph-chat-centered-text"></i>
+                                                    Reply
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- Review Item -->
+                
+                                        <!-- Review Item -->
+                                        <div class="border border-neutral-30 rounded-12 bg-white p-32 mt-24">
+                                            <div class="flex-align gap-8 mb-16">
+                                                <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                                <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                                <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                                <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+                                                <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star-half"></i></span>
+                                            </div>
+                                            <p class="text-neutral-700">"Dr. Smith is an amazing instructor. Her real-world experience and teaching style made this course one of the best I've ever taken."</p>
+                                            <span class="d-block border border-neutral-30 my-24 border-dashed"></span>
+                                            <div class="flex-align gap-24">
+                                                <img src="{% static 'assets3/images/thumbs/reviewer-img3.png' %}" alt="" class="w-60 h-60 rounded-circle cover-img">
+                                                <div class="">
+                                                    <h6 class="text-xl mb-8 fw-medium">David Wilson</h6>
+                                                    <span class="text-neutral-700 text-sm">Ethical Hacker</span>
+                                                </div>
+                                            </div>
+                                            <span class="d-block border border-neutral-30 my-24 border-dashed"></span>
+                
+                                            <div class="flex-align flex-wrap gap-40">
+                                                <button type="button" class="like-button flex-align gap-8 text-neutral-500 hover-text-main-600">
+                                                    <span class="like-button__icon text-xl d-flex"><i class="ph-bold ph-thumbs-up"></i></span>
+                                                    <span class="like-button__text">178</span>
+                                                </button>
+                                                <a href="tutor-details.html#commentForm" class="flex-align gap-8 text-neutral-500 hover-text-main-600">
+                                                    <i class="text-xl d-flex ph-bold ph-chat-centered-text"></i>
+                                                    Reply
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- Review Item -->
+                
+                                        <button type="button" class="btn btn-main rounded-pill flex-center gap-8 mt-40">
+                                            See All Reviews
+                                            <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
+                                        </button>
+                                    </div>
+
+                                    <!-- Comment Form Start -->
+                                    <div class="border border-neutral-30 rounded-12 bg-main-25 p-32 mt-24">
+                                        <form action="tutor-details.html#" id="commentForm">
+                                            <h5 class="mb-0">Write a Review</h5>
+                                            <span class="d-block border border-neutral-30 my-32 border-dashed"></span>
+                                            <div class="mb-24">
+                                                <label for="nameee" class="text-neutral-700 text-lg fw-medium mb-12">Name </label>
+                                                <input type="text" class="common-input rounded-pill" id="nameee" placeholder="Enter Name...">
+                                            </div>
+                                            <div class="mb-24">
+                                                <label for="email" class="text-neutral-700 text-lg fw-medium mb-12">Email </label>
+                                                <input type="text" class="common-input rounded-pill" id="email" placeholder="Enter Email...">
+                                            </div>
+                                            <div class="mb-24">
+                                                <label class="text-neutral-700 text-lg fw-medium mb-12">Star Reviews </label>
+                                                
+                                                <div id="half-star-rating">
+                                                    <div class="rating-group">
+                                                        <input class="rating__input rating__input--none" checked="" name="rating2" id="rating2-0" value="0" type="radio">
+                                                        <label aria-label="0 stars" class="rating__label" for="rating2-0">&nbsp;</label>
+                                                        <label aria-label="0.5 stars" class="rating__label rating__label--half" for="rating2-05"><i class="rating__icon rating__icon--star ph-fill ph-star-half"></i></label>
+                                                        <input class="rating__input" name="rating2" id="rating2-05" value="0.5" type="radio">
+                                                        <label aria-label="1 star" class="rating__label" for="rating2-10"><i class="rating__icon rating__icon--star ph-fill ph-star"></i></label>
+                                                        <input class="rating__input" name="rating2" id="rating2-10" value="1" type="radio">
+                                                        <label aria-label="1.5 stars" class="rating__label rating__label--half" for="rating2-15"><i class="rating__icon rating__icon--star ph-fill ph-star-half"></i></label>
+                                                        <input class="rating__input" name="rating2" id="rating2-15" value="1.5" type="radio">
+                                                        <label aria-label="2 stars" class="rating__label" for="rating2-20"><i class="rating__icon rating__icon--star ph-fill ph-star"></i></label>
+                                                        <input class="rating__input" name="rating2" id="rating2-20" value="2" type="radio">
+                                                        <label aria-label="2.5 stars" class="rating__label rating__label--half" for="rating2-25"><i class="rating__icon rating__icon--star ph-fill ph-star-half"></i></label>
+                                                        <input class="rating__input" name="rating2" id="rating2-25" value="2.5" type="radio" checked="">
+                                                        <label aria-label="3 stars" class="rating__label" for="rating2-30"><i class="rating__icon rating__icon--star ph-fill ph-star"></i></label>
+                                                        <input class="rating__input" name="rating2" id="rating2-30" value="3" type="radio">
+                                                        <label aria-label="3.5 stars" class="rating__label rating__label--half" for="rating2-35"><i class="rating__icon rating__icon--star ph-fill ph-star-half"></i></label>
+                                                        <input class="rating__input" name="rating2" id="rating2-35" value="3.5" type="radio">
+                                                        <label aria-label="4 stars" class="rating__label" for="rating2-40"><i class="rating__icon rating__icon--star ph-fill ph-star"></i></label>
+                                                        <input class="rating__input" name="rating2" id="rating2-40" value="4" type="radio">
+                                                        <label aria-label="4.5 stars" class="rating__label rating__label--half" for="rating2-45"><i class="rating__icon rating__icon--star ph-fill ph-star-half"></i></label>
+                                                        <input class="rating__input" name="rating2" id="rating2-45" value="4.5" type="radio">
+                                                        <label aria-label="5 stars" class="rating__label" for="rating2-50"><i class="rating__icon rating__icon--star ph-fill ph-star"></i></label>
+                                                        <input class="rating__input" name="rating2" id="rating2-50" value="5" type="radio">
+                                                    </div>
+                                                </div>
+                
+                                            </div>
+                                            <div class="mb-24">
+                                                <label for="desc" class="text-neutral-700 text-lg fw-medium mb-12">Your Question </label>
+                                                <textarea id="desc" class="common-input rounded-24" placeholder="Write you question..."></textarea>
+                                            </div>
+                                            <div class="mb-0">
+                                                <button type="submit" class="btn btn-main rounded-pill flex-center gap-8 mt-40">
+                                                    Submit Review
+                                                    <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- Comment Form End -->
+                                </div>
+                            </div>
+                            <!-- Reviews End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================== Tutor Details Section End ============================== -->
+    
+    <!-- ================================= Certificate Section Start ================================= -->
+<div class="certificate">
+    <div class="container container--lg">
+        <div class="certificate-box px-16 bg-main-600 rounded-16">
+            <div class="container">
+                <div class="position-relative py-80">
+                    <div class="row align-items-center">
+                        <div class="col-xl-6">
+                            <div class="certificate__content">
+                                <div class="flex-align gap-8 mb-16 wow bounceInDown">
+                                    <span class="w-8 h-8 bg-white rounded-circle"></span>
+                                    <h5 class="text-white mb-0">Obtenha o Certificado</h5>
+                                </div>
+                                <h2 class="text-white mb-40 fw-medium wow bounceIn">Obtenha o Certificado de Qualidade em Habilidades da EduAll</h2>
+                                <a href="tutor-details.html" class="btn btn-white rounded-pill flex-align d-inline-flex gap-8 hover-bg-main-800 wow bounceInUp">
+                                    Comece Agora
+                                    <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 d-xl-block d-none">
+                            <div class="certificate__thumb" data-aos="fade-up-left">    
+                                <img src="{% static 'assets3/images/thumbs/certificate-img.png' %}" alt="" data-tilt data-tilt-max="8" data-tilt-speed="500" data-tilt-perspective="5000" data-tilt-full-page-listening>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+ </div>
+<!-- ================================= Certificate Section End ================================= -->
+    
+    
+<!-- ==================== Footer Start Here ==================== -->
+<!-- ==================== Footer Start Here ==================== -->
+<footer class="footer bg-main-25 position-relative z-1">
+    {% include 'includes/footer.html' %}
+</footer>
+<!-- ==================== Footer End Here ==================== -->
+  
+
+        <!-- Jquery js -->
+    {% include 'includes/links_java.html' %}
+
+    <script>
+        // Espera o DOM estar pronto
+        document.addEventListener('DOMContentLoaded', function() {
+          var courseLinks = document.querySelectorAll('a[data-bs-toggle="modal"]');
+      
+          courseLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+              // Previne o link de navegar
+              event.preventDefault();
+      
+              // Pega os dados do curso armazenados no link
+              var courseName = link.getAttribute('data-course-name');
+              var courseArea = link.getAttribute('data-course-area');
+              var courseDescription = link.getAttribute('data-course-description');
+      
+              // Preenche os campos do modal com os dados do curso
+              document.getElementById('modalCourseName').textContent = courseName;
+              document.getElementById('modalCourseArea').textContent = courseArea;
+              document.getElementById('modalCourseDescription').textContent = courseDescription;
+            });
+          });
+        });
+      </script>
+      
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"></script>
+      
+      <!-- Adicionando a biblioteca de ícones do Bootstrap -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+      <script>
+
+    </body>
+</html>

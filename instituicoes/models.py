@@ -16,6 +16,47 @@ class Instituicao(models.Model):
 
     def __str__(self):
         return self.nome
+    
+class Blog(models.Model):
+    instituicao = models.ForeignKey(Instituicao, on_delete=models.CASCADE, related_name='blogs')
+    titulo = models.CharField(max_length=255)
+    conteudo = models.TextField()
+    data_criacao = models.DateTimeField(auto_now_add=True)
+    autor = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.titulo
+
+
+class Noticia(models.Model):
+    instituicao = models.ForeignKey(Instituicao, on_delete=models.CASCADE, related_name='noticias')
+    titulo = models.CharField(max_length=255)
+    conteudo = models.TextField()
+    data_publicacao = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.titulo
+
+
+class Contacto(models.Model):
+    instituicao = models.ForeignKey(Instituicao, on_delete=models.CASCADE, related_name='contactos')
+    nome = models.CharField(max_length=255)
+    email = models.EmailField()
+    telefone = models.CharField(max_length=20, null=True, blank=True)
+    mensagem = models.TextField()
+
+    def __str__(self):
+        return f"Contacto de {self.nome}"
+
+
+class SobreNos(models.Model):
+    instituicao = models.ForeignKey(Instituicao, on_delete=models.CASCADE, related_name='sobre_nos')
+    descricao = models.TextField()
+    missao = models.TextField()
+    visao = models.TextField()
+
+    def __str__(self):
+        return f"Sobre a {self.instituicao.nome}"
 
 class SeguirInstituicao(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.DO_NOTHING, related_name="instituicoes_seguidas")
@@ -41,16 +82,6 @@ class Curso(models.Model):
         return self.numero_vagas
 
 
-class Inscricao(models.Model):
-    usuario = models.ForeignKey(Usuario, on_delete=models.DO_NOTHING)
-    curso = models.ForeignKey(Curso, on_delete=models.DO_NOTHING)
-    data_inscricao = models.DateTimeField(auto_now_add=True)
-
-    def save(self, *args, **kwargs):
-        if self.curso.numero_vagas <= 0:
-            raise ValueError(f"Não há vagas disponíveis no curso {self.curso.nome}")
-        self.curso.numero_vagas -= 1  
-        super().save(*args, **kwargs)
 
 
 class Status(models.Model):
