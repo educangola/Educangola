@@ -10,11 +10,8 @@ class CategoriaBiblioteca(models.Model):
         verbose_name = "Categoria da Biblioteca"
         verbose_name_plural = "Categorias das Bibliotecas"
 
-
-class Biblioteca(models.Model):
-    nome = models.CharField(max_length=255)
-    email = models.EmailField(unique=True)
-    senha = models.CharField(max_length=255)
+class PerfilBiblioteca(models.Model):
+    biblioteca = models.OneToOneField('Biblioteca', on_delete=models.CASCADE)
     endereco = models.CharField(max_length=255)
     cidade = models.CharField(max_length=100)
     telefone = models.CharField(max_length=20)
@@ -22,6 +19,18 @@ class Biblioteca(models.Model):
     categoria = models.ForeignKey(CategoriaBiblioteca, on_delete=models.SET_NULL, null=True)
     site = models.URLField(blank=True, null=True)
     logo = models.ImageField(upload_to='bibliotecas/logos/', blank=True, null=True)
+
+    def __str__(self):
+        return f"Perfil de {self.biblioteca.nome}"
+
+    class Meta:
+        verbose_name = "Perfil da Biblioteca"
+        verbose_name_plural = "Perfis das Bibliotecas"
+
+class Biblioteca(models.Model):
+    nome = models.CharField(max_length=255)
+    email = models.EmailField(unique=True)
+    senha = models.CharField(max_length=255)
 
     def __str__(self):
         return self.nome
@@ -51,13 +60,24 @@ class Livro(models.Model):
     biblioteca = models.ForeignKey(Biblioteca, on_delete=models.DO_NOTHING, related_name='livros')
     disponivel = models.BooleanField(default=True)
     categoria = models.ForeignKey(CategoriaLivro, on_delete=models.DO_NOTHING, null=True)
-
+    imagem = models.ImageField(upload_to='livros/imagens/', blank=True, null=True)
+    hot = models.BooleanField(default=False)
+    
+    # Novos campos adicionados
+    tags = models.CharField(max_length=255, blank=True)  # Tags
+    formato = models.CharField(max_length=50)  # Formato
+    total_paginas = models.PositiveIntegerField()  # Total de páginas
+    idioma = models.CharField(max_length=50)  # Idioma
+    ano_publicacao = models.PositiveIntegerField()  # Ano de publicação
+    secao = models.CharField(max_length=100)  # Século (ex: United States, etc.)
+    
     def __str__(self):
         return f"{self.titulo} - {self.autor}"
 
     class Meta:
         verbose_name = "Livro"
         verbose_name_plural = "Livros"
+
 
 
 class UsuarioBiblioteca(models.Model):

@@ -14,6 +14,8 @@ def index(request):
     categorias = Categoria.objects.all()
     return render(request, 'index.html', {'cursos': cursos, 'categorias':categorias, 'cursos_actualizados':cursos_actualizados, 'instrutores':instrutores})
 
+def home_biblioteca(request):
+    return render(request, 'home_biblioteca.html')
 
 def Cadastrar_normal(request):
     status = request.GET.get('status')

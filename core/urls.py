@@ -16,4 +16,5 @@ urlpatterns = [
     path('universidade/', viewerro.universidade, name='universidade'),
     path('Login_normal/', viewerro.Login_normal, name = 'Login_normal'),
     path('Cadastrar_normal/', viewerro.Cadastrar_normal, name="Cadastrar_normal" ),
+
 ]
