@@ -168,11 +168,6 @@ STATIC_URL = '/static/'
 # Lista de diretórios onde o Django deve procurar por arquivos estáticos
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'), 
-    os.path.join(BASE_DIR, 'assets'),
-    os.path.join(BASE_DIR, 'assets1'), 
-    os.path.join(BASE_DIR, 'assets3'), 
-    os.path.join(BASE_DIR, 'assets4'),
-    os.path.join(BASE_DIR, 'login all'),
 ]
 
 # Diretório onde os arquivos estáticos serão coletados durante o deploy

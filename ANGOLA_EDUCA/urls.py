@@ -20,7 +20,7 @@ urlpatterns = i18n_patterns(
     path('usuarios/', include('usuarios.urls')),
     path('biblioteca/', include('biblioteca.urls')),
 )+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+ 
 handler404 = 'core.views.Erro'
 
 

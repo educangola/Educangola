@@ -9,143 +9,246 @@
             
 <ul class="nav-menu flex-align nav-menu--mobile">
     <li class="nav-menu__item has-submenu activePage">
-        <a href="javascript:void(0)" class="nav-menu__link">home</a>
+        <a href="javascript:void(0)" class="nav-menu__link">Início</a>
         <ul class="nav-submenu scroll-sm">
             <li class="nav-submenu__item activePage">
-                <a href="{% url 'index' %}" class="nav-submenu__link hover-bg-neutral-30"> home</a>
+                <a href="{% url 'index' %}" class="nav-submenu__link hover-bg-neutral-30">Página Inicial</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="{% url 'universidade' %}l" class="nav-submenu__link hover-bg-neutral-30"> home escolas</a>
+                <a href="{% url 'universidade' %}" class="nav-submenu__link hover-bg-neutral-30">pagina Escolas</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="{% url 'home_cursos' %}" class="nav-submenu__link hover-bg-neutral-30">Home cursos</a>
+                <a href="{% url 'home_cursos' %}" class="nav-submenu__link hover-bg-neutral-30">pagina Cursos</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="index-4.html" class="nav-submenu__link hover-bg-neutral-30"> Centros de formacao</a>
+                <a href="index-4.html" class="nav-submenu__link hover-bg-neutral-30">Centros de Formação</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="index-4.html" class="nav-submenu__link hover-bg-neutral-30"> home biblioteca</a>
+                <a href="{% url 'home_biblioteca' %}" class="nav-submenu__link hover-bg-neutral-30">pagina Biblioteca</a>
             </li>
         </ul>   
     </li>
     <li class="nav-menu__item has-submenu">
-        <a href="javascript:void(0)" class="nav-menu__link">Cursos</a>
+        <a href="javascript:void(0)" class="nav-menu__link">Cursos ▼</a>
+        <ul class="nav-submenu scroll-sm">
+            <li class="nav-submenu__item">
+                <a href="course.html" class="nav-submenu__link hover-bg-neutral-30">📚 Todos os Cursos</a>
+            </li>
+            <li class="nav-submenu__item">
+                <a href="course-list-view.html" class="nav-submenu__link hover-bg-neutral-30">🎓 Cursos Gratuitos</a>
+            </li>
+            <li class="nav-submenu__item">
+                <a href="course-premium.html" class="nav-submenu__link hover-bg-neutral-30">💼 Cursos Premium</a>
+            </li>
+            <li class="nav-submenu__item has-submenu">
+                <a href="javascript:void(0)" class="nav-submenu__link hover-bg-neutral-30">📊 Por Categoria ▸</a>
+                <ul class="nav-submenu scroll-sm">
+                    <li class="nav-submenu__item">
+                        <a href="tech-courses.html" class="nav-submenu__link hover-bg-neutral-30">💻 Tecnologia</a>
+                    </li>
+                    <li class="nav-submenu__item">
+                        <a href="business-courses.html" class="nav-submenu__link hover-bg-neutral-30">📈 Negócios</a>
+                    </li>
+                    <li class="nav-submenu__item">
+                        <a href="design-courses.html" class="nav-submenu__link hover-bg-neutral-30">🎨 Design</a>
+                    </li>
+                    <li class="nav-submenu__item">
+                        <a href="languages-courses.html" class="nav-submenu__link hover-bg-neutral-30">🌍 Idiomas</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-submenu__item">
+                <a href="course-details.html" class="nav-submenu__link hover-bg-neutral-30">📝 Simulados e Testes</a>
+            </li>
+            <li class="nav-submenu__item">
+                <a href="certificates.html" class="nav-submenu__link hover-bg-neutral-30">🏅 Cursos com Certificado</a>
+            </li>
+            <li class="nav-submenu__item">
+                <a href="popular-courses.html" class="nav-submenu__link hover-bg-neutral-30">🔥 Cursos Populares</a>
+            </li>
+        </ul>
+    </li>
+    
+    <li class="nav-menu__item has-submenu">
+        <a href="javascript:void(0)" class="nav-menu__link">Escolas</a>
          <ul class="nav-submenu scroll-sm">
             <li class="nav-submenu__item">
-                <a href="course.html" class="nav-submenu__link hover-bg-neutral-30"> Grade de Cursos</a>
+                <a href="course.html" class="nav-submenu__link hover-bg-neutral-30">Todas as Escolas</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="course-list-view.html" class="nav-submenu__link hover-bg-neutral-30"> Lista de Cursos</a>
+                <a href="course-list-view.html" class="nav-submenu__link hover-bg-neutral-30">Ensino Primário</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="course-details.html" class="nav-submenu__link hover-bg-neutral-30"> Detalhes do Curso</a>
+                <a href="course-details.html" class="nav-submenu__link hover-bg-neutral-30">Ensino Secundário</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="lesson-details.html" class="nav-submenu__link hover-bg-neutral-30"> Detalhes da Aula</a>
+                <a href="lesson-details.html" class="nav-submenu__link hover-bg-neutral-30"> Escolas Técnicas</a>
+            </li>
+            <li class="nav-submenu__item">
+                <a href="lesson-details.html" class="nav-submenu__link hover-bg-neutral-30"> Escolas de Idiomas</a>
+            </li>
+            <li class="nav-submenu__item">
+                <a href="lesson-details.html" class="nav-submenu__link hover-bg-neutral-30">Escolas de Arte</a>
+            </li>
+            <li class="nav-submenu__item">
+                <a href="lesson-details.html" class="nav-submenu__link hover-bg-neutral-30">Educação Especial</a>
             </li>
         </ul>
     </li>
     <li class="nav-menu__item has-submenu">
-        <a href="javascript:void(0)" class="nav-menu__link">Páginas</a>
-         <ul class="nav-submenu scroll-sm">
+        <a href="javascript:void(0)" class="nav-menu__link">Centros de Formação ▼</a>
+        <ul class="nav-submenu scroll-sm">
             <li class="nav-submenu__item">
-                <a href="about.html" class="nav-submenu__link hover-bg-neutral-30"> Sobre</a>
+                <a href="centros.html" class="nav-submenu__link hover-bg-neutral-30">Nossos Centros</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="about-two.html" class="nav-submenu__link hover-bg-neutral-30"> Sobre Dois</a>
+                <a href="formacao-profissional.html" class="nav-submenu__link hover-bg-neutral-30">Formação Profissional</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="about-three.html" class="nav-submenu__link hover-bg-neutral-30"> Sobre Três</a>
+                <a href="estagios-programas.html" class="nav-submenu__link hover-bg-neutral-30">Estágios e Programas</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="about-four.html" class="nav-submenu__link hover-bg-neutral-30"> Sobre Quatro</a>
+                <a href="centros-certificados.html" class="nav-submenu__link hover-bg-neutral-30">Centros Certificados</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="pricing-plan.html" class="nav-submenu__link hover-bg-neutral-30">Plano de Preços</a>
+                <a href="escolas-idiomas.html" class="nav-submenu__link hover-bg-neutral-30">Escolas de Idiomas</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="instructor.html" class="nav-submenu__link hover-bg-neutral-30"> Instrutor</a>
+                <a href="escolas-arte.html" class="nav-submenu__link hover-bg-neutral-30">Escolas de Arte</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="instructor-two.html" class="nav-submenu__link hover-bg-neutral-30"> Instrutor Dois</a>
+                <a href="educacao-especial.html" class="nav-submenu__link hover-bg-neutral-30">Educação Especial</a>
+            </li>
+    
+            <!-- NOVOS ITENS ADICIONADOS -->
+            <li class="nav-submenu__item">
+                <a href="metodologias.html" class="nav-submenu__link hover-bg-neutral-30">Metodologias de Ensino</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="instructor-details.html" class="nav-submenu__link hover-bg-neutral-30"> Detalhes do Instrutor</a>
+                <a href="cursos-avancados.html" class="nav-submenu__link hover-bg-neutral-30">Cursos Avançados</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="tutor.html" class="nav-submenu__link hover-bg-neutral-30"> Tutores Premium</a>
+                <a href="admissao.html" class="nav-submenu__link hover-bg-neutral-30">Processo de Admissão</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="tutor-details.html" class="nav-submenu__link hover-bg-neutral-30"> Detalhes dos Tutores Premium</a>
+                <a href="instrutores.html" class="nav-submenu__link hover-bg-neutral-30">Equipe de Instrutores</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="faq.html" class="nav-submenu__link hover-bg-neutral-30">FAQ</a>
+                <a href="acreditacoes.html" class="nav-submenu__link hover-bg-neutral-30">Acreditações e Reconhecimentos</a>
+            </li>
+        </ul>
+    </li>
+    
+    <li class="nav-menu__item has-submenu">
+        <a href="javascript:void(0)" class="nav-menu__link">Comunidade ▼</a>
+        <ul class="nav-submenu scroll-sm">
+            <li class="nav-submenu__item">
+                <a href="forum.html" class="nav-submenu__link hover-bg-neutral-30">Fórum</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="tuition-jobs.html" class="nav-submenu__link hover-bg-neutral-30">Vagas de Ensino</a>
+                <a href="projetos.html" class="nav-submenu__link hover-bg-neutral-30">Projetos</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="events.html" class="nav-submenu__link hover-bg-neutral-30">Eventos</a>
+                <a href="eventos.html" class="nav-submenu__link hover-bg-neutral-30">Eventos e Workshops</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="event-details.html" class="nav-submenu__link hover-bg-neutral-30">Detalhes do Evento</a>
+                <a href="grupos-estudo.html" class="nav-submenu__link hover-bg-neutral-30">Grupos de Estudo</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="apply-admission.html" class="nav-submenu__link hover-bg-neutral-30">Inscrever-se</a>
+                <a href="historias-sucesso.html" class="nav-submenu__link hover-bg-neutral-30">Histórias de Sucesso</a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="nav-menu__item has-submenu">
+        <a href="javascript:void(0)" class="nav-menu__link">Recursos Acadêmicos ▼</a>
+        <ul class="nav-submenu scroll-sm">
+            <li class="nav-submenu__item">
+                <a href="biblioteca.html" class="nav-submenu__link hover-bg-neutral-30">Biblioteca</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="gallery.html" class="nav-submenu__link hover-bg-neutral-30">Galeria</a>
+                <a href="teses.html" class="nav-submenu__link hover-bg-neutral-30">Banco de Teses</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="privacy-policy.html" class="nav-submenu__link hover-bg-neutral-30">Política de Privacidade</a>
+                <a href="tcc.html" class="nav-submenu__link hover-bg-neutral-30">Ajuda com TCC</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="favorite-course.html" class="nav-submenu__link hover-bg-neutral-30">Cursos Favoritos</a>
+                <a href="pesquisa.html" class="nav-submenu__link hover-bg-neutral-30">Pesquisa Científica</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="find-tutors.html" class="nav-submenu__link hover-bg-neutral-30">Encontrar Tutores</a>
+                <a href="publicacao.html" class="nav-submenu__link hover-bg-neutral-30">Plataforma de Publicação</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="book-online-class.html" class="nav-submenu__link hover-bg-neutral-30">Reservar Aula Online</a>
+                <a href="multimidia.html" class="nav-submenu__link hover-bg-neutral-30">Recursos Multimídia</a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="nav-menu__item has-submenu">
+        <a href="javascript:void(0)" class="nav-menu__link">Carreiras ▼</a>
+        <ul class="nav-submenu scroll-sm">
+            <li class="nav-submenu__item">
+                <a href="vagas.html" class="nav-submenu__link hover-bg-neutral-30">Vagas de Emprego</a>
+            </li>
+            <li class="nav-submenu__item">
+                <a href="orientacao-profissional.html" class="nav-submenu__link hover-bg-neutral-30">Orientações Profissionais</a>
+            </li>
+            <li class="nav-submenu__item">
+                <a href="feiras-emprego.html" class="nav-submenu__link hover-bg-neutral-30">Feiras de Emprego</a>
             </li>
         </ul>
     </li>
     <li class="nav-menu__item has-submenu">
-        <a href="javascript:void(0)" class="nav-menu__link">Produto</a>
-         <ul class="nav-submenu scroll-sm">
+        <a href="javascript:void(0)" class="nav-menu__link">Parcerias ▼</a>
+        <ul class="nav-submenu scroll-sm">
             <li class="nav-submenu__item">
-                <a href="product.html" class="nav-submenu__link hover-bg-neutral-30"> Produto</a>
+                <a href="parceiros.html" class="nav-submenu__link hover-bg-neutral-30">Parceiros Educacionais</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="product-details.html" class="nav-submenu__link hover-bg-neutral-30"> Detalhes do Produto</a>
+                <a href="trabalhe-conosco.html" class="nav-submenu__link hover-bg-neutral-30">Trabalhe Conosco</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="cart.html" class="nav-submenu__link hover-bg-neutral-30">Carrinho</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="checkout.html" class="nav-submenu__link hover-bg-neutral-30">Finalizar Compra</a>
+                <a href="patrocinadores.html" class="nav-submenu__link hover-bg-neutral-30">Patrocinadores</a>
             </li>
         </ul>
     </li>
     <li class="nav-menu__item has-submenu">
-        <a href="javascript:void(0)" class="nav-menu__link">Blog</a>
-         <ul class="nav-submenu scroll-sm">
+        <a href="javascript:void(0)" class="nav-menu__link">Sobre Nós ▼</a>
+        <ul class="nav-submenu scroll-sm">
             <li class="nav-submenu__item">
-                <a href="blog.html" class="nav-submenu__link hover-bg-neutral-30"> Blog em Grade</a>
+                <a href="missao.html" class="nav-submenu__link hover-bg-neutral-30">Missão e Valores</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="blog-list.html" class="nav-submenu__link hover-bg-neutral-30"> Lista de Blogs</a>
+                <a href="equipe.html" class="nav-submenu__link hover-bg-neutral-30">Nossa Equipe</a>
             </li>
             <li class="nav-submenu__item">
-                <a href="blog-classic.html" class="nav-submenu__link hover-bg-neutral-30"> Blog Clássico</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="blog-details.html" class="nav-submenu__link hover-bg-neutral-30"> Detalhes do Blog</a>
+                <a href="impacto.html" class="nav-submenu__link hover-bg-neutral-30">Relatórios de Impacto</a>
             </li>
         </ul>
     </li>
-    <li class="nav-menu__item">
-        <a href="contact.html" class="nav-menu__link">Contato</a>
+    <li class="nav-menu__item has-submenu">
+        <a href="contact.html" class="nav-menu__link">Blog</a>
+    </li>
+    <li class="nav-menu__item has-submenu">
+        <a href="contact.html" class="nav-menu__link">Noticias</a>
+    </li>
+    <li class="nav-menu__item has-submenu">
+        <a href="contact.html" class="nav-menu__link">FAQ</a>
+    </li>
+
+    <li class="nav-menu__item has-submenu">
+        <a href="javascript:void(0)" class="nav-menu__link">Ajuda e Suporte ▼</a>
+        <ul class="nav-submenu scroll-sm">
+            <li class="nav-submenu__item">
+                <a href="central-ajuda.html" class="nav-submenu__link hover-bg-neutral-30">Central de Ajuda</a>
+            </li>
+            <li class="nav-submenu__item">
+                <a href="suporte-aluno.html" class="nav-submenu__link hover-bg-neutral-30">Suporte ao Aluno</a>
+            </li>
+            <li class="nav-submenu__item">
+                <a href="guias-uso.html" class="nav-submenu__link hover-bg-neutral-30">Guias de Uso</a>
+            </li>
+        </ul>
     </li>
 </ul>
 
