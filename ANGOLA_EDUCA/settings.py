@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'biblioteca',
     'forum',
     'hackathons',
+    'gestoreduca'
 ]
 
 MIDDLEWARE = [

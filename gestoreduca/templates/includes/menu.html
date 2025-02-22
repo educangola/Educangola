@@ -1,0 +1,202 @@
+{% load static %}
+<aside class="sidebar">
+    <!-- Botão de fechar a barra lateral -->
+    <button type="button" class="sidebar-close-btn text-gray-500 hover-text-white hover-bg-main-600 text-md w-24 h-24 border border-gray-100 hover-border-main-600 d-xl-none d-flex flex-center rounded-circle position-absolute"><i class="ph ph-x"></i></button>
+    <!-- Fim do botão de fechar a barra lateral -->
+    
+    <a href="index.html" class="sidebar__logo text-center p-20 position-sticky inset-block-start-0 bg-white w-100 z-1 pb-10">
+        <img style="width: 100px;" src="{% static 'assets/img/logoeduca.png' %}" alt="Logo">
+    </a>
+
+    <div class="sidebar-menu-wrapper overflow-y-auto scroll-sm">
+        <div class="p-20 pt-10">
+            <ul class="sidebar-menu">
+                <!-- Gestão de Filiais -->
+                <li class="sidebar-menu__item has-dropdown">
+                    <a href="javascript:void(0)" class="sidebar-menu__link">
+                        <span class="icon"><i class="ph ph-buildings"></i></span>
+                        <span class="text">Filial</span>
+                    </a>
+                    <!-- Submenu começa -->
+                    <ul class="sidebar-submenu">
+                        <li class="sidebar-submenu__item">
+                            <a href="filiais.html" class="sidebar-submenu__link">Listar Filiais</a>
+                        </li>
+                        <li class="sidebar-submenu__item">
+                            <a href="adicionar-filial.html" class="sidebar-submenu__link">Adicionar Filial</a>
+                        </li>
+                        <li class="sidebar-submenu__item">
+                            <a href="gestao-filial.html" class="sidebar-submenu__link">Gestão de Filial</a>
+                        </li>
+                    </ul>
+                    <!-- Fim do Submenu -->
+                </li>
+
+                <!-- Gestão de Cursos -->
+                <li class="sidebar-menu__item has-dropdown">
+                    <a href="javascript:void(0)" class="sidebar-menu__link">
+                        <span class="icon"><i class="ph ph-graduation-cap"></i></span>
+                        <span class="text">Cursos</span>
+                    </a>
+                    <!-- Submenu começa -->
+                    <ul class="sidebar-submenu">
+                        <li class="sidebar-submenu__item">
+                            <a href="cursos.html" class="sidebar-submenu__link">Listar Cursos</a>
+                        </li>
+                        <li class="sidebar-submenu__item">
+                            <a href="adicionar-curso.html" class="sidebar-submenu__link">Adicionar Curso</a>
+                        </li>
+                        <li class="sidebar-submenu__item">
+                            <a href="gestao-cursos.html" class="sidebar-submenu__link">Gestão de Cursos</a>
+                        </li>
+                    </ul>
+                    <!-- Fim do Submenu -->
+                </li>
+
+                <!-- Gestão de Alunos -->
+                <li class="sidebar-menu__item has-dropdown">
+                    <a href="javascript:void(0)" class="sidebar-menu__link">
+                        <span class="icon"><i class="ph ph-users-three"></i></span>
+                        <span class="text">Alunos</span>
+                    </a>
+                    <!-- Submenu começa -->
+                    <ul class="sidebar-submenu">
+                        <li class="sidebar-submenu__item">
+                            <a href="alunos.html" class="sidebar-submenu__link">Listar Alunos</a>
+                        </li>
+                        <li class="sidebar-submenu__item">
+                            <a href="adicionar-aluno.html" class="sidebar-submenu__link">Adicionar Aluno</a>
+                        </li>
+                        <li class="sidebar-submenu__item">
+                            <a href="gestao-alunos.html" class="sidebar-submenu__link">Gestão de Alunos</a>
+                        </li>
+                    </ul>
+                    <!-- Fim do Submenu -->
+                </li>
+
+                <!-- Gestão de Professores -->
+                <li class="sidebar-menu__item has-dropdown">
+                    <a href="javascript:void(0)" class="sidebar-menu__link">
+                        <span class="icon"><i class="ph ph-chalkboard-teacher"></i></span>
+                        <span class="text">Professores</span>
+                    </a>
+                    <!-- Submenu começa -->
+                    <ul class="sidebar-submenu">
+                        <li class="sidebar-submenu__item">
+                            <a href="professores.html" class="sidebar-submenu__link">Listar Professores</a>
+                        </li>
+                        <li class="sidebar-submenu__item">
+                            <a href="adicionar-professor.html" class="sidebar-submenu__link">Adicionar Professor</a>
+                        </li>
+                        <li class="sidebar-submenu__item">
+                            <a href="gestao-professores.html" class="sidebar-submenu__link">Gestão de Professores</a>
+                        </li>
+                    </ul>
+                    <!-- Fim do Submenu -->
+                </li>
+
+                <!-- Gestão de Turmas -->
+                <li class="sidebar-menu__item has-dropdown">
+                    <a href="javascript:void(0)" class="sidebar-menu__link">
+                        <span class="icon"><i class="ph ph-users"></i></span>
+                        <span class="text">Turmas</span>
+                    </a>
+                    <!-- Submenu começa -->
+                    <ul class="sidebar-submenu">
+                        <li class="sidebar-submenu__item">
+                            <a href="turmas.html" class="sidebar-submenu__link">Listar Turmas</a>
+                        </li>
+                        <li class="sidebar-submenu__item">
+                            <a href="adicionar-turma.html" class="sidebar-submenu__link">Adicionar Turma</a>
+                        </li>
+                        <li class="sidebar-submenu__item">
+                            <a href="gestao-turmas.html" class="sidebar-submenu__link">Gestão de Turmas</a>
+                        </li>
+                    </ul>
+                    <!-- Fim do Submenu -->
+                </li>
+
+                <!-- Gestão Financeira -->
+                <li class="sidebar-menu__item has-dropdown">
+                    <a href="javascript:void(0)" class="sidebar-menu__link">
+                        <span class="icon"><i class="ph ph-currency-dollar"></i></span>
+                        <span class="text">Financeiro</span>
+                    </a>
+                    <!-- Submenu começa -->
+                    <ul class="sidebar-submenu">
+                        <li class="sidebar-submenu__item">
+                            <a href="pagamentos.html" class="sidebar-submenu__link">Pagamentos</a>
+                        </li>
+                        <li class="sidebar-submenu__item">
+                            <a href="relatorios-financeiros.html" class="sidebar-submenu__link">Relatórios Financeiros</a>
+                        </li>
+                        <li class="sidebar-submenu__item">
+                            <a href="gestao-financeira.html" class="sidebar-submenu__link">Gestão Financeira</a>
+                        </li>
+                    </ul>
+                    <!-- Fim do Submenu -->
+                </li>
+
+                <!-- Relatórios e Análises -->
+                <li class="sidebar-menu__item">
+                    <a href="relatorios.html" class="sidebar-menu__link">
+                        <span class="icon"><i class="ph ph-chart-bar"></i></span>
+                        <span class="text">Relatórios</span>
+                    </a>
+                </li>
+
+                <!-- Biblioteca de Recursos -->
+                <li class="sidebar-menu__item">
+                    <a href="biblioteca.html" class="sidebar-menu__link">
+                        <span class="icon"><i class="ph ph-books"></i></span>
+                        <span class="text">Biblioteca</span>
+                    </a>
+                </li>
+
+                <!-- Configurações -->
+                <li class="sidebar-menu__item">
+                    <span class="text-gray-300 text-sm px-20 pt-20 fw-semibold border-top border-gray-100 d-block text-uppercase">Configurações</span>
+                </li>
+                <li class="sidebar-menu__item">
+                    <a href="configuracoes.html" class="sidebar-menu__link">
+                        <span class="icon"><i class="ph ph-gear"></i></span>
+                        <span class="text">Configurações Gerais</span>
+                    </a>
+                </li>
+
+                <!-- Autenticação -->
+                <li class="sidebar-menu__item has-dropdown">
+                    <a href="javascript:void(0)" class="sidebar-menu__link">
+                        <span class="icon"><i class="ph ph-shield-check"></i></span>
+                        <span class="text">Autenticação</span>
+                    </a>
+                    <!-- Submenu começa -->
+                    <ul class="sidebar-submenu">
+                        <li class="sidebar-submenu__item">
+                            <a href="login.html" class="sidebar-submenu__link">Login</a>
+                        </li>
+                        <li class="sidebar-submenu__item">
+                            <a href="registro.html" class="sidebar-submenu__link">Registro</a>
+                        </li>
+                        <li class="sidebar-submenu__item">
+                            <a href="recuperar-senha.html" class="sidebar-submenu__link">Recuperar Senha</a>
+                        </li>
+                    </ul>
+                    <!-- Fim do Submenu -->
+                </li>
+            </ul>
+        </div>
+        <div class="p-20 pt-80">
+            <div class="bg-main-50 p-20 pt-0 rounded-16 text-center mt-74">
+                <span class="border border-5 bg-white mx-auto border-primary-50 w-114 h-114 rounded-circle flex-center text-success-600 text-2xl translate-n74">
+                    <img src="{% static 'assets5/images/icons/certificate.png' %}" alt="" class="centerised-img">
+                </span>
+                <div class="mt-n74">
+                    <h5 class="mb-4 mt-22">Certificação Profissional</h5>
+                    <p class="">Acesso a mais de 400 cursos com certificação</p>
+                    <a href="certificacao.html" class="btn btn-main mt-16 rounded-pill">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>

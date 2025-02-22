@@ -13,6 +13,7 @@ urlpatterns = i18n_patterns(
     path('', views.index, name="index"), 
     path('Educa_Angola/', include('core.urls')), 
     path('bolsa/', include('bolsas.urls')),
+    path('gestoreduca/', include('gestoreduca.urls')),
     path('comentarios/', include('comentarios.urls')),
     path('cursos/', include('cursos.urls')),
     path('instituicoes/', include('instituicoes.urls')),

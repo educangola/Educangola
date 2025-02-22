@@ -249,6 +249,28 @@
         </div>
     </section>
 
+    <section class="video pt-120">
+        <div class="container">
+            <div class="section-heading text-center">
+                <div class="flex-align d-inline-flex gap-8 mb-16">
+                    <span class="text-main-600 text-2xl d-flex"><i class="ph-bold ph-book-open"></i></span>
+                    <h5 class="text-main-600 mb-0">Vida no Campus</h5>
+                </div>
+                <h2 class="mb-24 wow bounceIn">Destaques do Campus</h2>
+                <p class="wow bounceInDown">Bem-vindo ao nosso campus vibrante, onde o aprendizado ganha vida em um ambiente dinâmico e inspirador.</p>
+            </div>
+        </div>
+    
+            <div class="video-img position-relative half-bg"> 
+                <div class="container wow bounceIn">
+                    <img src="{% static 'assets3/images/thumbs/video-img.png' %}" class="rounded-12 cover-img" alt="" data-tilt data-tilt-max="4" data-tilt-speed="500" data-tilt-perspective="5000" data-tilt-transition="1s">
+                    <a href="https://www.youtube.com/watch?v=MFLVmAE4cqg" class="play-button position-absolute start-50 top-50 translate-middle z-1 w-72 h-72 flex-center bg-main-two-600 text-white rounded-circle text-2xl">
+                        <i class="ph-fill ph-play"></i>
+                    </a>
+                </div>
+            </div>
+     </section>
+
 
     <section class="category py-120 position-relative z-1 mash-bg-main mash-bg-main-two mash-reverse">
         <div class="container">
@@ -451,7 +473,7 @@
     <!--==============================
     CTA Area
     ==============================-->
-    <section class="space-top cta-layout1 space-bottom" data-bg-src="{% static 'assets/img/caderno.jpg' %}">
+    <section style="background-color: rgb(52, 52, 212);" class="space-top cta-layout1 space-bottom" data-bg-src="{% static 'assets/img/cader.jpg' %}">
         <div class="container">
             <div class="cta-style2">
                 <div class="row g-5 align-items-center">
@@ -906,9 +928,7 @@
         {% include 'includes/footer.html' %}
     </footer>
     
-    <!-- Scroll To Top -->
-    <a href="index-5.html#" class="scrollToTop scroll-btn"><i class="far fa-arrow-up"></i></a>
-
+    
     
     
     <script src="{% static 'assets/js/vendor/jquery-3.6.0.min.js' %}"></script>
