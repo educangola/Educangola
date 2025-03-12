@@ -25,6 +25,7 @@ class Curso(models.Model):
     data_fim = models.DateField()
     imagem = models.ImageField(upload_to='imagens_cursos/', null=True, blank=True)
     data_criacao = models.DateTimeField(auto_now_add=True, null=True, blank=True)  # Novo campo
+    destaque = models.BooleanField(default=False)
 
     def __str__(self):
         return self.nome

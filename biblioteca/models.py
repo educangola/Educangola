@@ -41,7 +41,8 @@ class Biblioteca(models.Model):
 
 
 class CategoriaLivro(models.Model):
-    nome = models.CharField(max_length=100, unique=True)
+    nome = models.CharField(max_length=100)
+    imagem = models.ImageField(upload_to='livros/categoria/', blank=True, null=True)
 
     def __str__(self):
         return self.nome
@@ -62,6 +63,11 @@ class Livro(models.Model):
     categoria = models.ForeignKey(CategoriaLivro, on_delete=models.DO_NOTHING, null=True)
     imagem = models.ImageField(upload_to='livros/imagens/', blank=True, null=True)
     hot = models.BooleanField(default=False)
+    destaque = models.BooleanField(default=False)
+    descricao = models.CharField(max_length=255)
+    resumo = models.CharField(max_length=255)
+    preco = models.DecimalField(max_digits=15, decimal_places=3, null=True, blank=True)
+    mostrar_preco = models.BooleanField(default=False)
     
     # Novos campos adicionados
     tags = models.CharField(max_length=255, blank=True)  # Tags

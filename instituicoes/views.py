@@ -8,5 +8,6 @@ def Instituicao(request):
     return render(request, 'escolas.html')
 
 
-def detalhe_instituicao(request):
-    return render(request, 'detalhe_instituicao.html')
+def detalhe_instituicao(request, id):
+    escola = get_object_or_404(Instituicao, id=id) 
+    return render(request, 'detalhe_instituicao.html',{'escola':escola})

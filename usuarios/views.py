@@ -9,12 +9,7 @@ from hashlib import sha256
 def home(request):
     return render(request, 'home.html')
 
-def home_cursos(request):
-    cursos = Curso.objects.all()
-    instrutores = Instrutor.objects.all()
-    cursos_actualizados = Curso.objects.all().order_by('-data_criacao')
-    categorias = Categoria.objects.all()
-    return render(request, 'home_cursos.html', {'cursos': cursos, 'categorias':categorias, 'cursos_actualizados':cursos_actualizados, 'instrutores':instrutores})
+
 
 def cursos_por_categoria(request, id):
     categoria = get_object_or_404(Categoria, id=id) 

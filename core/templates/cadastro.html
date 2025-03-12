@@ -98,24 +98,52 @@
                             <h3 class="mb-16 text-neutral-500">Vamos começar!</h3>
                             <p class="text-neutral-500">Por favor, insira seu endereço de e-mail para iniciar sua inscrição online.</p>
                         </div>
-                        <form action="sign-up.html#">
+    
+                        <!-- Exibição de mensagens de status -->
+                        {% if request.GET.status %}
+                            {% if request.GET.status == "1" %}
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <strong>Atenção!</strong> Nome e e-mail não podem estar vazios.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            {% elif request.GET.status == "2" %}
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <strong>Erro!</strong> A senha deve ter pelo menos 8 caracteres.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            {% elif request.GET.status == "3" %}
+                                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                    <strong>Ops!</strong> Este e-mail já está cadastrado.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            {% elif request.GET.status == "0" %}
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <strong>Sucesso!</strong> Cadastro realizado com sucesso. Você pode fazer login agora.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            {% elif request.GET.status == "4" %}
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <strong>Erro!</strong> Ocorreu um erro inesperado. Tente novamente mais tarde.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            {% endif %}
+                        {% endif %}
+    
+                        <form action="{% url 'Valida_cadastro_normal' %}" method="POST">{% csrf_token %}
                             <div class="row gy-4">
                                 <div class="col-sm-6">
                                     <label for="fname" class="fw-medium text-lg text-neutral-500 mb-16">Nome</label>
-                                    <input type="text" class="common-input rounded-pill" id="fname" placeholder="Digite seu nome">
+                                    <input name="nome" type="text" class="common-input rounded-pill" id="fname" placeholder="Digite seu nome">
                                 </div>
-                                <div class="col-sm-6">
-                                    <label for="lname" class="fw-medium text-lg text-neutral-500 mb-16">Sobrenome</label>
-                                    <input type="text" class="common-input rounded-pill" id="lname" placeholder="Digite seu sobrenome">
-                                </div>
+                                
                                 <div class="col-sm-12">
                                     <label for="email" class="fw-medium text-lg text-neutral-500 mb-16">Digite seu e-mail</label>
-                                    <input type="email" class="common-input rounded-pill" id="email" placeholder="Digite seu e-mail...">
+                                    <input name="email" type="email" class="common-input rounded-pill" id="email" placeholder="Digite seu e-mail...">
                                 </div>
                                 <div class="col-sm-12">
                                     <label for="password" class="fw-medium text-lg text-neutral-500 mb-16">Senha</label>
                                     <div class="position-relative">
-                                        <input type="password" class="common-input rounded-pill pe-44" id="password" placeholder="Digite sua senha...">
+                                        <input name="senha" type="password" class="common-input rounded-pill pe-44" id="password" placeholder="Digite sua senha...">
                                         <span class="toggle-password position-absolute top-50 inset-inline-end-0 me-16 translate-middle-y ph-bold ph-eye-closed" id="#password"></span>
                                     </div>
                                 </div>
@@ -144,6 +172,7 @@
             </div>
         </div>
     </div>
+    
     
     <!-- ============================== Tutor Details Section End ============================== -->
     

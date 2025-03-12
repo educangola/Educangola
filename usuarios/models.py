@@ -7,17 +7,10 @@ class Habilidade(models.Model):
         return self.nome
 
 class Usuario(models.Model):
-    # Tipos de usuário com Choices
-    TIPO_USUARIO_CHOICES = (
-        ('aluno', 'Aluno'),
-        ('mentor', 'Mentor'),
-    )
-
     nome = models.CharField(max_length=255)
     email = models.EmailField(unique=True)
     senha = models.CharField(max_length=255)
-    tipo_usuario = models.CharField(max_length=10, choices=TIPO_USUARIO_CHOICES, default='aluno')
-
+    
     def __str__(self):
         return self.nome
 

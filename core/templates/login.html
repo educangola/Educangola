@@ -98,7 +98,23 @@
                             <h3 class="mb-16 text-neutral-500">Bem-vindo de volta!</h3>
                             <p class="text-neutral-500">Entre na sua conta e junte-se a nós</p>
                         </div>
-                        <form action="{% url 'Login_normal' %}" method="POST">{% csrf_token %}
+                        {% if request.GET.status %}
+                            {% if request.GET.status == "1" %}
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <strong>Atenção!</strong> E-mail ou senha incorretos.
+
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            {% endif %}
+                            {% if request.GET.status == "21" %}
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <strong>Atenção!</strong> faca login antes de tentar acessar o sistema.
+
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                        <form action="{% url 'Valida_login_normal' %}" method="POST">{% csrf_token %}
                             <div class="mb-24">
                                 <label for="email" class="fw-medium text-lg text-neutral-500 mb-16">Digite seu e-mail</label>
                                 <input name="email" type="email" class="common-input rounded-pill" id="email" placeholder="Digite seu e-mail...">

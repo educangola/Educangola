@@ -12,6 +12,14 @@
 
     <!-- Bootstrap -->
     {% include 'includes/links_css.html' %}
+    <style>
+        html, body {
+        overflow-x: hidden;
+    }
+    .custom-margin {
+    margin-right: 10px; /* Ajuste o valor conforme necessário */
+}
+    </style>
 </head> 
 <body>
     
@@ -153,7 +161,7 @@
                             <i class="animate__heartBeat ph-bold ph-video-camera"></i>
                         </span>
                         <div class="flex-grow-1">
-                            <h5 class="mb-8 text-white fw-medium">50.000 cursos online</h5>
+                            <h5 class="mb-8 text-white fw-medium">{{quantidade_cursos}} cursos online</h5>
                             <span class="text-sm text-white">Desfrute de uma variedade de tópicos atualizados</span>
                         </div>
                     </div>
@@ -169,17 +177,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-sm-6" data-aos="fade-up" data-aos-duration="600">
-                    <div class="info-item animation-item flex-align gap-20">
-                        <span class="w-60 h-60 flex-center bg-white text-main-600 text-28 rounded-circle flex-shrink-0">
-                             <i class="animate__heartBeat ph-bold ph-clock"></i>
-                        </span>
-                        <div class="flex-grow-1">
-                            <h5 class="mb-8 text-white fw-medium">Acesso vitalício</h5>
-                            <span class="text-sm text-white">Aprenda no seu horário</span>
-                        </div>
-                    </div>
-                </div>
+            
                 <div class="col-xl-3 col-sm-6" data-aos="fade-up" data-aos-duration="800">
                     <div class="info-item animation-item flex-align gap-20">
                         <span class="w-60 h-60 flex-center bg-white text-main-600 text-28 rounded-circle flex-shrink-0">
@@ -289,13 +287,6 @@
                                         <p class="text-neutral-500 text-line-2">Faça parte de uma universidade que se preocupa com o planeta.</p>
                                     </div>
                                 </div>
-                            </div>
-        
-                            <div class="pt-40 border-top border-neutral-50 mt-40 border-dashed border-0">
-                                <a href="course.html" class="btn btn-main rounded-pill flex-align d-inline-flex gap-8">
-                                    Leia Mais
-                                    <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -460,7 +451,7 @@
                     <p class="text-neutral-700 text-xl">"Fiz vários cursos e cada um superou minhas expectativas. Aprendi habilidades valiosas que me ajudaram a avançar na minha carreira. Super recomendo!"</p>
                     <div class="flex-between gap-24 flex-wrap pt-28 mt-28 border-top border-neutral-50 mt-28 border-dashed border-0">
                         <div class="flex-align gap-24 ">
-                            <img src="{% static 'assets3/images/thumbs/testi-img1.png' %}" alt="" class="w-60 h-60 object-fit-cover rounded-circle">
+                            <img src="{% static 'assets/img/logoeduca.png' %}" alt="" class="w-60 h-60 object-fit-cover rounded-circle">
                             <div class="">
                                 <h5 class="mb-8 fw-medium">John D.</h5>
                                 <span class="text-neutral-700">Designer Gráfico</span>
@@ -482,7 +473,7 @@
                     <p class="text-neutral-700 text-xl">"Eu estava inicialmente cético sobre o aprendizado online, mas mudei completamente minha perspectiva. Os cursos são bem elaborados e a flexibilidade para aprender no meu próprio ritmo é inestimável."</p>
                     <div class="flex-between gap-24 flex-wrap pt-28 mt-28 border-top border-neutral-50 mt-28 border-dashed border-0">
                         <div class="flex-align gap-24 ">
-                            <img src="{% static 'assets3/images/thumbs/testi-img2.png' %}" alt="" class="w-60 h-60 object-fit-cover rounded-circle">
+                            <img src="{% static 'assets/img/logoeduca.png' %}" alt="" class="w-60 h-60 object-fit-cover rounded-circle">
                             <div class="">
                                 <h5 class="mb-8 fw-medium">Sarah L.</h5>
                                 <span class="text-neutral-700">Designer UI/UX</span>
@@ -504,7 +495,7 @@
                     <p class="text-neutral-700 text-xl">"No começo, estava duvidoso sobre o aprendizado baseado na web, mas mudei completamente meu ponto de vista. Os cursos são bem planejados, e aprender no meu próprio ritmo é importante."</p>
                     <div class="flex-between gap-24 flex-wrap pt-28 mt-28 border-top border-neutral-50 mt-28 border-dashed border-0">
                         <div class="flex-align gap-24 ">
-                            <img src="{% static 'assets3/images/thumbs/user-two-img3.png' %}" alt="" class="w-60 h-60 object-fit-cover rounded-circle">
+                            <img src="{% static 'assets/img/logoeduca.png' %}" alt="" class="w-60 h-60 object-fit-cover rounded-circle">
                             <div class="">
                                 <h5 class="mb-8 fw-medium">John Doe</h5>
                                 <span class="text-neutral-700">Desenvolvedor Front End</span>
@@ -543,10 +534,10 @@
                         <h4 class="footer-item__title fw-medium text-white mb-32">Links Rápidos</h4>
                         <ul class="footer-menu">
                             <li class="mb-16">
-                                <a href="about.html" class="text-white hover-text-main-600 hover-text-decoration-underline">Sobre nós</a>
+                                <a href="{% url 'sobre_nos' %}" class="text-white hover-text-main-600 hover-text-decoration-underline">Sobre nós</a>
                             </li>
                             <li class="mb-16">
-                                <a href="https://wowtheme7.com/tf/eduall/demo/courses.html" class="text-white hover-text-main-600 hover-text-decoration-underline">Cursos</a>
+                                <a href="{% url 'Todos_cursos' %}" class="text-white hover-text-main-600 hover-text-decoration-underline">Cursos</a>
                             </li>
                             <li class="mb-16">
                                 <a href="instructor.html" class="text-white hover-text-main-600 hover-text-decoration-underline">Instrutores</a>
@@ -588,15 +579,15 @@
                         <div class="flex-align gap-20 mb-24">
                             <span class="icon d-flex text-32 text-main-600"><i class="ph ph-phone"></i></span>
                             <div class="">
-                                <a href="tel:(207)555-0119" class="text-white d-block hover-text-main-600 mb-4">(207) 555-0119</a>
-                                <a href="tel:(704)555-0127" class="text-white d-block hover-text-main-600 mb-0">(704) 555-0127</a>
+                                <a href="tel:(207)555-0119" class="text-white d-block hover-text-main-600 mb-4">+244 923908353</a>
+                                <a href="tel:(704)555-0127" class="text-white d-block hover-text-main-600 mb-0">+244 956302950</a>
                             </div>
                         </div>
                         <div class="flex-align gap-20 mb-24">
                             <span class="icon d-flex text-32 text-main-600"><i class="ph ph-envelope-open"></i></span>
                             <div class="">
-                                <a href="mailto:dwallo@gmail.com" class="text-white d-block hover-text-main-600 mb-4">dwallo@gmail.com</a>
-                                <a href="mailto:eduAll@gmail.com" class="text-white d-block hover-text-main-600 mb-0">eduAll@gmail.com</a>
+                                <a href="mailto:dwallo@gmail.com" class="text-white d-block hover-text-main-600 mb-4">educangola@gmail.com</a>
+                                <a href="mailto:eduAll@gmail.com" class="text-white d-block hover-text-main-600 mb-0">educangola@gmail.com</a>
                             </div>
                         </div>
                         <div class="flex-align gap-20 mb-0">

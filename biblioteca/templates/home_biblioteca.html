@@ -95,65 +95,35 @@
     
 
     <!-- Book Banner Section start  -->
-    <section class="book-banner-section fix section-padding">
+    <section style="z-index: 0;" class="book-banner-section fix section-padding">
         <div class="container">
             <div class="row g-4">
                 <!-- Banner 1 -->
+                {% for categoria in categorias %}
                 <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                     <div class="banner-book-card-items bg-cover"
                         style="background-image: url('{% static 'assets4/img/banner/book-banner-1.jpg' %}');">
                         <div class="book-shape">
-                            <img src="{% static 'assets4/img/banner/book-1.png' %}" alt="img">
+                            <img src="{{ categoria.imagem.url }}" alt="img">
                         </div>
                         <div class="banner-book-content">
-                            <h2>Livros de Ficção <br> Criminal</h2>
+                            <h2>{{categoria.nome}}</h2>
                             <h6>15% de desconto em brinquedos e presentes para crianças!</h6>
                             <a href="shop-details.html" class="theme-btn white-bg">Compre Agora <i
                                     class="fa-solid fa-arrow-right-long"></i></a>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
     
-                <!-- Banner 2 -->
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                    <div class="banner-book-card-items bg-cover"
-                        style="background-image: url('{% static 'assets4/img/banner/book-banner-2.jpg' %}');">
-                        <div class="book-shape">
-                            <img src="{% static 'assets4/img/banner/book-2.png' %}" alt="img">
-                        </div>
-                        <div class="banner-book-content">
-                            <h2>Um Ano em <br> uma Bicicleta</h2>
-                            <h6>15% de desconto em brinquedos e presentes para crianças!</h6>
-                            <a href="shop-details.html" class="theme-btn white-bg">Compre Agora <i
-                                    class="fa-solid fa-arrow-right-long"></i></a>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Banner 3 -->
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-                    <div class="banner-book-card-items bg-cover"
-                        style="background-image: url('{% static 'assets4/img/banner/book-banner-3.jpg' %}');">
-                        <div class="book-shape">
-                            <img src="{% static 'assets4/img/banner/book-3.png' %}" alt="img">
-                        </div>
-                        <div class="banner-book-content">
-                            <h2>
-                                Cresça com <br>
-                                Flores
-                            </h2>
-                            <h6>15% de desconto em brinquedos e presentes para crianças!</h6>
-                            <a href="shop.html" class="theme-btn white-bg">Compre Agora <i
-                                    class="fa-solid fa-arrow-right-long"></i></a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
+    
+
     <!-- Seção da Loja Início -->
-    <section class="shop-section section-padding fix pt-0">
+    <section style="z-index: 0;" class="shop-section section-padding fix pt-0">
         <div class="container">
             <div class="section-title-area">
                 <div class="section-title">
@@ -231,280 +201,107 @@
             </div>
         </div>
     </section>
-    
-    
 
-    <!-- Featured Books Section Start -->
-    <section class="featured-books-section pt-100 pb-145 fix section-bg">
+
+    <section style="z-index: 0;" class="featured-books-section pt-100 pb-145 fix section-bg">
         <div class="container">
-            <div class="section-title-area justify-content-center">
-                <div class="section-title wow fadeInUp" data-wow-delay=".3s">
-                    <h2>Livros em Destaque</h2>
+            <div class="section-heading text-center style-flex gap-24">
+                <div class="section-heading__inner text-start">
+                    <h2 class="mb-0 wow bounceIn">Explore Mais de {{quantidade_livro}} Livros Online Gratuitos para Leitores</h2>
+                </div>
+                <div class="section-heading__content">
+                    <p class="section-heading__desc text-start mt-0 text-line-2 wow bounceInUp">Bem-vindo ao nosso catálogo diversificado e dinâmico de livros. Estamos dedicados a fornecer a você uma vasta coleção de obras para todos os gostos e necessidades...</p>
+                    <a href="{% url 'home_biblioteca' %}" class="item-hover__text flex-align gap-8 text-main-600 mt-24 hover-text-decoration-underline transition-1" tabindex="0">
+                        Saber mais sobre Livros
+                        <i class="ph ph-arrow-right"></i>
+                    </a>
                 </div>
             </div>
-    
+
             <div class="swiper featured-books-slider">
                 <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slid">
-                        <div class="shop-box-items style-4 wow fadeInUp" data-wow-delay=".2s">
-                            <div class="book-thumb center">
-                                <a href="https://gramentheme.com/html/bookle/shop-details">
-                                    <img src="{% static 'assets4/img/book/07.png' %}" alt="img">
-                                </a>
-                            </div>
-                            <div class="shop-content">
-                                <ul class="book-category">
-                                    <li class="book-category-badge">Aventura</li>
-                                    <li>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                        (459)
-                                    </li>
-                                </ul>
-                                <h3><a href="shop-details.html">Qple GPad com Tela Retina</a></h3>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{% static 'assets4/img/testimonial/client-1.png' %}" alt="img">
-                                        </span>
-                                        <span class="content">Wilson</span>
-                                    </li>
-                                </ul>
-                                <div class="book-availablity">
-                                    <div class="details">
-                                        <ul class="price-list">
-                                            <li>$30.00</li>
-                                            <li>
-                                                <del>$39.99</del>
-                                            </li>
-                                        </ul>
-                                        <div class="progress-line"></div>
-                                        <p>25 Livros em estoque</p>
+                    {% for livro in livros %}
+                        <div class="swiper-slide">
+                            <div class="shop-box-items style-4 wow fadeInUp" data-wow-delay=".2s">
+                                <div class="book-thumb center">
+                                    <a href="#"><img src="{{ livro.imagem.url }}"></a>
+                                </div>
+                                <div class="shop-content">
+                                    <ul class="book-category">
+                                        <li style="color: #fff;" class="book-category-badge">Destaque</li>
+                                        <li>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            (459)
+                                        </li>
+                                    </ul>
+                                    <h3><a href="{% url 'detalhe_livro' livro.id %}">{{livro.titulo}} <br></a></h3>
+                                    <ul class="author-post">
+                                        <li class="authot-list">
+                                            
+                                            <span class="content">Autor: {{livro.autor}}</span>
+                                        </li>
+                                    </ul>
+                                    <div class="book-availablity">
+                                        <div class="details">
+                                            <ul class="price-list">
+                                                <li style="font-size: 15px;" >Editora: {{livro.biblioteca}}</li>
+                                            </ul>
+                                            <div class="progress-line">
+
+                                            </div>
+                                            <p>{{livro.categoria}}</p>
+                                        </div>
+                                        <div class="shop-btn">
+                                            <a href="{% url 'detalhe_livro' livro.id %}">
+                                                <i class="fa-solid fa-arrow-right"></i> <!-- Ícone de seta para a direita -->
+                                            </a>
+                                        </div>
+
                                     </div>
-                                    <div class="shop-btn">
-                                        <a href="shop-cart.html">
-                                            <i class="fa-regular fa-basket-shopping"></i>
-                                        </a>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
-                    </div>
-    
-                    <!-- Slide 2 -->
-                    <div class="swiper-slid">
-                        <div class="shop-box-items style-4 wow fadeInUp" data-wow-delay=".2s">
-                            <div class="book-thumb center">
-                                <a href="https://gramentheme.com/html/bookle/shop-details">
-                                    <img src="{% static 'assets4/img/book/11.png' %}" alt="img">
-                                </a>
-                            </div>
-                            <div class="shop-content">
-                                <ul class="book-category">
-                                    <li class="book-category-badge">Aventura</li>
-                                    <li>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                        (459)
-                                    </li>
-                                </ul>
-                                <h3><a href="shop-details.html">Qple GPad com Tela Retina</a></h3>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{% static 'assets4/img/testimonial/client-2.png' %}" alt="img">
-                                        </span>
-                                        <span class="content">Hawkins</span>
-                                    </li>
-                                </ul>
-                                <div class="book-availablity">
-                                    <div class="details">
-                                        <ul class="price-list">
-                                            <li>$30.00</li>
-                                            <li>
-                                                <del>$39.99</del>
-                                            </li>
-                                        </ul>
-                                        <div class="progress-line"></div>
-                                        <p>25 Livros em estoque</p>
-                                    </div>
-                                    <div class="shop-btn">
-                                        <a href="shop-cart.html">
-                                            <i class="fa-regular fa-basket-shopping"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <!-- Slide 3 -->
-                    <div class="swiper-slid">
-                        <div class="shop-box-items style-4 wow fadeInUp" data-wow-delay=".2s">
-                            <div class="book-thumb center">
-                                <a href="https://gramentheme.com/html/bookle/shop-details">
-                                    <img src="{% static 'assets4/img/book/10.png' %}" alt="img">
-                                </a>
-                            </div>
-                            <div class="shop-content">
-                                <ul class="book-category">
-                                    <li class="book-category-badge">Aventura</li>
-                                    <li>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                        (459)
-                                    </li>
-                                </ul>
-                                <h3><a href="shop-details.html">O Mistério Escondido Atrás</a></h3>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{% static 'assets4/img/testimonial/client-3.png' %}" alt="img">
-                                        </span>
-                                        <span class="content">Esther</span>
-                                    </li>
-                                </ul>
-                                <div class="book-availablity">
-                                    <div class="details">
-                                        <ul class="price-list">
-                                            <li>$30.00</li>
-                                            <li>
-                                                <del>$39.99</del>
-                                            </li>
-                                        </ul>
-                                        <div class="progress-line"></div>
-                                        <p>25 Livros em estoque</p>
-                                    </div>
-                                    <div class="shop-btn">
-                                        <a href="shop-cart.html">
-                                            <i class="fa-regular fa-basket-shopping"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <!-- Slide 4 -->
-                    <div class="swiper-slid">
-                        <div class="shop-box-items style-4 wow fadeInUp" data-wow-delay=".2s">
-                            <div class="book-thumb center">
-                                <a href="https://gramentheme.com/html/bookle/shop-details">
-                                    <img src="{% static 'assets4/img/book/07.png' %}" alt="img">
-                                </a>
-                            </div>
-                            <div class="shop-content">
-                                <ul class="book-category">
-                                    <li class="book-category-badge">Aventura</li>
-                                    <li>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                        (459)
-                                    </li>
-                                </ul>
-                                <h3><a href="shop-details.html">Qple GPad com Tela Retina</a></h3>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{% static 'assets4/img/testimonial/client-1.png' %}" alt="img">
-                                        </span>
-                                        <span class="content">Wilson</span>
-                                    </li>
-                                </ul>
-                                <div class="book-availablity">
-                                    <div class="details">
-                                        <ul class="price-list">
-                                            <li>$30.00</li>
-                                            <li>
-                                                <del>$39.99</del>
-                                            </li>
-                                        </ul>
-                                        <div class="progress-line"></div>
-                                        <p>25 Livros em estoque</p>
-                                    </div>
-                                    <div class="shop-btn">
-                                        <a href="shop-cart.html">
-                                            <i class="fa-regular fa-basket-shopping"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <!-- Slide 5 -->
-                    <div class="swiper-slide">
-                        <div class="shop-box-items style-4 wow fadeInUp" data-wow-delay=".2s">
-                            <div class="book-thumb center">
-                                <a href="https://gramentheme.com/html/bookle/shop-details">
-                                    <img src="{% static 'assets4/img/book/11.png' %}" alt="img">
-                                </a>
-                            </div>
-                            <div class="shop-content">
-                                <ul class="book-category">
-                                    <li class="book-category-badge">Aventura</li>
-                                    <li>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                        (459)
-                                    </li>
-                                </ul>
-                                <h3><a href="shop-details.html">Qple GPad com Tela Retina</a></h3>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{% static 'assets4/img/testimonial/client-2.png' %}" alt="img">
-                                        </span>
-                                        <span class="content">Hawkins</span>
-                                    </li>
-                                </ul>
-                                <div class="book-availablity">
-                                    <div class="details">
-                                        <ul class="price-list">
-                                            <li>$30.00</li>
-                                            <li>
-                                                <del>$39.99</del>
-                                            </li>
-                                        </ul>
-                                        <div class="progress-line"></div>
-                                        <p>25 Livros em estoque</p>
-                                    </div>
-                                    <div class="shop-btn">
-                                        <a href="shop-cart.html">
-                                            <i class="fa-regular fa-basket-shopping"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
-    
-                <!-- Paginação do Swiper -->
+
                 <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="cta-banner-section fix section-padding pt-0">
+        <div class="container">
+            <div class="cta-banner-wrapper section-padding bg-cover"
+                style="background-image: url('{% static 'assets4/img/cta-banner.jpg' %}');">
+                <div class="book-shape">
+                    <img src="{% static 'assets4/img/book-shape.png' %}" alt="shape-img">
+                </div>
+                <div class="girl-shape float-bob-x">
+                    <img src="{% static 'assets4/img/girl-shape-2.png' %}" alt="shape-img">
+                </div>
+                <div class="cta-content text-center">
+                    <h2 class="mb-40 wow fadeInUp" data-wow-delay=".3s"
+                        style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">Get 25% discount
+                        in all <br> kind of
+                        super Selling</h2>
+                    <a href="shop.html" class="theme-btn wow fadeInUp" data-wow-delay=".5s"
+                        style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">Shop Now <i
+                            class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
             </div>
         </div>
     </section>
 
 
+
     <!-- Best Seller Section Start -->
-    <section class="best-seller-section section-padding fix">
+    <section style="z-index: 0;" class="best-seller-section section-padding fix">
         <div class="container">
             <div class="section-title-area">
                 <div class="section-title wow fadeInUp" data-wow-delay=".3s">
@@ -517,7 +314,7 @@
                 <!-- Livro 1 -->
                 <div class="shop-box-items style-3 wow fadeInUp" data-wow-delay=".2s">
                     <div class="book-thumb center">
-                        <a href="https://gramentheme.com/html/bookle/shop-details">
+                        <a href="#">
                             <img src="{% static 'assets4/img/book/07.png' %}" alt="img">
                         </a>
                     </div>
@@ -674,7 +471,7 @@
     </section>
 
     <!-- Seção da Loja Início -->
-<section class="shop-section section-padding fix pt-0">
+<section style="z-index: 0;" class="shop-section section-padding fix pt-0">
     <div class="container">
         <div class="section-title-area">
             <div class="section-title wow fadeInUp" data-wow-delay=".3s">
@@ -914,7 +711,7 @@
 <!-- Seção de Banner CTA Fim -->
 
     <!-- Shop Section Start -->
-    <section class="shop-section section-padding fix pt-0">
+    <section style="z-index: 0;" class="shop-section section-padding fix pt-0">
         <div class="container">
             <div class="section-title-area">
                 <div class="section-title">
@@ -1191,7 +988,7 @@
     
 
     <!-- News Section Start -->
-    <section class="news-section fix section-padding section-bg">
+    <section style="z-index: 0;" class="news-section fix section-padding section-bg">
         <div class="container">
             <div class="section-title text-center">
                 <h2 class="mb-3 wow fadeInUp" data-wow-delay=".3s">Nossas Últimas Notícias</h2>

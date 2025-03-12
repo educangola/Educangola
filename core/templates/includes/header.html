@@ -62,13 +62,9 @@
                                     <i class="fas fa-university"></i> home cursos
                                 </a>
                             </li>
+                            
                             <li class="nav-submenu__item">
-                                <a href="#" class="nav-submenu__link hover-bg-neutral-30">
-                                    <i class="fas fa-chalkboard-teacher"></i> Centros de Formação
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="#" class="nav-submenu__link hover-bg-neutral-30">
+                                <a href="{% url 'home_biblioteca' %}" class="nav-submenu__link hover-bg-neutral-30">
                                     <i class="fas fa-tools"></i> home biblioteca
                                 </a>
                             </li>
@@ -313,21 +309,75 @@
             <!-- Menu End  -->
         </div>
 
-        <!-- Header Right start -->
-        <div class="header-right flex-align">
-            <form action="index.html#" class="search-form position-relative d-xl-block d-none">
-                <input type="text" class="common-input rounded-pill bg-main-25 pe-48 border-neutral-30" placeholder="pesquisar...">
-                <button type="submit" class="w-36 h-36 bg-main-600 hover-bg-main-700 rounded-circle flex-center text-md text-white position-absolute top-50 translate-middle-y inset-inline-end-0 me-8">
-                    <i class="ph-bold ph-magnifying-glass"></i>
-                </button>
-            </form>
-            <a href="{% url 'Login_normal' %}" class="info-action w-52 h-52 bg-main-25 hover-bg-main-600 border border-neutral-30 rounded-circle flex-center text-2xl text-neutral-500 hover-text-white hover-border-main-600">
-                <i class="ph ph-user-circle"></i>
-            </a>
-            <button type="button" class="toggle-mobileMenu d-lg-none text-neutral-200 flex-center">
-                <i class="ph ph-list"></i> 
+        {% load static %}
+
+<!-- Header Right -->
+<div class="header-right flex-align gap-16">
+    <!-- Search Form -->
+    <form action="{% url 'index' %}" class="search-form position-relative d-xl-block d-none">
+        <input type="text" class="common-input rounded-pill bg-main-25 pe-48 border-neutral-30" type="text" placeholder="Pesquisar...">
+        <button type="submit" class="w-36 h-36 bg-main-600 hover-bg-main-700 rounded-circle flex-center text-md text-white position-absolute top-50 translate-middle-y inset-inline-end-0 me-8">
+            <i class="ph ph-magnifying-glass"></i>
+        </button>
+    </form>
+
+    <!-- User Profile or Login Button -->
+    {% if usuario %}
+    <!-- User Profile Start -->
+    <div class="flex-align gap-16" style="margin-right: 20px;"> <!-- Adicionado margem à direita -->
+        <div class="dropdown">
+            <button class="users arrow-down-icon border border-gray-200 rounded-pill p-4 d-inline-block pe-40 position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="position-relative">
+                    <img src="{% if usuario.foto %}{{ usuario.foto.url }}{% else %}{% static 'assets5/images/thumbs/user-img.png' %}{% endif %}" class="h-10 w-10 rounded-pill">
+                    <span class="position-absolute w-8 h-8 bg-success rounded-circle bottom-0 end-0 border border-white"></span>
+                </span>
             </button>
+            <div class="dropdown-menu dropdown-menu--lg border-0 bg-transparent p-0" style="right: 0; left: auto;">
+                <div class="card border border-gray-100 rounded-12 box-shadow-custom">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center pb-3 border-bottom border-gray-100">
+                            <img src="{% if usuario.foto %}{{ usuario.foto.url }}{% else %}{% static 'assets5/images/thumbs/user-img.png' %}{% endif %}" class="w-54 h-54 rounded-circle">
+                            <div class="ms-3">
+                                <p class="fw-bold mb-0">{{ usuario.nome }}</p>
+                                <p class="fw-medium text-13 text-gray-500">{{ usuario.email }}</p>
+                            </div>
+                        </div>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#" class="dropdown-item py-2 px-3 d-flex align-items-center gap-2 text-gray-800 hover-bg-gray-100 rounded-6">
+                                    <i class="ph ph-gear text-primary-600"></i> Configurações da Conta
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item py-2 px-3 d-flex align-items-center gap-2 text-gray-800 hover-bg-gray-100 rounded-6">
+                                    <i class="ph ph-chart-bar text-primary-600"></i> Atualizar Plano
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item py-2 px-3 d-flex align-items-center gap-2 text-gray-800 hover-bg-gray-100 rounded-6">
+                                    <i class="ph ph-chats-teardrop text-primary-600"></i> Mensagens
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'sair' %}" class="dropdown-item py-2 px-3 d-flex align-items-center gap-2 text-danger hover-bg-danger-50 rounded-6">
+                                    <i class="ph ph-sign-out text-danger"></i> Sair
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Header Right End  -->
+    </div>
+    <!-- User Profile End -->
+{% else %}
+    <!-- Login Button -->
+    <a href="{% url 'Login_normal' %}" class="info-action w-52 h-52 bg-main-25 hover-bg-main-600 border border-neutral-30 rounded-circle flex-center text-2xl">
+        <i class="ph ph-user"></i>
+    </a>
+{% endif %}
+</div>
+
     </nav>
+    
 </div>
