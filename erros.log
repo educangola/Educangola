@@ -13659,3 +13659,1371 @@ Traceback (most recent call last):
     raise ValueError(
 ValueError: The view core.views.conta_aluno didn't return an HttpResponse object. It returned None instead.
 "GET /en/Educa_Angola/conta_aluno/ HTTP/1.1" 500 68609
+Internal Server Error: /pt-br/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/core/views.py", line 36, in index
+    return render(request, 'index.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/engine.py", line 208, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 573, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 6: 'static'. Did you forget to register or load this tag?
+"GET /pt-br/ HTTP/1.1" 500 218621
+Internal Server Error: /pt-br/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 494, in parse
+    command = token.contents.split()[0]
+              ~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/core/views.py", line 36, in index
+    return render(request, 'index.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/engine.py", line 208, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 496, in parse
+    raise self.error(token, "Empty block tag on line %d" % token.lineno)
+django.template.exceptions.TemplateSyntaxError: Empty block tag on line 1
+"GET /pt-br/ HTTP/1.1" 500 209481
+Internal Server Error: /pt-br/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 494, in parse
+    command = token.contents.split()[0]
+              ~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/core/views.py", line 36, in index
+    return render(request, 'index.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/engine.py", line 208, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 496, in parse
+    raise self.error(token, "Empty block tag on line %d" % token.lineno)
+django.template.exceptions.TemplateSyntaxError: Empty block tag on line 1
+"GET /pt-br/ HTTP/1.1" 500 209479
+Internal Server Error: /en/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/core/views.py", line 36, in index
+    return render(request, 'index.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'cursos' not found. 'cursos' is not a valid view function or pattern name.
+"GET /en/ HTTP/1.1" 500 152786
+Internal Server Error: /pt-br/biblioteca/home_biblioteca/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/biblioteca/views.py", line 18, in home_biblioteca
+    usuario = Usuario.objects.get(id=usuario_id)
+              ^^^^^^^
+NameError: name 'Usuario' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/biblioteca/views.py", line 19, in home_biblioteca
+    except Usuario.DoesNotExist:
+           ^^^^^^^
+NameError: name 'Usuario' is not defined
+"GET /pt-br/biblioteca/home_biblioteca/ HTTP/1.1" 500 73929
+Internal Server Error: /pt-br/biblioteca/home_biblioteca/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/biblioteca/views.py", line 19, in home_biblioteca
+    if usuario_id:
+                   
+NameError: name 'Usuario' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/biblioteca/views.py", line 20, in home_biblioteca
+    try:
+         
+NameError: name 'Usuario' is not defined
+"GET /pt-br/biblioteca/home_biblioteca/ HTTP/1.1" 500 74442
+Internal Server Error: /en/admin/cursos/categoria/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: cursos_categoria.imagem
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2140, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: cursos_categoria.imagem
+"GET /en/admin/cursos/categoria/ HTTP/1.1" 500 175556
+Internal Server Error: /en/admin/cursos/categoria/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: cursos_categoria
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2001, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 866, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 146, in __init__
+    self.get_results(request)
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 313, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 630, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 616, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: cursos_categoria
+"GET /en/admin/cursos/categoria/ HTTP/1.1" 500 199256
+Internal Server Error: /en/admin/cursos/categoria/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: cursos_categoria
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2001, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 866, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 146, in __init__
+    self.get_results(request)
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 313, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 630, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 616, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: cursos_categoria
+"GET /en/admin/cursos/categoria/ HTTP/1.1" 500 199256
+Internal Server Error: /en/admin/cursos/categoria/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: cursos_categoria
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2001, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 866, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 146, in __init__
+    self.get_results(request)
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 313, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 630, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 616, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: cursos_categoria
+"GET /en/admin/cursos/categoria/ HTTP/1.1" 500 199256
+Internal Server Error: /en/admin/cursos/categoria/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: cursos_categoria
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2001, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 866, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 146, in __init__
+    self.get_results(request)
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 313, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 630, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 616, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: cursos_categoria
+"GET /en/admin/cursos/categoria/ HTTP/1.1" 500 199256
+Internal Server Error: /en/admin/cursos/categoria/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: cursos_categoria
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2001, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 866, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 146, in __init__
+    self.get_results(request)
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 313, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 630, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 616, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: cursos_categoria
+"GET /en/admin/cursos/categoria/ HTTP/1.1" 500 199256
+Internal Server Error: /en/admin/cursos/instrutor/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: cursos_instrutor
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2001, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 866, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 146, in __init__
+    self.get_results(request)
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 313, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 630, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 616, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: cursos_instrutor
+"GET /en/admin/cursos/instrutor/ HTTP/1.1" 500 199123
+Internal Server Error: /en/Educa_Angola/home_cursos/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: cursos_curso
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/core/views.py", line 51, in home_cursos
+    quantidade_cursos_tecnologia = curso_categoria_tecnologia.count()
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 630, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 616, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: cursos_curso
+"GET /en/Educa_Angola/home_cursos/ HTTP/1.1" 500 135295
+Internal Server Error: /en/Educa_Angola/home_cursos/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: cursos_curso
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/core/views.py", line 51, in home_cursos
+    quantidade_cursos_tecnologia = curso_categoria_tecnologia.count()
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 630, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 616, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: cursos_curso
+"GET /en/Educa_Angola/home_cursos/ HTTP/1.1" 500 135327
+Internal Server Error: /en/Educa_Angola/home_cursos/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: cursos_curso
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/core/views.py", line 51, in home_cursos
+    quantidade_cursos_tecnologia = curso_categoria_tecnologia.count()
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 630, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 616, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: cursos_curso
+"GET /en/Educa_Angola/home_cursos/ HTTP/1.1" 500 135327
+Internal Server Error: /en/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/core/views.py", line 36, in index
+    return render(request, 'index.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'detalhe_curso' with no arguments not found. 1 pattern(s) tried: ['en/cursos/detalhe_curso(?P<id>[0-9]+)/\\Z']
+"GET /en/ HTTP/1.1" 500 152667
+Internal Server Error: /en/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/core/views.py", line 36, in index
+    return render(request, 'index.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'categoria' not found. 'categoria' is not a valid view function or pattern name.
+"GET /en/ HTTP/1.1" 500 150703
+Internal Server Error: /en/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/core/views.py", line 36, in index
+    return render(request, 'index.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'categoria' not found. 'categoria' is not a valid view function or pattern name.
+"GET /en/ HTTP/1.1" 500 150703
+Internal Server Error: /en/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/core/views.py", line 36, in index
+    return render(request, 'index.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'categoria' not found. 'categoria' is not a valid view function or pattern name.
+"GET /en/ HTTP/1.1" 500 150821
+Internal Server Error: /en/
+Traceback (most recent call last):
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/core/views.py", line 36, in index
+    return render(request, 'index.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muquissi/Documentos/Plataforma Educangola/venv/lib/python3.11/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'pauta_detalhes' not found. 'pauta_detalhes' is not a valid view function or pattern name.
+"GET /en/ HTTP/1.1" 500 139836
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.

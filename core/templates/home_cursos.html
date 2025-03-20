@@ -19,6 +19,20 @@
     .custom-margin {
     margin-right: 10px; /* Ajuste o valor conforme necessário */
 }
+
+.course-item__thumb::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4); /* escurece */
+    z-index: 1;
+}
+.play-video-btn {
+    z-index: 2; /* Mantém o botão visível acima da camada escura */
+}
     </style>
 
     
@@ -104,16 +118,7 @@
 
                     <img src="{% static 'assets3/images/shapes/curve-arrow.png' %}" alt="" class="curve-arrow position-absolute">
 
-                    <div class="banner-box one px-24 py-12 rounded-12 bg-white fw-medium box-shadow-lg d-inline-block" data-aos="fade-down">
-                        <div class="enrolled-students mt-12">
-                            <img src="{% static 'assets3/images/thumbs/enroll-student-img1.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover transition-2">
-                            <img src="{% static 'assets3/images/thumbs/enroll-student-img2.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover transition-2">
-                            <img src="{% static 'assets3/images/thumbs/enroll-student-img3.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover transition-2">
-                            <img src="{% static 'assets3/images/thumbs/enroll-student-img4.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover transition-2">
-                            <img src="{% static 'assets3/images/thumbs/enroll-student-img5.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover transition-2">
-                            <img src="{% static 'assets3/images/thumbs/enroll-student-img6.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover transition-2">
-                        </div>
-                    </div>
+                    
                     
                     <div class="banner-box two px-24 py-12 rounded-12 bg-white fw-medium box-shadow-lg flex-align d-inline-flex gap-16" data-aos="fade-up">
                         <span class="banner-box__icon flex-shrink-0 w-48 h-48 bg-purple-400 text-white text-2xl flex-center rounded-circle"><i class="ph ph-watch"></i></span>
@@ -172,78 +177,132 @@
  </section>
 
 
-<section class="explore-course py-120 bg-main-25 position-relative z-1">
+ <section class="explore-course py-120 bg-main-25 position-relative z-1">
     <img src="{% static 'assets3/images/shapes/shape2.png' %}" alt="" class="shape six animation-scalation">
 
     <div class="container">
+        <!-- Cabeçalho -->
         <div class="section-heading text-center style-flex gap-24">
             <div class="section-heading__inner text-start">
-                <h2 class="mb-0 wow bounceIn">Explore Mais de {{quantidade_cursos}} Cursos Online Gratuitos para Estudantes</h2>
+                <h2 class="mb-0 wow bounceIn">
+                   Cursos recomendados
+                </h2>
             </div>
             <div class="section-heading__content">
-                <p class="section-heading__desc text-start mt-0 text-line-2 wow bounceInUp">Bem-vindo ao nosso catálogo diversificado e dinâmico de cursos. Estamos dedicados a fornecer a você...</p>
-                <a href="{% url 'home_cursos' %}" class="item-hover__text flex-align gap-8 text-main-600 mt-24 hover-text-decoration-underline transition-1" tabindex="0">
+                <p class="section-heading__desc text-start mt-0 text-line-2 wow bounceInUp">
+                    Bem-vindo ao nosso catálogo diversificado e dinâmico de cursos. Estamos dedicados a fornecer a você...
+                </p>
+                <a href="{% url 'home_cursos' %}" 
+                   class="item-hover__text flex-align gap-8 text-main-600 mt-24 hover-text-decoration-underline transition-1" 
+                   tabindex="0">
                     Saber mais sobre cursos
                     <i class="ph ph-arrow-right"></i>
                 </a>
             </div>
         </div>
 
+        <!-- Navegação das Categorias -->
         <div class="nav-tab-wrapper bg-white p-16 mb-40" data-aos="zoom-out">
             <ul class="nav nav-pills common-tab gap-16" id="pills-tab" role="tablist">
+                <!-- Todas as Categorias -->
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria_selecionada is None %} active {% endif %}" href="{% url 'home_cursos' %}">
+                    <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria_selecionada is None %} active {% endif %}" 
+                       href="{% url 'home_cursos' %}">
                         <i class="text-xl d-flex ph-bold ph-squares-four"></i>
-                        Todas as Categorias
+                        all Categorias
                     </a>
                 </li>
-                {% for categoria in categorias %}
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria.id == categoria_selecionada %} active {% endif %}" href="{% url 'home_cursos' %}?categoria={{ categoria.id }}" data-categoria-id="{{ categoria.id }}">
-                        <i class="text-xl d-flex ph-bold ph-magic-wand"></i>
-                        {{ categoria.nome }}
-                    </a>
-                </li>
-                {% endfor %}
+
+                <div class="categorias-scroll">
+                    <ul class="nav nav-pills gap-2 flex-nowrap overflow-auto">
+                        {% for categoria in categorias %}
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria.id == categoria_selecionada %} active {% endif %}" 
+                               href="{% url 'cursos_por_categoria' categoria.id %}" 
+                               data-categoria-id="{{ categoria.id }}">
+                                <i class="text-xl d-flex ph-bold ph-magic-wand"></i>
+                                {{ categoria.nome }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                
+                
             </ul>
         </div>
 
+        <!-- Conteúdo dos Cursos -->
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-categories" role="tabpanel" aria-labelledby="pills-categories-tab" tabindex="0">
                 <div class="cursos-container">
                     {% for todos_cursos in cursos|slice:":6" %}
                     <div class="curso-item wow fadeInUp" data-aos="fade-up" data-aos-duration="600">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
+                            
+                            <!-- Imagem do Curso -->
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
                                 <a href="{% url 'detalhe_curso' todos_cursos.id %}" class="w-100 h-100">
-                                    <img src="{{ todos_cursos.imagem.url }}" alt="Course Image" class="course-item__img rounded-12 cover-img transition-2">
+                                    <img src="{{ todos_cursos.imagem.url }}" 
+                                         alt="Course Image" 
+                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
-                                <div class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
-                                    <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
-                                    <span class="text-lg fw-medium">{{ todos_cursos.duracao }}</span>
-                                </div>
-                                <button type="button" class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
+                            
+                                <!-- Wishlist -->
+                                <button type="button" 
+                                        class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
                                     <i class="ph ph-heart"></i>
                                 </button>
+                            
+                                <!-- BOTÃO PLAY SOBRE A IMAGEM -->
+                                <button type="button" 
+                                class="play-video-btn w-64 h-64 bg-white flex-center position-absolute top-50 start-50 translate-middle rounded-circle shadow-lg"
+                                data-bs-toggle="modal" 
+                                data-bs-target="#videoModal" 
+                                data-video-url="{{ todos_cursos.link_video }}">
+                                <i class="ph-fill ph-youtube-logo text-danger text-3xl"></i>
+                                </button>
+
+                            <!-- MODAL PARA EXIBIR O VÍDEO -->
+                            <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                                <div class="modal-content bg-dark">
+                                    <div class="modal-body p-0 position-relative">
+                                        <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <div class="ratio ratio-16x9">
+                                            <iframe id="videoFrame" src="" title="YouTube video" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            </div>       
+                            </div>
+                            
+
+                            <!-- Conteúdo -->
                             <div class="course-item__content">
                                 <h4 class="mb-28">
-                                    <a href="{% url 'detalhe_curso' todos_cursos.id %}" class="link text-line-2">{{ todos_cursos.nome }}</a>
+                                    <a href="{% url 'detalhe_curso' todos_cursos.id %}" class="link text-line-2">
+                                        {{ todos_cursos.nome }}
+                                    </a>
                                 </h4>
+
+                                <!-- Modalidade e Nível -->
                                 <div class="flex-between gap-8 flex-wrap mb-16">
                                     <div class="flex-align gap-8">
-                                        <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-video-camera"></i></span>
-                                        <span class="text-neutral-700 text-lg fw-medium">20 Aulas</span>
-                                    </div>
-                                    <div class="flex-align gap-8">
                                         <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-monitor"></i></span>
-                                        <span class="text-neutral-700 text-lg fw-medium">Modalidade: {{ todos_cursos.modalidade }}</span>
+                                        <span class="text-neutral-700 text-lg fw-medium">
+                                            Modalidade: {{ todos_cursos.modalidade }}
+                                        </span>
                                     </div>
                                     <div class="flex-align gap-8">
                                         <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-chart-bar"></i></span>
-                                        <span class="text-neutral-700 text-lg fw-medium">{{ todos_cursos.nivel }}</span>
+                                        <span class="text-neutral-700 text-lg fw-medium">
+                                            {{ todos_cursos.nivel }}
+                                        </span>
                                     </div>
                                 </div>
+
                                 <div class="flex-between gap-8 flex-wrap">
                                     <div class="flex-align gap-4">
                                         <span class="text-2xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
@@ -255,24 +314,26 @@
                                         </span>
                                         <span class="text-neutral-700 text-lg fw-medium">{{ todos_cursos.instituicao }}</span>
                                     </div>
-                                    <div class="flex-align gap-8">
-                                        <span class="text-neutral-700 text-lg fw-medium">Publicado em: {{ todos_cursos.data_criacao }}</span>
-                                    </div>
+                                    
                                 </div>
+
+                                <!-- Preço e Inscrição -->
                                 <div class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">kz {{ todos_cursos.preco }}</h4>
-                                    <a href="{% url 'incricao_curso' todos_cursos.id %}" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold">
-                                        Inscreva-se <i class="ph ph-arrow-right"></i>
+                                    <a href="{% url 'incricao_curso' todos_cursos.id %}" 
+                                       class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold">
+                                        Inscreva-se 
+                                        <i class="ph ph-arrow-right"></i>
                                     </a>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                     {% endfor %}
                 </div>
             </div>
         </div>
-        
     </div>
 </section>
 
@@ -327,58 +388,128 @@
         <img src="{% static 'assets3/images/shapes/shape2.png' %}" alt="" class="shape six animation-scalation">
     
         <div class="container">
+            <!-- Cabeçalho -->
             <div class="section-heading text-center style-flex gap-24">
-                
                 <div class="section-heading__inner text-start">
-                    <h2 class="mb-0 wow bounceIn">Explore Mais de {{quantidade_cursos}} Cursos de Tecnologia</h2>
+                    <h2 class="mb-0 wow bounceIn">
+                        Cursos mais procurados
+                    </h2>
                 </div>
                 <div class="section-heading__content">
-                    <p class="section-heading__desc text-start mt-0 text-line-2 wow bounceInUp">Bem-vindo ao nosso catálogo diversificado e dinâmico de cursos. Estamos dedicados a fornecer a você...</p>
-                    <a href="{% url 'home_cursos' %}" class="item-hover__text flex-align gap-8 text-main-600 mt-24 hover-text-decoration-underline transition-1" tabindex="0">
+                    <p class="section-heading__desc text-start mt-0 text-line-2 wow bounceInUp">
+                        Bem-vindo ao nosso catálogo diversificado e dinâmico de cursos. Estamos dedicados a fornecer a você...
+                    </p>
+                    <a href="{% url 'home_cursos' %}" 
+                       class="item-hover__text flex-align gap-8 text-main-600 mt-24 hover-text-decoration-underline transition-1" 
+                       tabindex="0">
                         Saber mais sobre cursos
                         <i class="ph ph-arrow-right"></i>
                     </a>
                 </div>
             </div>
     
-            
+            <!-- Navegação das Categorias -->
+            <div class="nav-tab-wrapper bg-white p-16 mb-40" data-aos="zoom-out">
+                <ul class="nav nav-pills common-tab gap-16" id="pills-tab" role="tablist">
+                    <!-- Todas as Categorias -->
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria_selecionada is None %} active {% endif %}" 
+                           href="{% url 'home_cursos' %}">
+                            <i class="text-xl d-flex ph-bold ph-squares-four"></i>
+                            all Categorias
+                        </a>
+                    </li>
     
+                    <div class="categorias-scroll">
+                        <ul class="nav nav-pills gap-2 flex-nowrap overflow-auto">
+                            {% for categoria in categorias %}
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria.id == categoria_selecionada %} active {% endif %}" 
+                                   href="{% url 'cursos_por_categoria' categoria.id %}" 
+                                   data-categoria-id="{{ categoria.id }}">
+                                    <i class="text-xl d-flex ph-bold ph-magic-wand"></i>
+                                    {{ categoria.nome }}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    
+                    
+                </ul>
+            </div>
+    
+            <!-- Conteúdo dos Cursos -->
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-categories" role="tabpanel" aria-labelledby="pills-categories-tab" tabindex="0">
                     <div class="cursos-container">
                         {% for todos_cursos in cursos|slice:":6" %}
                         <div class="curso-item wow fadeInUp" data-aos="fade-up" data-aos-duration="600">
                             <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
+                                
+                                <!-- Imagem do Curso -->
                                 <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
                                     <a href="{% url 'detalhe_curso' todos_cursos.id %}" class="w-100 h-100">
-                                        <img src="{{ todos_cursos.imagem.url }}" alt="Course Image" class="course-item__img rounded-12 cover-img transition-2">
+                                        <img src="{{ todos_cursos.imagem.url }}" 
+                                             alt="Course Image" 
+                                             class="course-item__img rounded-12 cover-img transition-2">
                                     </a>
-                                    <div class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
-                                        <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
-                                        <span class="text-lg fw-medium">{{ todos_cursos.duracao }}</span>
-                                    </div>
-                                    <button type="button" class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
+                                
+                                    <!-- Wishlist -->
+                                    <button type="button" 
+                                            class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
                                         <i class="ph ph-heart"></i>
                                     </button>
+                                
+                                    <!-- BOTÃO PLAY SOBRE A IMAGEM -->
+                                    <button type="button" 
+                                    class="play-video-btn w-64 h-64 bg-white flex-center position-absolute top-50 start-50 translate-middle rounded-circle shadow-lg"
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#videoModal" 
+                                    data-video-url="{{ todos_cursos.link_video }}">
+                                    <i class="ph-fill ph-youtube-logo text-danger text-3xl"></i>
+                                    </button>
+    
+                                <!-- MODAL PARA EXIBIR O VÍDEO -->
+                                <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                    <div class="modal-content bg-dark">
+                                        <div class="modal-body p-0 position-relative">
+                                            <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            <div class="ratio ratio-16x9">
+                                                <iframe id="videoFrame" src="" title="YouTube video" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                </div>       
+                                </div>
+                                
+    
+                                <!-- Conteúdo -->
                                 <div class="course-item__content">
                                     <h4 class="mb-28">
-                                        <a href="{% url 'detalhe_curso' todos_cursos.id %}" class="link text-line-2">{{ todos_cursos.nome }}</a>
+                                        <a href="{% url 'detalhe_curso' todos_cursos.id %}" class="link text-line-2">
+                                            {{ todos_cursos.nome }}
+                                        </a>
                                     </h4>
+    
+                                    <!-- Modalidade e Nível -->
                                     <div class="flex-between gap-8 flex-wrap mb-16">
                                         <div class="flex-align gap-8">
-                                            <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-video-camera"></i></span>
-                                            <span class="text-neutral-700 text-lg fw-medium">20 Aulas</span>
-                                        </div>
-                                        <div class="flex-align gap-8">
                                             <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-monitor"></i></span>
-                                            <span class="text-neutral-700 text-lg fw-medium">Modalidade: {{ todos_cursos.modalidade }}</span>
+                                            <span class="text-neutral-700 text-lg fw-medium">
+                                                Modalidade: {{ todos_cursos.modalidade }}
+                                            </span>
                                         </div>
                                         <div class="flex-align gap-8">
                                             <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-chart-bar"></i></span>
-                                            <span class="text-neutral-700 text-lg fw-medium">{{ todos_cursos.nivel }}</span>
+                                            <span class="text-neutral-700 text-lg fw-medium">
+                                                {{ todos_cursos.nivel }}
+                                            </span>
                                         </div>
                                     </div>
+    
                                     <div class="flex-between gap-8 flex-wrap">
                                         <div class="flex-align gap-4">
                                             <span class="text-2xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
@@ -390,24 +521,26 @@
                                             </span>
                                             <span class="text-neutral-700 text-lg fw-medium">{{ todos_cursos.instituicao }}</span>
                                         </div>
-                                        <div class="flex-align gap-8">
-                                            <span class="text-neutral-700 text-lg fw-medium">Publicado em: {{ todos_cursos.data_criacao }}</span>
-                                        </div>
+                                        
                                     </div>
+    
+                                    <!-- Preço e Inscrição -->
                                     <div class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                         <h4 class="mb-0 text-main-two-600">kz {{ todos_cursos.preco }}</h4>
-                                        <a href="{% url 'incricao_curso' todos_cursos.id %}" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold">
-                                            Inscreva-se <i class="ph ph-arrow-right"></i>
+                                        <a href="{% url 'incricao_curso' todos_cursos.id %}" 
+                                           class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold">
+                                            Inscreva-se 
+                                            <i class="ph ph-arrow-right"></i>
                                         </a>
                                     </div>
                                 </div>
+    
                             </div>
                         </div>
                         {% endfor %}
                     </div>
                 </div>
             </div>
-            
         </div>
     </section>
 
@@ -461,56 +594,128 @@
         <img src="{% static 'assets3/images/shapes/shape2.png' %}" alt="" class="shape six animation-scalation">
     
         <div class="container">
+            <!-- Cabeçalho -->
             <div class="section-heading text-center style-flex gap-24">
                 <div class="section-heading__inner text-start">
-                    <h2 class="mb-0 wow bounceIn">Explore Mais de {{quantidade_cursos}} Cursos Online Gratuitos para Estudantes</h2>
+                    <h2 class="mb-0 wow bounceIn">
+                        Cursos em Promoção
+                    </h2>
                 </div>
                 <div class="section-heading__content">
-                    <p class="section-heading__desc text-start mt-0 text-line-2 wow bounceInUp">Bem-vindo ao nosso catálogo diversificado e dinâmico de cursos. Estamos dedicados a fornecer a você...</p>
-                    <a href="{% url 'home_cursos' %}" class="item-hover__text flex-align gap-8 text-main-600 mt-24 hover-text-decoration-underline transition-1" tabindex="0">
+                    <p class="section-heading__desc text-start mt-0 text-line-2 wow bounceInUp">
+                        Bem-vindo ao nosso catálogo diversificado e dinâmico de cursos. Estamos dedicados a fornecer a você...
+                    </p>
+                    <a href="{% url 'home_cursos' %}" 
+                       class="item-hover__text flex-align gap-8 text-main-600 mt-24 hover-text-decoration-underline transition-1" 
+                       tabindex="0">
                         Saber mais sobre cursos
                         <i class="ph ph-arrow-right"></i>
                     </a>
                 </div>
             </div>
     
+            <!-- Navegação das Categorias -->
+            <div class="nav-tab-wrapper bg-white p-16 mb-40" data-aos="zoom-out">
+                <ul class="nav nav-pills common-tab gap-16" id="pills-tab" role="tablist">
+                    <!-- Todas as Categorias -->
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria_selecionada is None %} active {% endif %}" 
+                           href="{% url 'home_cursos' %}">
+                            <i class="text-xl d-flex ph-bold ph-squares-four"></i>
+                            all Categorias
+                        </a>
+                    </li>
     
+                    <div class="categorias-scroll">
+                        <ul class="nav nav-pills gap-2 flex-nowrap overflow-auto">
+                            {% for categoria in categorias %}
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria.id == categoria_selecionada %} active {% endif %}" 
+                                   href="{% url 'cursos_por_categoria' categoria.id %}" 
+                                   data-categoria-id="{{ categoria.id }}">
+                                    <i class="text-xl d-flex ph-bold ph-magic-wand"></i>
+                                    {{ categoria.nome }}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    
+                    
+                </ul>
+            </div>
+    
+            <!-- Conteúdo dos Cursos -->
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-categories" role="tabpanel" aria-labelledby="pills-categories-tab" tabindex="0">
                     <div class="cursos-container">
                         {% for todos_cursos in cursos|slice:":6" %}
                         <div class="curso-item wow fadeInUp" data-aos="fade-up" data-aos-duration="600">
                             <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
+                                
+                                <!-- Imagem do Curso -->
                                 <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
                                     <a href="{% url 'detalhe_curso' todos_cursos.id %}" class="w-100 h-100">
-                                        <img src="{{ todos_cursos.imagem.url }}" alt="Course Image" class="course-item__img rounded-12 cover-img transition-2">
+                                        <img src="{{ todos_cursos.imagem.url }}" 
+                                             alt="Course Image" 
+                                             class="course-item__img rounded-12 cover-img transition-2">
                                     </a>
-                                    <div class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
-                                        <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
-                                        <span class="text-lg fw-medium">{{ todos_cursos.duracao }}</span>
-                                    </div>
-                                    <button type="button" class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
+                                
+                                    <!-- Wishlist -->
+                                    <button type="button" 
+                                            class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
                                         <i class="ph ph-heart"></i>
                                     </button>
+                                
+                                    <!-- BOTÃO PLAY SOBRE A IMAGEM -->
+                                    <button type="button" 
+                                    class="play-video-btn w-64 h-64 bg-white flex-center position-absolute top-50 start-50 translate-middle rounded-circle shadow-lg"
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#videoModal" 
+                                    data-video-url="{{ todos_cursos.link_video }}">
+                                    <i class="ph-fill ph-youtube-logo text-danger text-3xl"></i>
+                                    </button>
+    
+                                <!-- MODAL PARA EXIBIR O VÍDEO -->
+                                <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                    <div class="modal-content bg-dark">
+                                        <div class="modal-body p-0 position-relative">
+                                            <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            <div class="ratio ratio-16x9">
+                                                <iframe id="videoFrame" src="" title="YouTube video" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                </div>       
+                                </div>
+                                
+    
+                                <!-- Conteúdo -->
                                 <div class="course-item__content">
                                     <h4 class="mb-28">
-                                        <a href="{% url 'detalhe_curso' todos_cursos.id %}" class="link text-line-2">{{ todos_cursos.nome }}</a>
+                                        <a href="{% url 'detalhe_curso' todos_cursos.id %}" class="link text-line-2">
+                                            {{ todos_cursos.nome }}
+                                        </a>
                                     </h4>
+    
+                                    <!-- Modalidade e Nível -->
                                     <div class="flex-between gap-8 flex-wrap mb-16">
                                         <div class="flex-align gap-8">
-                                            <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-video-camera"></i></span>
-                                            <span class="text-neutral-700 text-lg fw-medium">20 Aulas</span>
-                                        </div>
-                                        <div class="flex-align gap-8">
                                             <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-monitor"></i></span>
-                                            <span class="text-neutral-700 text-lg fw-medium">Modalidade: {{ todos_cursos.modalidade }}</span>
+                                            <span class="text-neutral-700 text-lg fw-medium">
+                                                Modalidade: {{ todos_cursos.modalidade }}
+                                            </span>
                                         </div>
                                         <div class="flex-align gap-8">
                                             <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-chart-bar"></i></span>
-                                            <span class="text-neutral-700 text-lg fw-medium">{{ todos_cursos.nivel }}</span>
+                                            <span class="text-neutral-700 text-lg fw-medium">
+                                                {{ todos_cursos.nivel }}
+                                            </span>
                                         </div>
                                     </div>
+    
                                     <div class="flex-between gap-8 flex-wrap">
                                         <div class="flex-align gap-4">
                                             <span class="text-2xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
@@ -522,83 +727,212 @@
                                             </span>
                                             <span class="text-neutral-700 text-lg fw-medium">{{ todos_cursos.instituicao }}</span>
                                         </div>
-                                        <div class="flex-align gap-8">
-                                            <span class="text-neutral-700 text-lg fw-medium">Publicado em: {{ todos_cursos.data_criacao }}</span>
-                                        </div>
+                                        
                                     </div>
+    
+                                    <!-- Preço e Inscrição -->
                                     <div class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                         <h4 class="mb-0 text-main-two-600">kz {{ todos_cursos.preco }}</h4>
-                                        <a href="{% url 'incricao_curso' todos_cursos.id %}" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold">
-                                            Inscreva-se <i class="ph ph-arrow-right"></i>
+                                        <a href="{% url 'incricao_curso' todos_cursos.id %}" 
+                                           class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold">
+                                            Inscreva-se 
+                                            <i class="ph ph-arrow-right"></i>
                                         </a>
                                     </div>
                                 </div>
+    
                             </div>
                         </div>
                         {% endfor %}
                     </div>
                 </div>
             </div>
-            
         </div>
     </section>
 <!-- ================================ About Section End ==================================== -->
+
+
+{% load static %}
+
+<section class="explore-course py-120 bg-main-25 position-relative z-1">
+    <!-- Shape de fundo -->
+    <img src="{% static 'assets3/images/shapes/shape2.png' %}" alt="" class="shape six animation-scalation">
+
+    <div class="container">
+        <!-- Cabeçalho da Seção -->
+        <div class="section-heading text-center style-flex gap-24">
+            <div class="section-heading__inner text-start">
+                <h2 class="mb-0 wow bounceIn">Explore as Categorias de Idiomas</h2>
+            </div>
+            <div class="section-heading__content">
+                <p class="section-heading__desc text-start mt-0 text-line-2 wow bounceInUp">
+                    Bem-vindo ao nosso catálogo diversificado e dinâmico de categorias. Estamos dedicados a fornecer a você...
+                </p>
+                <a href="{% url 'home_cursos' %}" class="item-hover__text flex-align gap-8 text-main-600 mt-24 hover-text-decoration-underline transition-1" tabindex="0">
+                    Saber mais sobre categorias
+                    <i class="ph ph-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Conteúdo das Categorias -->
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-categories" role="tabpanel" aria-labelledby="pills-categories-tab" tabindex="0">
+                <div class="row row-cols-xxl-3 row-cols-lg-2 row-cols-1 gy-4">
+                    {% for categoria in categorias|slice:":3" %}
+                    <div class="col wow fadeInUp" data-aos="fade-up" data-aos-duration="600">
+                        <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-lg" style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);">
+                            <!-- Thumbnail da Categoria -->
+                            <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
+                                <a href="{% url 'detalhe_curso' categoria.id %}" class="w-100 h-100 d-block">
+                                    <img src="{{ categoria.imagem.url }}" alt="{{ categoria.nome }}" class="course-item__img rounded-12 cover-img transition-2" style="transition: transform 0.3s ease;">
+                                </a>
+                            </div>
+        
+                            <!-- Conteúdo da Categoria -->
+                            <div class="course-item__content mt-24">
+                                <h4 class="mb-16">
+                                    <a href="{% url 'detalhe_curso' categoria.id %}" class="link text-line-2" style="color: #2D3748; text-decoration: none;">{{ categoria.nome }}</a>
+                                </h4>
+                                <!-- Adicione mais detalhes da categoria, se necessário -->
+                                <p class="text-neutral-500 text-line-2" style="color: #718096;">{{ categoria.descricao_curta }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <section class="explore-course py-120 bg-main-25 position-relative z-1">
     <img src="{% static 'assets3/images/shapes/shape2.png' %}" alt="" class="shape six animation-scalation">
 
     <div class="container">
+        <!-- Cabeçalho -->
         <div class="section-heading text-center style-flex gap-24">
             <div class="section-heading__inner text-start">
-                <h2 class="mb-0 wow bounceIn">Explore Mais de {{quantidade_cursos}} Cursos Online Gratuitos para Estudantes</h2>
+                <h2 class="mb-0 wow bounceIn">
+                    Cursos para Carreira / Profissão Específica
+                </h2>
             </div>
             <div class="section-heading__content">
-                <p class="section-heading__desc text-start mt-0 text-line-2 wow bounceInUp">Bem-vindo ao nosso catálogo diversificado e dinâmico de cursos. Estamos dedicados a fornecer a você...</p>
-                <a href="{% url 'home_cursos' %}" class="item-hover__text flex-align gap-8 text-main-600 mt-24 hover-text-decoration-underline transition-1" tabindex="0">
+                <p class="section-heading__desc text-start mt-0 text-line-2 wow bounceInUp">
+                    Bem-vindo ao nosso catálogo diversificado e dinâmico de cursos. Estamos dedicados a fornecer a você...
+                </p>
+                <a href="{% url 'home_cursos' %}" 
+                   class="item-hover__text flex-align gap-8 text-main-600 mt-24 hover-text-decoration-underline transition-1" 
+                   tabindex="0">
                     Saber mais sobre cursos
                     <i class="ph ph-arrow-right"></i>
                 </a>
             </div>
         </div>
 
+        <!-- Navegação das Categorias -->
+        <div class="nav-tab-wrapper bg-white p-16 mb-40" data-aos="zoom-out">
+            <ul class="nav nav-pills common-tab gap-16" id="pills-tab" role="tablist">
+                <!-- Todas as Categorias -->
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria_selecionada is None %} active {% endif %}" 
+                       href="{% url 'home_cursos' %}">
+                        <i class="text-xl d-flex ph-bold ph-squares-four"></i>
+                        all Categorias
+                    </a>
+                </li>
 
+                <div class="categorias-scroll">
+                    <ul class="nav nav-pills gap-2 flex-nowrap overflow-auto">
+                        {% for categoria in categorias %}
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria.id == categoria_selecionada %} active {% endif %}" 
+                               href="{% url 'cursos_por_categoria' categoria.id %}" 
+                               data-categoria-id="{{ categoria.id }}">
+                                <i class="text-xl d-flex ph-bold ph-magic-wand"></i>
+                                {{ categoria.nome }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                
+                
+            </ul>
+        </div>
+
+        <!-- Conteúdo dos Cursos -->
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-categories" role="tabpanel" aria-labelledby="pills-categories-tab" tabindex="0">
                 <div class="cursos-container">
                     {% for todos_cursos in cursos|slice:":6" %}
                     <div class="curso-item wow fadeInUp" data-aos="fade-up" data-aos-duration="600">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
+                            
+                            <!-- Imagem do Curso -->
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
                                 <a href="{% url 'detalhe_curso' todos_cursos.id %}" class="w-100 h-100">
-                                    <img src="{{ todos_cursos.imagem.url }}" alt="Course Image" class="course-item__img rounded-12 cover-img transition-2">
+                                    <img src="{{ todos_cursos.imagem.url }}" 
+                                         alt="Course Image" 
+                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
-                                <div class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
-                                    <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
-                                    <span class="text-lg fw-medium">{{ todos_cursos.duracao }}</span>
-                                </div>
-                                <button type="button" class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
+                            
+                                <!-- Wishlist -->
+                                <button type="button" 
+                                        class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
                                     <i class="ph ph-heart"></i>
                                 </button>
+                            
+                                <!-- BOTÃO PLAY SOBRE A IMAGEM -->
+                                <button type="button" 
+                                class="play-video-btn w-64 h-64 bg-white flex-center position-absolute top-50 start-50 translate-middle rounded-circle shadow-lg"
+                                data-bs-toggle="modal" 
+                                data-bs-target="#videoModal" 
+                                data-video-url="{{ todos_cursos.link_video }}">
+                                <i class="ph-fill ph-youtube-logo text-danger text-3xl"></i>
+                                </button>
+
+                            <!-- MODAL PARA EXIBIR O VÍDEO -->
+                            <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                                <div class="modal-content bg-dark">
+                                    <div class="modal-body p-0 position-relative">
+                                        <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <div class="ratio ratio-16x9">
+                                            <iframe id="videoFrame" src="" title="YouTube video" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            </div>       
+                            </div>
+                            
+
+                            <!-- Conteúdo -->
                             <div class="course-item__content">
                                 <h4 class="mb-28">
-                                    <a href="{% url 'detalhe_curso' todos_cursos.id %}" class="link text-line-2">{{ todos_cursos.nome }}</a>
+                                    <a href="{% url 'detalhe_curso' todos_cursos.id %}" class="link text-line-2">
+                                        {{ todos_cursos.nome }}
+                                    </a>
                                 </h4>
+
+                                <!-- Modalidade e Nível -->
                                 <div class="flex-between gap-8 flex-wrap mb-16">
                                     <div class="flex-align gap-8">
-                                        <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-video-camera"></i></span>
-                                        <span class="text-neutral-700 text-lg fw-medium">20 Aulas</span>
-                                    </div>
-                                    <div class="flex-align gap-8">
                                         <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-monitor"></i></span>
-                                        <span class="text-neutral-700 text-lg fw-medium">Modalidade: {{ todos_cursos.modalidade }}</span>
+                                        <span class="text-neutral-700 text-lg fw-medium">
+                                            Modalidade: {{ todos_cursos.modalidade }}
+                                        </span>
                                     </div>
                                     <div class="flex-align gap-8">
                                         <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-chart-bar"></i></span>
-                                        <span class="text-neutral-700 text-lg fw-medium">{{ todos_cursos.nivel }}</span>
+                                        <span class="text-neutral-700 text-lg fw-medium">
+                                            {{ todos_cursos.nivel }}
+                                        </span>
                                     </div>
                                 </div>
+
                                 <div class="flex-between gap-8 flex-wrap">
                                     <div class="flex-align gap-4">
                                         <span class="text-2xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
@@ -610,24 +944,26 @@
                                         </span>
                                         <span class="text-neutral-700 text-lg fw-medium">{{ todos_cursos.instituicao }}</span>
                                     </div>
-                                    <div class="flex-align gap-8">
-                                        <span class="text-neutral-700 text-lg fw-medium">Publicado em: {{ todos_cursos.data_criacao }}</span>
-                                    </div>
+                                    
                                 </div>
+
+                                <!-- Preço e Inscrição -->
                                 <div class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">kz {{ todos_cursos.preco }}</h4>
-                                    <a href="{% url 'incricao_curso' todos_cursos.id %}" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold">
-                                        Inscreva-se <i class="ph ph-arrow-right"></i>
+                                    <a href="{% url 'incricao_curso' todos_cursos.id %}" 
+                                       class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold">
+                                        Inscreva-se 
+                                        <i class="ph ph-arrow-right"></i>
                                     </a>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                     {% endfor %}
                 </div>
             </div>
         </div>
-        
     </div>
 </section>
     
@@ -746,7 +1082,7 @@
                 </ul>
 
                 <div class="pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                    <a href="about.html" class="btn btn-main rounded-pill flex-align d-inline-flex gap-8">
+                    <a href="{% url 'sobre_nos' %}" class="btn btn-main rounded-pill flex-align d-inline-flex gap-8">
                         Leia Mais
                         <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
                     </a>
@@ -769,17 +1105,7 @@
                     </div>
                 </div>
 
-                <div class="banner-box one style-two px-24 py-12 rounded-12 bg-white fw-medium box-shadow-lg d-inline-block" data-aos="fade-left">
-                    <span class="text-main-600">36k+</span> Alunos Matriculados
-                    <div class="enrolled-students mt-12">
-                        <img src="{% static 'assets3/images/thumbs/enroll-student-img1.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover">
-                        <img src="{% static 'assets3/images/thumbs/enroll-student-img2.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover">
-                        <img src="{% static 'assets3/images/thumbs/enroll-student-img3.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover">
-                        <img src="{% static 'assets3/images/thumbs/enroll-student-img4.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover">
-                        <img src="{% static 'assets3/images/thumbs/enroll-student-img5.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover">
-                        <img src="{% static 'assets3/images/thumbs/enroll-student-img6.png' %}" alt="" class="w-48 h-48 rounded-circle object-fit-cover">
-                    </div>
-                </div>
+                
 
                 <div class="text-end" data-aos="zoom-out">
                     <div class="d-sm-inline-block d-block position-relative">
@@ -789,12 +1115,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="animation-video" data-aos="zoom-in">
-                    <img src="{% static 'assets3/images/thumbs/choose-us-img2.png' %}" alt="" class="border border-white rounded-circle border-3" data-tilt>
-                    <a href="https://www.youtube.com/watch?v=MFLVmAE4cqg" class="play-button w-48 h-48 flex-center bg-main-600 text-white rounded-circle text-xl position-absolute top-50 start-50 translate-middle">
-                        <i class="ph-fill ph-play"></i>
-                    </a>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -998,7 +1319,7 @@
                                         <span class="w-8 h-8 bg-white rounded-circle"></span>
                                         <h5 class="text-white mb-0">Obter Certificado</h5>
                                     </div>
-                                    <h2 class="text-white mb-40 fw-medium wow bounceIn">Obtenha um Certificado de Qualidade de Habilidades da EduAll</h2>
+                                    <h2 class="text-white mb-40 fw-medium wow bounceIn">Obtenha um Certificado de Qualidade de Habilidades da Educaangola</h2>
                                     <a href="index.html" class="btn btn-white rounded-pill flex-align d-inline-flex gap-8 hover-bg-main-800 wow bounceInUp">
                                         Comece Agora
                                         <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>

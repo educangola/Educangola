@@ -3,12 +3,15 @@ from instituicoes.models import Instituicao
 from decimal import Decimal
 
 
+
 class Categoria(models.Model):
     nome = models.CharField(max_length=255)
     descricao = models.TextField(null=True, blank=True)
+    imagem = models.ImageField(upload_to='categorias/', null=True, blank=True)  # Campo de imagem adicionado
 
     def __str__(self):
         return self.nome
+
 
 
 

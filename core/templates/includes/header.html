@@ -1,383 +1,350 @@
 {% load static %}
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<style>
+   .profile-dropdown {
+    position: absolute;
+    top: 100%; /* Mantém abaixo do botão */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para ficar bem no centro */
+    margin-top: 10px; /* Espaço entre o botão e o dropdown */
+    z-index: 1000; /* Mantém sobre outros elementos */
+    min-width: 300px; /* Largura mínima */
+    max-width: 90vw; /* Evita que ultrapasse a tela */
+    background: white; /* Garante visibilidade */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona um leve sombreamento */
+    padding: 10px;
+    display: none; /* Oculta por padrão */
+}
+
+.dropdown {
+    position: relative; /* Mantém como referência */
+}
+
+.dropdown:hover .profile-dropdown {
+    display: block; /* Mostra ao passar o mouse */
+}
+
+</style>
 
 <div class="container container--xl">
     <nav class="header-inner flex-between gap-8">
-
-        <div class="header-content-wrapper flex-align flex-grow-1">
-            <!-- Logo Start -->
-            <div class="logo">
-                <a href="{% url 'home_cursos' %}" class="link">
-                    <img src="{% static 'assets/img/Artboard 1.png' %}" alt="Logo">
-                </a>
-            </div>
-            <!-- Logo End  -->
-
-            <!-- Select Start -->
-            <div class="d-sm-block d-none">
-                <div class="header-select border border-neutral-30 bg-main-25 rounded-pill position-relative">
-                    <span class="select-icon position-absolute top-50 translate-middle-y inset-inline-start-0 z-1 ms-lg-4 ms-12 text-xl pointer-event-none d-flex">
-                        <i class="ph-bold ph-squares-four"></i>
-                    </span>
-                    <select class="js-example-basic-single border-0" name="state">
-                        <option value="1" selected disabled>Categorias</option>
-                        <option value="1">Design</option>
-                        <option value="1">Desenvolvimento</option>
-                        <option value="1">Arquitetura</option>
-                        <option value="1">Estilo de Vida</option>
-                        <option value="1">Ciência de Dados</option>
-                        <option value="1">Marketing</option>
-                        <option value="1">Música</option>
-                        <option value="1">Tipografia</option>
-                        <option value="1">Finanças</option>
-                        <option value="1">Motivação</option>
-                    </select>
-                    
-                </div>
-            </div>
-            <!-- Select End -->
-
-            <!-- Menu Start  -->
-            <div class="header-menu d-lg-block d-none">
-                
-                <ul class="nav-menu flex-align">
-                    <li class="nav-menu__item has-submenu activePage">
-                        <a href="javascript:void(0)" class="nav-menu__link">
-                            <i class="fas fa-home"></i>
-                        </a>
-                        <ul class="nav-submenu scroll-sm">
-                            <li class="nav-submenu__item">
-                                <a href="{% url 'index' %}" class="nav-submenu__link hover-bg-neutral-30">
-                                    <i class="fas fa-home"></i> Home
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="{% url 'universidade' %}" class="nav-submenu__link hover-bg-neutral-30">
-                                    <i class="fas fa-school"></i> home escolas
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="{% url 'home_cursos' %}" class="nav-submenu__link hover-bg-neutral-30">
-                                    <i class="fas fa-university"></i> home cursos
-                                </a>
-                            </li>
-                            
-                            <li class="nav-submenu__item">
-                                <a href="{% url 'home_biblioteca' %}" class="nav-submenu__link hover-bg-neutral-30">
-                                    <i class="fas fa-tools"></i> home biblioteca
-                                </a>
-                            </li>
-                            
-                        </ul>   
-                    </li>
-                    
-                    <li class="nav-menu__item has-submenu">
-                        <a href="javascript:void(0)" class="nav-menu__link">
-                            <i class="fas fa-school"></i>
-                        </a>
-                        <ul class="nav-submenu scroll-sm">
-                            <li class="nav-submenu__item">
-                                <a href="primario.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Ensino Primário
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="secundario.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Ensino Secundário
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="tecnicas.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Escolas Técnicas
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="idiomas.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Escolas de Idiomas
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="arte.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Escolas de Arte
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="especial.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Educação Especial
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-menu__item has-submenu">
-                        <a href="javascript:void(0)" class="nav-menu__link">
-                            <i class="fas fa-graduation-cap"></i>
-                        </a>
-                        <ul class="nav-submenu scroll-sm">
-                            <li class="nav-submenu__item">
-                                <a href="{% url 'Todos_cursos' %}" class="nav-submenu__link hover-bg-neutral-30">
-                                    Todos os Cursos
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="cursos-gratuitos.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Cursos Gratuitos
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="idiomas.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Idiomas
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="aulas-ao-vivo.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Aulas ao Vivo
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="certificacoes.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Certificações
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="simulados.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Simulados e Testes
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="laboratorios.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Laboratórios Virtuais
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="mais-categorias.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Mais Categorias
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="negocios.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Cursos de Negócios
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="design.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Cursos de Design
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="tecnologia.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Cursos de Tecnologia
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="saude.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Cursos de Saúde
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="desenvolvimento.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Desenvolvimento Profissional
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-menu__item has-submenu">
-                        <a href="javascript:void(0)" class="nav-menu__link">
-                            <i class="fas fa-briefcase"></i>
-                        </a>
-                        <ul class="nav-submenu scroll-sm">
-                            <li class="nav-submenu__item">
-                                <a href="soft-skills.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Soft Skills
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="empreendedorismo.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Empreendedorismo
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="financas-pessoais.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Finanças Pessoais
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="criatividade-design.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Criatividade e Design
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="saude-mental.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Saúde Mental
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="comunidade.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Comunidade e Interação
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-menu__item has-submenu">
-                        <a href="javascript:void(0)" class="nav-menu__link">
-                            <i class="fas fa-users"></i>
-                        </a>
-                        <ul class="nav-submenu scroll-sm">
-                            <li class="nav-submenu__item">
-                                <a href="mentoria.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Mentoria
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="projetos.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Projetos
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="grupos-estudo.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Grupos de Estudo
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="hackathons.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Hackathons
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-menu__item has-submenu">
-                        <a href="javascript:void(0)" class="nav-menu__link">
-                            <i class="fas fa-book"></i>
-                        </a>
-                        <ul class="nav-submenu scroll-sm">
-                            <li class="nav-submenu__item">
-                                <a href="biblioteca.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Biblioteca
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="banco-teses.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Banco de Teses
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="publicacoes.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Publicações
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="ajuda-tcc.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Ajuda com TCC
-                                </a>
-                            </li>
-                            <li class="nav-submenu__item">
-                                <a href="mapeamento-competencias.html" class="nav-submenu__link hover-bg-neutral-30">
-                                    Mapeamento de Competências
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-menu__item">
-                        <a href="{% url 'contactar' %}" class="nav-menu__link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </li>
-                    
-                    <li class="nav-menu__item">
-                        <div class="d-flex align-items-center gap-2">
-                            <i class="fas fa-globe"></i> <!-- Ícone de globo -->
-                            <select class="form-select form-select-sm" aria-label="Escolher idioma" onchange="location = this.value;">
-                                <option value="pt" selected>
-                                    <span class="flag-icon flag-icon-pt" style="font-size: 18px;"></span> Português
-                                </option>
-                                <option value="en">
-                                    <span class="flag-icon flag-icon-us" style="font-size: 18px;"></span> Inglês
-                                </option>
-                                <option value="umb">
-                                    <span class="flag-icon flag-icon-ao" style="font-size: 18px;"></span> Umbundo
-                                </option>
-                                <option value="kng">
-                                    <span class="flag-icon flag-icon-ao" style="font-size: 18px;"></span> Kicongo
-                                </option>
-                            </select>
-                        </div>
-                    </li>
-                       
-                </ul>
-                
-            </div>
-            <!-- Menu End  -->
+        <!-- Logo -->
+        <div class="logo">
+            <a href="{% url 'home_cursos' %}" class="link">
+                <img src="{% static 'assets/img/Artboard 1.png' %}" alt="Logo">
+            </a>
         </div>
 
-        {% load static %}
-
-<!-- Header Right -->
-<div class="header-right flex-align gap-16">
-    <!-- Search Form -->
-    <form action="{% url 'index' %}" class="search-form position-relative d-xl-block d-none">
-        <input type="text" class="common-input rounded-pill bg-main-25 pe-48 border-neutral-30" type="text" placeholder="Pesquisar...">
-        <button type="submit" class="w-36 h-36 bg-main-600 hover-bg-main-700 rounded-circle flex-center text-md text-white position-absolute top-50 translate-middle-y inset-inline-end-0 me-8">
-            <i class="ph ph-magnifying-glass"></i>
-        </button>
-    </form>
-
-    <!-- User Profile or Login Button -->
-    {% if usuario %}
-    <!-- User Profile Start -->
-    <div class="flex-align gap-16" style="margin-right: 20px;"> <!-- Adicionado margem à direita -->
-        <div class="dropdown">
-            <button class="users arrow-down-icon border border-gray-200 rounded-pill p-4 d-inline-block pe-40 position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <span class="position-relative">
-                    <img src="{% if usuario.foto %}{{ usuario.foto.url }}{% else %}{% static 'assets5/images/thumbs/user-img.png' %}{% endif %}" class="h-10 w-10 rounded-pill">
-                    <span class="position-absolute w-8 h-8 bg-success rounded-circle bottom-0 end-0 border border-white"></span>
+        <!-- Categorias Dropdown -->
+        <div class="d-sm-block d-none">
+            <div class="header-select border border-neutral-30 bg-main-25 rounded-pill position-relative">
+                <span class="select-icon position-absolute top-50 translate-middle-y inset-inline-start-0 z-1 ms-lg-4 ms-12 text-xl pointer-event-none d-flex">
+                    <i class="ph-bold ph-squares-four"></i>
                 </span>
-            </button>
-            <div class="dropdown-menu dropdown-menu--lg border-0 bg-transparent p-0" style="right: 0; left: auto;">
-                <div class="card border border-gray-100 rounded-12 box-shadow-custom">
-                    <div class="card-body p-4">
-                        <div class="d-flex align-items-center pb-3 border-bottom border-gray-100">
-                            <img src="{% if usuario.foto %}{{ usuario.foto.url }}{% else %}{% static 'assets5/images/thumbs/user-img.png' %}{% endif %}" class="w-54 h-54 rounded-circle">
-                            <div class="ms-3">
-                                <p class="fw-bold mb-0">{{ usuario.nome }}</p>
-                                <p class="fw-medium text-13 text-gray-500">{{ usuario.email }}</p>
+                <select class="js-example-basic-single border-0" name="state">
+                    <option value="1" selected disabled>Categorias</option>
+                    <option value="1">Design</option>
+                    <option value="1">Desenvolvimento</option>
+                    <option value="1">Arquitetura</option>
+                    <option value="1">Estilo de Vida</option>
+                    <option value="1">Ciência de Dados</option>
+                    <option value="1">Marketing</option>
+                    <option value="1">Música</option>
+                    <option value="1">Tipografia</option>
+                    <option value="1">Finanças</option>
+                    <option value="1">Motivação</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Menu Principal -->
+        <div class="header-menu d-lg-block d-none">
+            <ul class="nav-menu flex-align">
+                <!-- Home -->
+                <li class="nav-menu__item has-submenu activePage">
+                    <a href="javascript:void(0)" class="nav-menu__link">
+                        <i class="fas fa-home"></i>
+                    </a>
+                    <ul class="nav-submenu scroll-sm">
+                        <li><a href="{% url 'index' %}" class="nav-submenu__link hover-bg-neutral-30"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="{% url 'universidade' %}" class="nav-submenu__link hover-bg-neutral-30"><i class="fas fa-school"></i> Home Escolas</a></li>
+                        <li><a href="{% url 'home_cursos' %}" class="nav-submenu__link hover-bg-neutral-30"><i class="fas fa-university"></i> Home Cursos</a></li>
+                        <li><a href="{% url 'home_biblioteca' %}" class="nav-submenu__link hover-bg-neutral-30"><i class="fas fa-tools"></i> Home Biblioteca</a></li>
+                    </ul>
+                </li>
+
+                <!-- Escolas -->
+                <li class="nav-menu__item has-submenu">
+                    <a href="javascript:void(0)" class="nav-menu__link">
+                        <i class="fas fa-school"></i>
+                    </a>
+                    <ul class="nav-submenu scroll-sm">
+                        <li><a href="primario.html" class="nav-submenu__link hover-bg-neutral-30">Ensino Primário</a></li>
+                        <li><a href="secundario.html" class="nav-submenu__link hover-bg-neutral-30">Ensino Secundário</a></li>
+                        <li><a href="tecnicas.html" class="nav-submenu__link hover-bg-neutral-30">Escolas Técnicas</a></li>
+                        <li><a href="idiomas.html" class="nav-submenu__link hover-bg-neutral-30">Escolas de Idiomas</a></li>
+                        <li><a href="arte.html" class="nav-submenu__link hover-bg-neutral-30">Escolas de Arte</a></li>
+                        <li><a href="especial.html" class="nav-submenu__link hover-bg-neutral-30">Educação Especial</a></li>
+                    </ul>
+                </li>
+
+                <!-- Cursos -->
+                <li class="nav-menu__item has-submenu">
+                    <a href="javascript:void(0)" class="nav-menu__link">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+                    <ul class="nav-submenu scroll-sm">
+                        <li><a href="{% url 'Todos_cursos' %}" class="nav-submenu__link hover-bg-neutral-30">Todos os Cursos</a></li>
+                        <li><a href="cursos-gratuitos.html" class="nav-submenu__link hover-bg-neutral-30">Cursos Gratuitos</a></li>
+                        <li><a href="idiomas.html" class="nav-submenu__link hover-bg-neutral-30">Idiomas</a></li>
+                        <li><a href="aulas-ao-vivo.html" class="nav-submenu__link hover-bg-neutral-30">Aulas ao Vivo</a></li>
+                        <li><a href="certificacoes.html" class="nav-submenu__link hover-bg-neutral-30">Certificações</a></li>
+                        <li><a href="simulados.html" class="nav-submenu__link hover-bg-neutral-30">Simulados e Testes</a></li>
+                        <li><a href="laboratorios.html" class="nav-submenu__link hover-bg-neutral-30">Laboratórios Virtuais</a></li>
+                        <li><a href="mais-categorias.html" class="nav-submenu__link hover-bg-neutral-30">Mais Categorias</a></li>
+                        <li><a href="negocios.html" class="nav-submenu__link hover-bg-neutral-30">Cursos de Negócios</a></li>
+                        <li><a href="design.html" class="nav-submenu__link hover-bg-neutral-30">Cursos de Design</a></li>
+                        <li><a href="tecnologia.html" class="nav-submenu__link hover-bg-neutral-30">Cursos de Tecnologia</a></li>
+                        <li><a href="saude.html" class="nav-submenu__link hover-bg-neutral-30">Cursos de Saúde</a></li>
+                        <li><a href="desenvolvimento.html" class="nav-submenu__link hover-bg-neutral-30">Desenvolvimento Profissional</a></li>
+                    </ul>
+                </li>
+
+                <!-- Profissional -->
+                <li class="nav-menu__item has-submenu">
+                    <a href="javascript:void(0)" class="nav-menu__link">
+                        <i class="fas fa-briefcase"></i>
+                    </a>
+                    <ul class="nav-submenu scroll-sm">
+                        <li><a href="soft-skills.html" class="nav-submenu__link hover-bg-neutral-30">Soft Skills</a></li>
+                        <li><a href="empreendedorismo.html" class="nav-submenu__link hover-bg-neutral-30">Empreendedorismo</a></li>
+                        <li><a href="financas-pessoais.html" class="nav-submenu__link hover-bg-neutral-30">Finanças Pessoais</a></li>
+                        <li><a href="criatividade-design.html" class="nav-submenu__link hover-bg-neutral-30">Criatividade e Design</a></li>
+                        <li><a href="saude-mental.html" class="nav-submenu__link hover-bg-neutral-30">Saúde Mental</a></li>
+                        <li><a href="comunidade.html" class="nav-submenu__link hover-bg-neutral-30">Comunidade e Interação</a></li>
+                    </ul>
+                </li>
+
+                <!-- Comunidade -->
+                <li class="nav-menu__item has-submenu">
+                    <a href="javascript:void(0)" class="nav-menu__link">
+                        <i class="fas fa-users"></i>
+                    </a>
+                    <ul class="nav-submenu scroll-sm">
+                        <li><a href="mentoria.html" class="nav-submenu__link hover-bg-neutral-30">Mentoria</a></li>
+                        <li><a href="projetos.html" class="nav-submenu__link hover-bg-neutral-30">Projetos</a></li>
+                        <li><a href="grupos-estudo.html" class="nav-submenu__link hover-bg-neutral-30">Grupos de Estudo</a></li>
+                        <li><a href="hackathons.html" class="nav-submenu__link hover-bg-neutral-30">Hackathons</a></li>
+                    </ul>
+                </li>
+
+                <!-- Biblioteca -->
+                <li class="nav-menu__item has-submenu">
+                    <a href="javascript:void(0)" class="nav-menu__link">
+                        <i class="fas fa-book"></i>
+                    </a>
+                    <ul class="nav-submenu scroll-sm">
+                        <li><a href="biblioteca.html" class="nav-submenu__link hover-bg-neutral-30">Biblioteca</a></li>
+                        <li><a href="banco-teses.html" class="nav-submenu__link hover-bg-neutral-30">Banco de Teses</a></li>
+                        <li><a href="publicacoes.html" class="nav-submenu__link hover-bg-neutral-30">Publicações</a></li>
+                        <li><a href="ajuda-tcc.html" class="nav-submenu__link hover-bg-neutral-30">Ajuda com TCC</a></li>
+                        <li><a href="mapeamento-competencias.html" class="nav-submenu__link hover-bg-neutral-30">Mapeamento de Competências</a></li>
+                    </ul>
+                </li>
+
+                <!-- Contato -->
+                <li class="nav-menu__item">
+                    <a href="{% url 'contactar' %}" class="nav-menu__link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </li>
+
+                <!-- Idioma -->
+                <div class="dropdown">
+                    <button class="text-gray-500 w-40 h-40 bg-main-50 hover-bg-main-100 transition-2 rounded-circle text-xl flex-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="ph ph-globe"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu--md border-0 bg-transparent p-0">
+                        <div class="card border border-gray-100 rounded-12 box-shadow-custom">
+                            <div class="card-body">
+                                <div class="max-h-270 overflow-y-auto scroll-sm pe-8">
+                                    <!-- Árabe -->
+                                    <div class="form-check form-radio d-flex align-items-center justify-content-between ps-0 mb-16">
+                                        <label class="ps-0 form-check-label line-height-1 fw-medium text-secondary-light" for="arabic"> 
+                                            <span class="text-black hover-bg-transparent hover-text-primary d-flex align-items-center gap-8"> 
+                                                <img src="{% static 'assets5/images/thumbs/flag1.png' %}" alt="" class="w-32-px h-32-px border borde border-gray-100 rounded-circle flex-shrink-0">
+                                                <span class="text-15 fw-semibold mb-0">Árabe</span>
+                                            </span>
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="language" id="arabic">
+                                    </div>
+                                    <!-- Alemão -->
+                                    <div class="form-check form-radio d-flex align-items-center justify-content-between ps-0 mb-16">
+                                        <label class="ps-0 form-check-label line-height-1 fw-medium text-secondary-light" for="germany"> 
+                                            <span class="text-black hover-bg-transparent hover-text-primary d-flex align-items-center gap-8"> 
+                                                <img src="{% static 'assets5/images/thumbs/flag2.png' %}" alt="" class="w-32-px h-32-px border borde border-gray-100 rounded-circle flex-shrink-0">
+                                                <span class="text-15 fw-semibold mb-0">Alemão</span>
+                                            </span>
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="language" id="germany">
+                                    </div>
+                                    <!-- Inglês -->
+                                    <div class="form-check form-radio d-flex align-items-center justify-content-between ps-0 mb-16">
+                                        <label class="ps-0 form-check-label line-height-1 fw-medium text-secondary-light" for="english"> 
+                                            <span class="text-black hover-bg-transparent hover-text-primary d-flex align-items-center gap-8"> 
+                                                <img src="{% static 'assets5/images/thumbs/flag3.png' %}" alt="" class="w-32-px h-32-px border borde border-gray-100 rounded-circle flex-shrink-0">
+                                                <span class="text-15 fw-semibold mb-0">Inglês</span>
+                                            </span>
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="language" id="english">
+                                    </div>
+                                    <!-- Espanhol -->
+                                    <div class="form-check form-radio d-flex align-items-center justify-content-between ps-0">
+                                        <label class="ps-0 form-check-label line-height-1 fw-medium text-secondary-light" for="spanish"> 
+                                            <span class="text-black hover-bg-transparent hover-text-primary d-flex align-items-center gap-8"> 
+                                                <img src="{% static 'assets5/images/thumbs/flag4.png' %}" alt="" class="w-32-px h-32-px border borde border-gray-100 rounded-circle flex-shrink-0">
+                                                <span class="text-15 fw-semibold mb-0">Espanhol</span>
+                                            </span>
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="language" id="spanish">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <ul class="list-unstyled mb-0">
-                            <li>
-                                <a href="#" class="dropdown-item py-2 px-3 d-flex align-items-center gap-2 text-gray-800 hover-bg-gray-100 rounded-6">
-                                    <i class="ph ph-gear text-primary-600"></i> Configurações da Conta
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="dropdown-item py-2 px-3 d-flex align-items-center gap-2 text-gray-800 hover-bg-gray-100 rounded-6">
-                                    <i class="ph ph-chart-bar text-primary-600"></i> Atualizar Plano
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="dropdown-item py-2 px-3 d-flex align-items-center gap-2 text-gray-800 hover-bg-gray-100 rounded-6">
-                                    <i class="ph ph-chats-teardrop text-primary-600"></i> Mensagens
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{% url 'sair' %}" class="dropdown-item py-2 px-3 d-flex align-items-center gap-2 text-danger hover-bg-danger-50 rounded-6">
-                                    <i class="ph ph-sign-out text-danger"></i> Sair
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
-            </div>
+            </ul>
         </div>
-    </div>
-    <!-- User Profile End -->
-{% else %}
-    <!-- Login Button -->
-    <a href="{% url 'Login_normal' %}" class="info-action w-52 h-52 bg-main-25 hover-bg-main-600 border border-neutral-30 rounded-circle flex-center text-2xl">
-        <i class="ph ph-user"></i>
-    </a>
-{% endif %}
+
+        <!-- Dropdown do Perfil -->
+        <div style="margin-right: 20px;" class="dropdown">
+            {% if usuario %}
+                <!-- Exibe o dropdown do perfil se o usuário estiver logado -->
+                <button class="users arrow-down-icon border border-gray-200 rounded-pill p-4 d-inline-block pe-40 position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="position-relative">
+                        <img style="width: 20px; height: 15px; object-fit: cover;" 
+                             src="{% static 'assets5/images/thumbs/user-img.png' %}" 
+                             alt="Imagem" class="rounded-circle">
+                        <span class="activation-badge w-8 h-8 position-absolute inset-block-end-0 inset-inline-end-0"></span>
+                    </span>
+                    
+                </button>
+        
+                <!-- Dropdown do perfil -->
+                <div class="profile-dropdown dropdown-menu dropdown-menu--lg border-0 bg-transparent p-0">
+                    <div class="card border border-gray-100 rounded-12 box-shadow-custom">
+                        <div class="card-body">
+                            <div class="flex-align gap-8 mb-20 pb-20 border-bottom border-gray-100">
+                                <img src="{% static 'assets5/images/thumbs/user-img.png' %}" alt="" class="w-54 h-54 rounded-circle">
+                                <div class="">
+                                    <h4 class="mb-0">{{usuario}}</h4>
+                                    <p class="fw-medium text-13 text-gray-200">{{ usuario.email }}</p>
+                                </div>
+                            </div>
+                            <ul class="max-h-270 overflow-y-auto scroll-sm pe-4">
+                                <li class="mb-4">
+                                    <a href="{% url 'conta_aluno' %}" class="py-12 text-15 px-20 hover-bg-gray-50 text-gray-300 rounded-8 flex-align gap-8 fw-medium text-15">
+                                        <span class="text-2xl text-primary-600 d-flex"><i class="ph ph-gauge"></i></span>
+                                        <span class="text">Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="setting.html" class="py-12 text-15 px-20 hover-bg-gray-50 text-gray-300 rounded-8 flex-align gap-8 fw-medium text-15">
+                                        <span class="text-2xl text-primary-600 d-flex"><i class="ph ph-gear"></i></span>
+                                        <span class="text">Configurações da Conta</span>
+                                    </a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="favoritos.html" class="py-12 text-15 px-20 hover-bg-gray-50 text-gray-300 rounded-8 flex-align gap-8 fw-medium text-15">
+                                        <span class="text-2xl text-primary-600 d-flex"><i class="ph ph-heart"></i></span>
+                                        <span class="text">Cursos Favoritos</span>
+                                    </a>
+                                </li>
+                                
+                                <li class="mb-4">
+                                    <a href="analytics.html" class="py-12 text-15 px-20 hover-bg-gray-50 text-gray-300 rounded-8 flex-align gap-8 fw-medium text-15">
+                                        <span class="text-2xl text-primary-600 d-flex"><i class="ph ph-chart-line-up"></i></span>
+                                        <span class="text">Atividade Diária</span>
+                                    </a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="message.html" class="py-12 text-15 px-20 hover-bg-gray-50 text-gray-300 rounded-8 flex-align gap-8 fw-medium text-15 position-relative">
+                                        <span class="text-2xl text-primary-600 d-flex position-relative">
+                                            <i class="ph ph-chats-teardrop"></i>
+                                            <!-- Badge de notificação -->
+                                            <span class="position-absolute top-0 end-0 bg-danger text-white rounded-circle text-10 fw-bold px-2" id="new-message-count">3</span>
+                                        </span>
+                                        <span class="text">Caixa de Entrada</span>
+                                    </a>
+                                </li>
+                                
+                                <li class="mb-4">
+                                    <a href="email.html" class="py-12 text-15 px-20 hover-bg-gray-50 text-gray-300 rounded-8 flex-align gap-8 fw-medium text-15 position-relative">
+                                        <span class="text-2xl text-primary-600 d-flex position-relative">
+                                            <i class="ph ph-envelope-simple"></i>
+                                            <!-- Badge de notificação -->
+                                            <span class="position-absolute top-0 end-0 bg-danger text-white rounded-circle text-10 fw-bold px-2" id="new-email-count">5</span>
+                                        </span>
+                                        <span class="text">E-mail</span>
+                                    </a>
+                                </li>
+                                
+                                <li class="pt-8 border-top border-gray-100">
+                                    <a href="{% url 'sair' %}" class="py-12 text-15 px-20 hover-bg-danger-50 text-gray-300 hover-text-danger-600 rounded-8 flex-align gap-8 fw-medium text-15">
+                                        <span class="text-2xl text-danger-600 d-flex"><i class="ph ph-sign-out"></i></span>
+                                        <span class="text">Sair</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <!-- Exibe apenas o ícone de login se o usuário não estiver logado -->
+                <a href="{% url 'Login_normal' %}" class="info-action w-52 h-52 bg-main-25 hover-bg-main-600 border border-neutral-30 rounded-circle flex-center text-2xl">
+                    <i class="ph ph-user"></i>
+                </a>
+            {% endif %}
+        </div>
+        
+       
+        <button type="button" class="toggle-mobileMenu d-lg-none text-neutral-200 flex-center">
+            <i class="ph ph-list"></i>
+        </button>
+    </nav>
 </div>
 
-    </nav>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const dropdown = document.querySelector(".profile-dropdown");
+        const button = document.querySelector(".dropdown");
     
-</div>
+        if (dropdown && button) {
+            button.addEventListener("click", function () {
+                dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    
+                // Ajustar posição se estiver saindo da tela
+                const rect = dropdown.getBoundingClientRect();
+                if (rect.right > window.innerWidth) {
+                    dropdown.style.left = "auto";
+                    dropdown.style.right = "0";
+                    dropdown.style.transform = "none";
+                } else {
+                    dropdown.style.left = "50%";
+                    dropdown.style.right = "auto";
+                    dropdown.style.transform = "translateX(-50%)";
+                }
+            });
+    
+            // Fecha o dropdown ao clicar fora
+            document.addEventListener("click", function (event) {
+                if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+                    dropdown.style.display = "none";
+                }
+            });
+        }
+    });
+    </script>
+    
+

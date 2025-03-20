@@ -56,14 +56,33 @@ def home_cursos(request):
     instrutores = Instrutor.objects.all()
     cursos_actualizados = Curso.objects.all().order_by('-data_criacao')
     categorias = Categoria.objects.all()
-    return render(request, 'home_cursos.html', {'cursos': cursos, 'categorias':categorias, 'cursos_actualizados':cursos_actualizados, 'instrutores':instrutores, 'quantidade_cursos':quantidade_cursos, 'quantidade_livro':quantidade_livro, 'curso_categoria_tecnologia':curso_categoria_tecnologia, 'quantidade_cursos_tecnologia':quantidade_cursos_tecnologia})
+    # Verifica se o usuário está logado
+    usuario_id = request.session.get('usuario')
+    usuario = None
+
+    if usuario_id:
+        try:
+            usuario = Usuario.objects.get(id=usuario_id)
+        except Usuario.DoesNotExist:
+            usuario = None 
+            
+    return render(request, 'home_cursos.html', {'cursos': cursos, 'categorias':categorias, 'cursos_actualizados':cursos_actualizados, 'instrutores':instrutores, 'quantidade_cursos':quantidade_cursos, 'quantidade_livro':quantidade_livro, 'curso_categoria_tecnologia':curso_categoria_tecnologia, 'quantidade_cursos_tecnologia':quantidade_cursos_tecnologia,'usuario': usuario})
 
 def detalhe_livro(request, id):
     livro = get_object_or_404(Livro, id=id) 
     return render(request, 'detalhe_livro.html', {'livro': livro})
 
 def home_biblioteca(request):
-    return render(request, 'home_biblioteca.html')
+    # Verifica se o usuário está logado
+    usuario_id = request.session.get('usuario')
+    usuario = None
+
+    if usuario_id:
+        try:
+            usuario = Usuario.objects.get(id=usuario_id)
+        except Usuario.DoesNotExist:
+            usuario = None 
+    return render(request, 'home_biblioteca.html', {'usuario': usuario})
 
 def Cadastrar_normal(request):
     status = request.GET.get('status')

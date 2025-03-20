@@ -143,41 +143,45 @@
                     <div class="card border border-gray-100 rounded-12 box-shadow-custom">
                         <div class="card-body">
                             <div class="max-h-270 overflow-y-auto scroll-sm pe-8">
+                                <!-- Árabe -->
                                 <div class="form-check form-radio d-flex align-items-center justify-content-between ps-0 mb-16">
-                                  <label class="ps-0 form-check-label line-height-1 fw-medium text-secondary-light" for="arabic"> 
-                                    <span class="text-black hover-bg-transparent hover-text-primary d-flex align-items-center gap-8"> 
-                                      <img src="{% static 'assets5/images/thumbs/flag1.png' %}" alt="" class="w-32-px h-32-px border borde border-gray-100 rounded-circle flex-shrink-0">
-                                      <span class="text-15 fw-semibold mb-0">Arabic</span>
-                                    </span>
-                                  </label>
-                                  <input class="form-check-input" type="radio" name="language" id="arabic">
+                                    <label class="ps-0 form-check-label line-height-1 fw-medium text-secondary-light" for="arabic"> 
+                                        <span class="text-black hover-bg-transparent hover-text-primary d-flex align-items-center gap-8"> 
+                                            <img src="{% static 'assets5/images/thumbs/flag1.png' %}" alt="" class="w-32-px h-32-px border borde border-gray-100 rounded-circle flex-shrink-0">
+                                            <span class="text-15 fw-semibold mb-0">Árabe</span>
+                                        </span>
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="language" id="arabic">
                                 </div>
+                                <!-- Alemão -->
                                 <div class="form-check form-radio d-flex align-items-center justify-content-between ps-0 mb-16">
-                                  <label class="ps-0 form-check-label line-height-1 fw-medium text-secondary-light" for="germany"> 
-                                    <span class="text-black hover-bg-transparent hover-text-primary d-flex align-items-center gap-8"> 
-                                      <img src="{% static 'assets5/images/thumbs/flag2.png' %}" alt="" class="w-32-px h-32-px border borde border-gray-100 rounded-circle flex-shrink-0">
-                                      <span class="text-15 fw-semibold mb-0">Germany</span>
-                                    </span>
-                                  </label>
-                                  <input class="form-check-input" type="radio" name="language" id="germany">
+                                    <label class="ps-0 form-check-label line-height-1 fw-medium text-secondary-light" for="germany"> 
+                                        <span class="text-black hover-bg-transparent hover-text-primary d-flex align-items-center gap-8"> 
+                                            <img src="{% static 'assets5/images/thumbs/flag2.png' %}" alt="" class="w-32-px h-32-px border borde border-gray-100 rounded-circle flex-shrink-0">
+                                            <span class="text-15 fw-semibold mb-0">Alemão</span>
+                                        </span>
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="language" id="germany">
                                 </div>
+                                <!-- Inglês -->
                                 <div class="form-check form-radio d-flex align-items-center justify-content-between ps-0 mb-16">
-                                  <label class="ps-0 form-check-label line-height-1 fw-medium text-secondary-light" for="english"> 
-                                    <span class="text-black hover-bg-transparent hover-text-primary d-flex align-items-center gap-8"> 
-                                      <img src="{% static 'assets5/images/thumbs/flag3.png' %}" alt="" class="w-32-px h-32-px border borde border-gray-100 rounded-circle flex-shrink-0">
-                                      <span class="text-15 fw-semibold mb-0">English</span>
-                                    </span>
-                                  </label>
-                                  <input class="form-check-input" type="radio" name="language" id="english">
+                                    <label class="ps-0 form-check-label line-height-1 fw-medium text-secondary-light" for="english"> 
+                                        <span class="text-black hover-bg-transparent hover-text-primary d-flex align-items-center gap-8"> 
+                                            <img src="{% static 'assets5/images/thumbs/flag3.png' %}" alt="" class="w-32-px h-32-px border borde border-gray-100 rounded-circle flex-shrink-0">
+                                            <span class="text-15 fw-semibold mb-0">Inglês</span>
+                                        </span>
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="language" id="english">
                                 </div>
+                                <!-- Espanhol -->
                                 <div class="form-check form-radio d-flex align-items-center justify-content-between ps-0">
-                                  <label class="ps-0 form-check-label line-height-1 fw-medium text-secondary-light" for="spanish"> 
-                                    <span class="text-black hover-bg-transparent hover-text-primary d-flex align-items-center gap-8"> 
-                                      <img src="{% static 'assets5/images/thumbs/flag4.png' %}" alt="" class="w-32-px h-32-px border borde border-gray-100 rounded-circle flex-shrink-0">
-                                      <span class="text-15 fw-semibold mb-0">Spanish</span>
-                                    </span>
-                                  </label>
-                                  <input class="form-check-input" type="radio" name="language" id="spanish">
+                                    <label class="ps-0 form-check-label line-height-1 fw-medium text-secondary-light" for="spanish"> 
+                                        <span class="text-black hover-bg-transparent hover-text-primary d-flex align-items-center gap-8"> 
+                                            <img src="{% static 'assets5/images/thumbs/flag4.png' %}" alt="" class="w-32-px h-32-px border borde border-gray-100 rounded-circle flex-shrink-0">
+                                            <span class="text-15 fw-semibold mb-0">Espanhol</span>
+                                        </span>
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="language" id="spanish">
                                 </div>
                             </div>
                         </div>
@@ -264,7 +268,7 @@
                                 <div class="col-lg-6">
                                     <div class="grettings-box-two__content">
                                         <h2 class="fw-medium mb-0 flex-align gap-10">Olá, {{usuario}}<img src="{% static 'assets5/images/icons/wave-hand.png' %}" alt=""> </h2>
-                                        <h2 class="fw-medium mb-16">O que você quer aprender hoje com seu parceiro?</h2>
+                                        <h2 class="fw-medium mb-16">O que você quer aprender hoje?</h2>
                                         <p class="text-15 text-gray-400">Descubra cursos, acompanhe seu progresso e alcance seus objetivos de aprendizado de forma contínua.</p>
                                         <a href="student-courses.html" class="btn btn-main rounded-pill mt-32">Explorar Cursos</a>
                                     </div>
