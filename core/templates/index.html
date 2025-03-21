@@ -149,6 +149,48 @@
     z-index: 2; /* Mantém o botão visível acima da camada escura */
 }
 
+<!--tamanho dos cursos-->
+/* Tamanho padrão dos cards */
+.curso-item {
+    max-width: 300px; /* ou 280px */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.course-item {
+    height: 100%;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Controlar altura da imagem */
+.course-item__thumb img {
+    height: 180px; 
+    object-fit: cover;
+}
+
+/* Limitar tamanho do título */
+.course-item__content h4 {
+    font-size: 16px;
+    min-height: 48px; 
+}
+
+/* Diminuir espaçamentos internos */
+.course-item__content {
+    padding: 8px 0;
+}
+
+/* Ajustar botões */
+.wishlist-btn, .play-video-btn {
+    width: 40px;
+    height: 40px;
+}
+
+.play-video-btn i {
+    font-size: 20px;
+}
 
     </style>
 
@@ -405,33 +447,30 @@
     
             <!-- Navegação das Categorias -->
             <div class="nav-tab-wrapper bg-white p-16 mb-40" data-aos="zoom-out">
-                <ul class="nav nav-pills common-tab gap-16" id="pills-tab" role="tablist">
-                    <!-- Todas as Categorias -->
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria_selecionada is None %} active {% endif %}" 
-                           href="{% url 'home_cursos' %}">
-                            <i class="text-xl d-flex ph-bold ph-squares-four"></i>
-                            all Categorias
-                        </a>
-                    </li>
-    
-                    <div class="categorias-scroll">
-                        <ul class="nav nav-pills gap-2 flex-nowrap overflow-auto">
-                            {% for categoria in categorias %}
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria.id == categoria_selecionada %} active {% endif %}" 
-                                   href="{% url 'cursos_por_categoria' categoria.id %}" 
-                                   data-categoria-id="{{ categoria.id }}">
-                                    <i class="text-xl d-flex ph-bold ph-magic-wand"></i>
-                                    {{ categoria.nome }}
-                                </a>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    
-                    
-                </ul>
+                <div class="categorias-scroll" style="overflow-x: auto; white-space: nowrap;">
+                    <ul class="nav nav-pills gap-2 d-flex flex-nowrap">
+                        <!-- Todas as Categorias -->
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center gap-8 {% if categoria_selecionada is None %} active {% endif %}" 
+                               href="{% url 'home_cursos' %}">
+                                <i class="text-xl d-flex ph-bold ph-squares-four"></i>
+                                All Categorias
+                            </a>
+                        </li>
+                
+                        <!-- Lista de Categorias -->
+                        {% for categoria in categorias %}
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center gap-8 {% if categoria.id == categoria_selecionada %} active {% endif %}" 
+                               href="{% url 'cursos_por_categoria' categoria.id %}" 
+                               data-categoria-id="{{ categoria.id }}">
+                                <i class="text-xl d-flex ph-bold ph-magic-wand"></i>
+                                {{ categoria.nome }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
     
             <!-- Conteúdo dos Cursos -->
@@ -1258,10 +1297,6 @@
         <div class="container">
             <div class="section-heading text-center">
                 <h2 class="mb-24 wow bounceIn">Artigos Recentes</h2>
-                <p class="wow bounceInUp">
-                    Explore nossos artigos mais recentes e mergulhe em conteúdos exclusivos, dicas práticas e insights valiosos. 
-                    Esteja por dentro das últimas tendências e novidades para ampliar seus conhecimentos e se inspirar!
-                </p>
             </div>
             
             <div class="row d-flex flex-nowrap overflow-auto" style="gap: 20px; scroll-snap-type: x mandatory;">

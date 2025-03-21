@@ -33,6 +33,49 @@
 .play-video-btn {
     z-index: 2; /* Mantém o botão visível acima da camada escura */
 }
+
+/* Tamanho padrão dos cards */
+.curso-item {
+    max-width: 300px; /* ou 280px */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.course-item {
+    height: 100%;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Controlar altura da imagem */
+.course-item__thumb img {
+    height: 180px; 
+    object-fit: cover;
+}
+
+/* Limitar tamanho do título */
+.course-item__content h4 {
+    font-size: 16px;
+    min-height: 48px; 
+}
+
+/* Diminuir espaçamentos internos */
+.course-item__content {
+    padding: 8px 0;
+}
+
+/* Ajustar botões */
+.wishlist-btn, .play-video-btn {
+    width: 40px;
+    height: 40px;
+}
+
+.play-video-btn i {
+    font-size: 20px;
+}
+
     </style>
 
     
@@ -203,33 +246,31 @@
 
         <!-- Navegação das Categorias -->
         <div class="nav-tab-wrapper bg-white p-16 mb-40" data-aos="zoom-out">
-            <ul class="nav nav-pills common-tab gap-16" id="pills-tab" role="tablist">
-                <!-- Todas as Categorias -->
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria_selecionada is None %} active {% endif %}" 
-                       href="{% url 'home_cursos' %}">
-                        <i class="text-xl d-flex ph-bold ph-squares-four"></i>
-                        all Categorias
-                    </a>
-                </li>
-
-                <div class="categorias-scroll">
-                    <ul class="nav nav-pills gap-2 flex-nowrap overflow-auto">
-                        {% for categoria in categorias %}
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria.id == categoria_selecionada %} active {% endif %}" 
-                               href="{% url 'cursos_por_categoria' categoria.id %}" 
-                               data-categoria-id="{{ categoria.id }}">
-                                <i class="text-xl d-flex ph-bold ph-magic-wand"></i>
-                                {{ categoria.nome }}
-                            </a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                
-                
-            </ul>
+            <div class="categorias-scroll" style="overflow-x: auto; white-space: nowrap;">
+                <ul class="nav nav-pills gap-2 d-flex flex-nowrap">
+                    <!-- Todas as Categorias -->
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center gap-8 {% if categoria_selecionada is None %} active {% endif %}" 
+                           href="{% url 'home_cursos' %}">
+                            <i class="text-xl d-flex ph-bold ph-squares-four"></i>
+                            All Categorias
+                        </a>
+                    </li>
+            
+                    <!-- Lista de Categorias -->
+                    {% for categoria in categorias %}
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center gap-8 {% if categoria.id == categoria_selecionada %} active {% endif %}" 
+                           href="{% url 'cursos_por_categoria' categoria.id %}" 
+                           data-categoria-id="{{ categoria.id }}">
+                            <i class="text-xl d-flex ph-bold ph-magic-wand"></i>
+                            {{ categoria.nome }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
         </div>
 
         <!-- Conteúdo dos Cursos -->
@@ -410,33 +451,30 @@
     
             <!-- Navegação das Categorias -->
             <div class="nav-tab-wrapper bg-white p-16 mb-40" data-aos="zoom-out">
-                <ul class="nav nav-pills common-tab gap-16" id="pills-tab" role="tablist">
-                    <!-- Todas as Categorias -->
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria_selecionada is None %} active {% endif %}" 
-                           href="{% url 'home_cursos' %}">
-                            <i class="text-xl d-flex ph-bold ph-squares-four"></i>
-                            all Categorias
-                        </a>
-                    </li>
-    
-                    <div class="categorias-scroll">
-                        <ul class="nav nav-pills gap-2 flex-nowrap overflow-auto">
-                            {% for categoria in categorias %}
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria.id == categoria_selecionada %} active {% endif %}" 
-                                   href="{% url 'cursos_por_categoria' categoria.id %}" 
-                                   data-categoria-id="{{ categoria.id }}">
-                                    <i class="text-xl d-flex ph-bold ph-magic-wand"></i>
-                                    {{ categoria.nome }}
-                                </a>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    
-                    
-                </ul>
+                <div class="categorias-scroll" style="overflow-x: auto; white-space: nowrap;">
+                    <ul class="nav nav-pills gap-2 d-flex flex-nowrap">
+                        <!-- Todas as Categorias -->
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center gap-8 {% if categoria_selecionada is None %} active {% endif %}" 
+                               href="{% url 'home_cursos' %}">
+                                <i class="text-xl d-flex ph-bold ph-squares-four"></i>
+                                All Categorias
+                            </a>
+                        </li>
+                
+                        <!-- Lista de Categorias -->
+                        {% for categoria in categorias %}
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center gap-8 {% if categoria.id == categoria_selecionada %} active {% endif %}" 
+                               href="{% url 'cursos_por_categoria' categoria.id %}" 
+                               data-categoria-id="{{ categoria.id }}">
+                                <i class="text-xl d-flex ph-bold ph-magic-wand"></i>
+                                {{ categoria.nome }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
     
             <!-- Conteúdo dos Cursos -->
@@ -616,33 +654,30 @@
     
             <!-- Navegação das Categorias -->
             <div class="nav-tab-wrapper bg-white p-16 mb-40" data-aos="zoom-out">
-                <ul class="nav nav-pills common-tab gap-16" id="pills-tab" role="tablist">
-                    <!-- Todas as Categorias -->
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria_selecionada is None %} active {% endif %}" 
-                           href="{% url 'home_cursos' %}">
-                            <i class="text-xl d-flex ph-bold ph-squares-four"></i>
-                            all Categorias
-                        </a>
-                    </li>
-    
-                    <div class="categorias-scroll">
-                        <ul class="nav nav-pills gap-2 flex-nowrap overflow-auto">
-                            {% for categoria in categorias %}
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria.id == categoria_selecionada %} active {% endif %}" 
-                                   href="{% url 'cursos_por_categoria' categoria.id %}" 
-                                   data-categoria-id="{{ categoria.id }}">
-                                    <i class="text-xl d-flex ph-bold ph-magic-wand"></i>
-                                    {{ categoria.nome }}
-                                </a>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    
-                    
-                </ul>
+                <div class="categorias-scroll" style="overflow-x: auto; white-space: nowrap;">
+                    <ul class="nav nav-pills gap-2 d-flex flex-nowrap">
+                        <!-- Todas as Categorias -->
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center gap-8 {% if categoria_selecionada is None %} active {% endif %}" 
+                               href="{% url 'home_cursos' %}">
+                                <i class="text-xl d-flex ph-bold ph-squares-four"></i>
+                                All Categorias
+                            </a>
+                        </li>
+                
+                        <!-- Lista de Categorias -->
+                        {% for categoria in categorias %}
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center gap-8 {% if categoria.id == categoria_selecionada %} active {% endif %}" 
+                               href="{% url 'cursos_por_categoria' categoria.id %}" 
+                               data-categoria-id="{{ categoria.id }}">
+                                <i class="text-xl d-flex ph-bold ph-magic-wand"></i>
+                                {{ categoria.nome }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
     
             <!-- Conteúdo dos Cursos -->
@@ -768,42 +803,38 @@
                 <p class="section-heading__desc text-start mt-0 text-line-2 wow bounceInUp">
                     Bem-vindo ao nosso catálogo diversificado e dinâmico de categorias. Estamos dedicados a fornecer a você...
                 </p>
-                <a href="{% url 'home_cursos' %}" class="item-hover__text flex-align gap-8 text-main-600 mt-24 hover-text-decoration-underline transition-1" tabindex="0">
+                <a href="{% url 'home_cursos' %}" class="item-hover__text flex-align gap-8 text-main-600 mt-16 hover-text-decoration-underline transition-1" tabindex="0">
                     Saber mais sobre categorias
                     <i class="ph ph-arrow-right"></i>
                 </a>
             </div>
         </div>
-
-        <!-- Conteúdo das Categorias -->
-        <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-categories" role="tabpanel" aria-labelledby="pills-categories-tab" tabindex="0">
-                <div class="row row-cols-xxl-3 row-cols-lg-2 row-cols-1 gy-4">
-                    {% for categoria in categorias|slice:":3" %}
-                    <div class="col wow fadeInUp" data-aos="fade-up" data-aos-duration="600">
-                        <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-lg" style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);">
-                            <!-- Thumbnail da Categoria -->
-                            <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a href="{% url 'detalhe_curso' categoria.id %}" class="w-100 h-100 d-block">
-                                    <img src="{{ categoria.imagem.url }}" alt="{{ categoria.nome }}" class="course-item__img rounded-12 cover-img transition-2" style="transition: transform 0.3s ease;">
-                                </a>
-                            </div>
-        
-                            <!-- Conteúdo da Categoria -->
-                            <div class="course-item__content mt-24">
-                                <h4 class="mb-16">
-                                    <a href="{% url 'detalhe_curso' categoria.id %}" class="link text-line-2" style="color: #2D3748; text-decoration: none;">{{ categoria.nome }}</a>
-                                </h4>
-                                <!-- Adicione mais detalhes da categoria, se necessário -->
-                                <p class="text-neutral-500 text-line-2" style="color: #718096;">{{ categoria.descricao_curta }}</p>
-                            </div>
-                        </div>
+    
+        <!-- Conteúdo das Categorias com scroll horizontal -->
+        <div style="overflow-x: auto; white-space: nowrap; padding-bottom: 10px;">
+            <div class="d-flex flex-nowrap gap-3">
+                {% for categoria in categorias %}
+                <div class="course-item bg-white rounded-12 p-8 box-shadow-sm" style="min-width: 250px; max-width: 250px; display: inline-block;">
+                    <!-- Thumbnail da Categoria -->
+                    <div class="course-item__thumb rounded-8 overflow-hidden position-relative" style="height: 150px;">
+                        <a href="{% url 'detalhe_curso' categoria.id %}" class="w-100 h-100 d-block">
+                            <img src="{{ categoria.imagem.url }}" alt="{{ categoria.nome }}" class="course-item__img rounded-8 cover-img transition-2" style="object-fit: cover; height: 100%;">
+                        </a>
                     </div>
-                    {% endfor %}
+    
+                    <!-- Conteúdo da Categoria -->
+                    <div class="course-item__content mt-16">
+                        <h5 class="mb-8">
+                            <a href="{% url 'detalhe_curso' categoria.id %}" class="link text-line-2" style="color: #2D3748; text-decoration: none; font-size: 16px;">{{ categoria.nome }}</a>
+                        </h5>
+                        <p class="text-neutral-500 text-line-2" style="color: #718096; font-size: 14px;">{{ categoria.descricao_curta }}</p>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
     </div>
+    
 </section>
 
 
@@ -833,36 +864,33 @@
 
         <!-- Navegação das Categorias -->
         <div class="nav-tab-wrapper bg-white p-16 mb-40" data-aos="zoom-out">
-            <ul class="nav nav-pills common-tab gap-16" id="pills-tab" role="tablist">
-                <!-- Todas as Categorias -->
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria_selecionada is None %} active {% endif %}" 
-                       href="{% url 'home_cursos' %}">
-                        <i class="text-xl d-flex ph-bold ph-squares-four"></i>
-                        all Categorias
-                    </a>
-                </li>
-
-                <div class="categorias-scroll">
-                    <ul class="nav nav-pills gap-2 flex-nowrap overflow-auto">
-                        {% for categoria in categorias %}
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center w-100 gap-8 {% if categoria.id == categoria_selecionada %} active {% endif %}" 
-                               href="{% url 'cursos_por_categoria' categoria.id %}" 
-                               data-categoria-id="{{ categoria.id }}">
-                                <i class="text-xl d-flex ph-bold ph-magic-wand"></i>
-                                {{ categoria.nome }}
-                            </a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                
-                
-            </ul>
+            <div class="categorias-scroll" style="overflow-x: auto; white-space: nowrap;">
+                <ul class="nav nav-pills gap-2 d-flex flex-nowrap">
+                    <!-- Todas as Categorias -->
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center gap-8 {% if categoria_selecionada is None %} active {% endif %}" 
+                           href="{% url 'home_cursos' %}">
+                            <i class="text-xl d-flex ph-bold ph-squares-four"></i>
+                            All Categorias
+                        </a>
+                    </li>
+            
+                    <!-- Lista de Categorias -->
+                    {% for categoria in categorias %}
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill bg-main-25 text-md fw-medium text-neutral-500 flex-center gap-8 {% if categoria.id == categoria_selecionada %} active {% endif %}" 
+                           href="{% url 'cursos_por_categoria' categoria.id %}" 
+                           data-categoria-id="{{ categoria.id }}">
+                            <i class="text-xl d-flex ph-bold ph-magic-wand"></i>
+                            {{ categoria.nome }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
 
-        <!-- Conteúdo dos Cursos -->
+        
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-categories" role="tabpanel" aria-labelledby="pills-categories-tab" tabindex="0">
                 <div class="cursos-container">
